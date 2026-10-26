@@ -1,6 +1,6 @@
 # Mahmoud Ashraf — Portfolio
 
-A responsive Arabic/English dark portfolio using plain HTML, CSS and JavaScript. It includes ambient motion, scroll reveals, an animated technology marquee, interactive project artwork and reduced-motion support. No build or package installation is needed. The deployable site is `dist/`.
+A responsive Arabic/English dark portfolio using plain HTML, CSS and JavaScript. It includes ambient motion, scroll reveals, a sticky glass header, scroll progress, an animated technology marquee, interactive project artwork and reduced-motion support. No build or package installation is needed. The deployable site is `dist/`.
 
 ## Preview
 
