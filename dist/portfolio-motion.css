@@ -1,4 +1,11 @@
 html,body{overflow-x:clip}.ambient{overflow:hidden}
+.brand{gap:11px;letter-spacing:0}
+.brand-mark{position:relative;width:43px;height:43px;display:grid;grid-template-columns:1fr 1fr;place-items:center;border:1px solid rgba(140,255,193,.34);border-radius:13px;background:linear-gradient(145deg,rgba(140,255,193,.13),rgba(112,165,255,.07));box-shadow:inset 0 1px rgba(255,255,255,.08),0 10px 30px rgba(0,0,0,.18);overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
+.brand-mark:after{content:'';position:absolute;inset:-30%;background:linear-gradient(115deg,transparent 38%,rgba(140,255,193,.3),transparent 62%);transform:translateX(-100%);transition:transform .7s}
+.brand:hover .brand-mark{transform:rotate(-4deg) scale(1.04);border-color:rgba(140,255,193,.7);box-shadow:0 0 28px rgba(140,255,193,.12)}
+.brand:hover .brand-mark:after{transform:translateX(100%)}
+.brand-mark span{font:700 13px/1 var(--display);color:var(--ink);z-index:1}.brand-mark span:last-child{color:var(--accent);border-inline-start:1px solid rgba(255,255,255,.12);width:100%;height:18px;display:grid;place-items:center}
+.brand-copy{display:flex;flex-direction:column;gap:2px}.brand-copy strong{font:600 10px var(--mono);letter-spacing:1.5px}.brand-copy small{font:400 7px var(--mono);letter-spacing:1.25px;color:#718093}
 .motion-line{position:absolute;width:42vw;height:1px;background:linear-gradient(90deg,transparent,rgba(143,124,255,.26),transparent);opacity:.7;animation:portfolio-line 18s ease-in-out infinite alternate}
 .motion-line-a{left:-18vw;top:27%;transform:rotate(18deg)}
 .motion-line-b{right:-20vw;top:68%;transform:rotate(-22deg);animation-delay:-7s}
@@ -11,4 +18,5 @@ html,body{overflow-x:clip}.ambient{overflow:hidden}
 @keyframes portfolio-line{to{translate:230px 55px}}
 @keyframes portfolio-float{50%{transform:translate(18px,-28px) rotate(5deg)}}
 @media(max-width:760px){.float-token{width:39px;height:39px;opacity:.55}.token-c,.token-d{display:none}.motion-line{width:70vw}}
+@media(max-width:430px){.brand-copy{display:flex!important}.brand-copy small{display:none}.brand-copy strong{font-size:8px!important;letter-spacing:1px}.brand-mark{width:38px;height:38px;border-radius:11px}}
 @media(prefers-reduced-motion:reduce){.motion-line,.float-token{animation:none}.service:hover,.process-steps>div:hover{transform:none}}

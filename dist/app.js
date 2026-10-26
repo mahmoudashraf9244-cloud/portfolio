@@ -4,6 +4,7 @@ const translations = {
   }
 };
 Object.assign(translations.ar,{
+  concepts:'المفاهيم',
   nexusArt:'إدارة الأفراد بوضوح.',
   nexusCategory:'لوحة إدارة الموظفين',
   nexusTitle:'TeamDesk — لوحة<br>إدارة الموظفين',
