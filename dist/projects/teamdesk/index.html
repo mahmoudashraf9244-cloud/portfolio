@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="fixes.css">
   <link rel="stylesheet" href="motion.css">
+  <link rel="stylesheet" href="reports.css">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -22,11 +23,11 @@
     <a class="brand" href="#" aria-label="TeamDesk dashboard home"><span class="brand-mark">T</span><span><strong>TEAMDESK</strong><small>PEOPLE OPERATIONS</small></span></a>
     <div class="topbar-meta"><span class="api-status"><i></i><span id="apiStatus">Connecting to API</span></span><button class="icon-button" id="themeButton" type="button" aria-label="Toggle color theme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6 7 7m10 10 1.4 1.4m0-12.8L17 7M7 17l-1.4 1.4"/><circle cx="12" cy="12" r="4"/></svg></button><div class="profile-chip"><span>MA</span><div><strong>Mahmoud</strong><small>Administrator</small></div></div></div>
   </header>
-  <aside class="sidebar" aria-label="Workspace navigation"><nav><a class="active" href="#workspace" aria-label="Overview"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg><span>Overview</span></a><a href="#directory" aria-label="Employees"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-4 2-7 6-7s6 3 6 7M16 5c3 0 5 2 5 5m-4 3c2.5.5 4 2.8 4 6"/></svg><span>Employees</span></a><button type="button" data-coming-soon="Departments"><svg viewBox="0 0 24 24"><path d="M4 21V7l8-4 8 4v14M9 21v-4h6v4M8 9h1m6 0h1M8 13h1m6 0h1"/></svg><span>Departments</span></button><button type="button" data-coming-soon="Reports"><svg viewBox="0 0 24 24"><path d="M5 20V10m7 10V4m7 16v-7"/></svg><span>Reports</span></button></nav><div class="sidebar-pulse"><i></i><span>System online</span></div></aside>
+  <aside class="sidebar" aria-label="Workspace navigation"><nav><a class="active" href="#workspace" aria-label="Overview"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg><span>Overview</span></a><a href="#directory" aria-label="Employees"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-4 2-7 6-7s6 3 6 7M16 5c3 0 5 2 5 5m-4 3c2.5.5 4 2.8 4 6"/></svg><span>Employees</span></a><a href="#reports" aria-label="Departments"><svg viewBox="0 0 24 24"><path d="M4 21V7l8-4 8 4v14M9 21v-4h6v4M8 9h1m6 0h1M8 13h1m6 0h1"/></svg><span>Departments</span></a><a href="#reports" aria-label="Reports"><svg viewBox="0 0 24 24"><path d="M5 20V10m7 10V4m7 16v-7"/></svg><span>Reports</span></a></nav><div class="sidebar-pulse"><i></i><span>System online</span></div></aside>
 
   <main id="workspace" class="shell">
     <section class="intro">
-      <div><p class="kicker">PEOPLE OPERATIONS / OVERVIEW</p><h1>Workforce, in sync.</h1><p>Manage employee records, access roles and people data through one focused workspace.</p></div>
+      <div><p class="kicker">PEOPLE OPERATIONS / OVERVIEW</p><h1>People operations, made clear.</h1><p>Manage employee records, monitor access roles, and turn people data into clear operational insights.</p></div>
       <div class="intro-actions"><button class="ghost-button" id="exportBtn" type="button" disabled>Export CSV</button><button class="primary-button" id="addBtn" type="button" disabled><span aria-hidden="true">＋</span> Add employee</button></div>
     </section>
 
@@ -57,6 +58,7 @@
       <div id="gridView" class="user-grid" hidden></div>
       <footer id="pagination" class="pagination" hidden><p id="pageSummary"></p><div><button id="previousPage" type="button" aria-label="Previous page">←</button><span id="pageButtons"></span><button id="nextPage" type="button" aria-label="Next page">→</button></div></footer>
     </section>
+    <section class="reports-panel" id="reports"><div class="reports-heading"><div><p class="kicker">REPORTS / LIVE DATA</p><h2>Workforce insights</h2><p>Role distribution and operational signals generated from the current employee dataset.</p></div><span class="report-badge"><i></i> Live summary</span></div><div class="report-grid"><article class="role-chart"><div class="report-title"><h3>Role distribution</h3><span id="roleTotal">0 employees</span></div><div class="bar-item"><div><span>Employees</span><b id="userReportValue">0%</b></div><i><span id="userReportBar"></span></i></div><div class="bar-item"><div><span>Moderators</span><b id="moderatorReportValue">0%</b></div><i><span id="moderatorReportBar"></span></i></div><div class="bar-item"><div><span>Administrators</span><b id="adminReportValue">0%</b></div><i><span id="adminReportBar"></span></i></div></article><article class="operations-card"><div class="report-title"><h3>Workspace health</h3><span>Operational</span></div><div class="health-score"><strong id="healthScore">100</strong><span>/100</span></div><p>Data loaded, controls enabled, and local changes tracked in this browser.</p><div class="health-row"><span>API connectivity</span><b>Online</b></div><div class="health-row"><span>Records displayed</span><b id="visibleReport">0</b></div><div class="health-row"><span>Local changes</span><b id="changesReport">0</b></div></article></div></section>
     <p class="demo-note"><strong>Demo behavior:</strong> DummyJSON simulates write requests. Added, edited and deleted records are persisted in this browser so the prototype behaves consistently after refresh.</p>
   </main>
 
