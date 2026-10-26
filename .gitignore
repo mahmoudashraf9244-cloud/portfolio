@@ -1,0 +1,8 @@
+dist/assets/*.png
+node_modules/
+.sites-local/
+*.zip
+.chrome-qa*/
+*-preview.png
+*-full.png
+*-full-revealed.png
