@@ -5,6 +5,7 @@ const translations = {
 };
 Object.assign(translations.ar,{
   concepts:'المفاهيم',
+  workNote:'مشروعان مباشران / ديمو ودراسة حالة',
   nexusArt:'إدارة الأفراد بوضوح.',
   nexusCategory:'لوحة إدارة الموظفين',
   nexusTitle:'TeamDesk — لوحة<br>إدارة الموظفين',
@@ -35,7 +36,7 @@ function setLanguage(language) {
   navigation.setAttribute('aria-label',currentLanguage === 'ar' ? 'التنقل الرئيسي' : 'Main navigation');
   document.querySelector('.portrait img').alt = currentLanguage === 'ar' ? 'محمود أشرف يرتدي بدلة كحلية ونظارة' : 'Mahmoud Ashraf wearing a navy suit and glasses';
   document.querySelector('#copyEmail').setAttribute('aria-label',currentLanguage === 'ar' ? 'نسخ البريد الإلكتروني' : 'Copy email address');
-  document.querySelector('.contact-arrow').setAttribute('aria-label',currentLanguage === 'ar' ? 'مراسلة محمود أشرف' : 'Email Mahmoud Ashraf');
+  document.querySelector('.contact-arrow').setAttribute('aria-label',currentLanguage === 'ar' ? 'تواصل مع محمود على واتساب' : 'Chat with Mahmoud on WhatsApp');
   document.querySelector('.project-visual').setAttribute('aria-label',currentLanguage === 'ar' ? 'افتح الديمو المباشر للبوابة الجامعية' : 'Open the university portal live demo');
   document.title = currentLanguage === 'ar' ? 'محمود أشرف — مطوّر برمجيات' : 'Mahmoud Ashraf — Software Developer';
   document.querySelector('meta[name="description"]').content = currentLanguage === 'ar' ? 'محمود أشرف، مطوّر برمجيات. تطبيقات ويب متجاوبة بالعربية والإنجليزية باستخدام Python وDjango. استكشف أعمالي وتواصل معي.' : 'Mahmoud Ashraf — Software Developer building responsive, bilingual web applications with Python and Django. Explore my work and get in touch.';

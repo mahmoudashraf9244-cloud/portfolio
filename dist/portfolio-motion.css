@@ -14,9 +14,22 @@ html,body{overflow-x:clip}.ambient{overflow:hidden}
 .project-visual,.service,.process-steps>div{transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .35s}
 .project-visual:hover{box-shadow:0 34px 90px rgba(0,0,0,.24)}
 .service:hover,.process-steps>div:hover{transform:translateY(-5px)}
+.section,.services-section,.about-section{position:relative}
+.section:after,.services-section:after{content:'';position:absolute;pointer-events:none;width:72px;height:72px;border:1px solid rgba(140,255,193,.1);border-radius:20px;z-index:-1;animation:section-drift 10s ease-in-out infinite alternate}
+#work:after{right:3%;top:34%}.services-section:after{left:4%;top:42%;border-color:rgba(112,165,255,.13);animation-delay:-4s}.about-section:after{right:7%;top:18%;animation-delay:-7s}
+.project{border-color:rgba(255,255,255,.15);box-shadow:0 32px 100px rgba(0,0,0,.3),inset 0 1px rgba(255,255,255,.025)}
+.project-info{position:relative}.project-category{font-size:10px;color:#a8b2c0}.project-category>span:first-child{display:inline-flex;width:max-content;padding:7px 10px;border:1px solid rgba(140,255,193,.18);border-radius:999px;background:rgba(140,255,193,.055);color:var(--accent)}
+.project-info>p{font-size:14px;line-height:1.8}
+.project-proof{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:22px}
+.project-proof span{position:relative;padding:9px 10px 9px 25px;border:1px solid rgba(255,255,255,.075);border-radius:9px;background:rgba(255,255,255,.025);font:500 10px var(--mono);color:#c4cdd8}
+.project-proof span:before{content:'';position:absolute;left:10px;top:50%;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px rgba(140,255,193,.55);transform:translateY(-50%)}
+.service p,.about-content>p,.contact-text{font-size:14px}.case-grid p{font-size:13px}.section-note{font-size:11px;color:#99a5b5}
+.whatsapp-cta{width:auto;min-width:132px;height:64px;padding:0 20px;gap:10px;border-radius:999px;font:600 12px var(--body)}.whatsapp-cta svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.whatsapp-cta:hover{transform:translateY(-3px);background:var(--accent)}
 .button span[aria-hidden],.text-link>span[aria-hidden],.language span[aria-hidden]{display:none}
 @keyframes portfolio-line{to{translate:230px 55px}}
 @keyframes portfolio-float{50%{transform:translate(18px,-28px) rotate(5deg)}}
+@keyframes section-drift{to{transform:translate(45px,-25px) rotate(16deg)}}
 @media(max-width:760px){.float-token{width:39px;height:39px;opacity:.55}.token-c,.token-d{display:none}.motion-line{width:70vw}}
+@media(max-width:760px){.project-proof{grid-template-columns:1fr}.project-proof span{font-size:10px}.whatsapp-cta{min-width:58px;width:58px;height:58px;padding:0}.whatsapp-cta span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.socials{flex-wrap:wrap;row-gap:12px}.section:after,.services-section:after{opacity:.55}}
 @media(max-width:430px){.brand-copy{display:flex!important}.brand-copy small{display:none}.brand-copy strong{font-size:8px!important;letter-spacing:1px}.brand-mark{width:38px;height:38px;border-radius:11px}}
 @media(prefers-reduced-motion:reduce){.motion-line,.float-token{animation:none}.service:hover,.process-steps>div:hover{transform:none}}
