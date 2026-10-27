@@ -1,5 +1,9 @@
 html,body{overflow-x:clip}.ambient{overflow:hidden}
 .noise{display:none!important}.button span[aria-hidden="true"]{display:none!important}
+.portrait-composition{width:min(100%,350px)!important;padding:24px 22px 26px;border:1px solid rgba(255,255,255,.09);border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(112,165,255,.025));box-shadow:0 28px 80px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.04);perspective:1000px}.portrait-composition:before{content:'';position:absolute;inset:10px;border:1px solid rgba(140,255,193,.08);border-radius:22px;pointer-events:none}.portrait{width:min(100%,290px);margin-inline:auto;transform:translateY(0) scale(1)!important;transition:transform .38s cubic-bezier(.2,.75,.25,1),box-shadow .38s,filter .38s!important}.portrait-composition:hover .portrait{transform:translateY(-5px) scale(1.025)!important;box-shadow:0 42px 95px rgba(0,0,0,.46);filter:saturate(1.03)}.portrait-composition:hover .portrait-label{transform:none!important}.portrait-stamp,.stamp-arrow{display:none!important}.code-terminal{width:min(100%,620px)!important}.terminal-line{min-height:58px!important;font-size:13px!important;padding:14px 17px!important}.terminal-bar{height:36px!important}.terminal-bar small{font-size:10px!important}
+.focus-section{display:grid;grid-template-columns:.72fr 1.28fr;gap:75px;align-items:start;border-top:1px solid rgba(255,255,255,.065)}.focus-heading h2{font-family:var(--display);font-size:clamp(42px,4.3vw,61px);font-weight:700;letter-spacing:-2.7px;margin-top:28px}.focus-heading>p:last-child{max-width:430px;color:var(--muted);font-size:15px;line-height:1.8;margin-top:22px}.focus-track{display:grid;border-top:1px solid var(--line)}.focus-track article{position:relative;display:grid;grid-template-columns:48px 1fr auto;gap:20px;align-items:center;padding:25px 12px;border-bottom:1px solid var(--line);transition:transform .3s cubic-bezier(.2,.75,.25,1),background .3s,border-color .3s;overflow:hidden}.focus-track article:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(140,255,193,.055),transparent 65%);opacity:0;transition:opacity .3s}.focus-track article:hover{transform:translateX(9px);border-color:rgba(140,255,193,.22)}.focus-track article:hover:before{opacity:1}.focus-track article>span{position:relative;color:var(--accent);font:600 10px var(--mono)}.focus-track h3{position:relative;font:700 22px var(--display);margin:0 0 5px}.focus-track p{position:relative;color:var(--muted);font-size:13px;line-height:1.65;margin:0}.focus-track b{position:relative;padding:7px 10px;border:1px solid rgba(112,165,255,.16);border-radius:999px;color:#9fc0f4;font:600 9px var(--mono);white-space:nowrap}.focus-track article:nth-child(2){margin-inline-start:28px}.focus-track article:nth-child(3){margin-inline-start:56px}
+@media(max-width:900px){.focus-section{grid-template-columns:1fr;gap:35px}.focus-track article:nth-child(n){margin-inline-start:0}}
+@media(max-width:760px){.portrait-composition{width:min(100%,300px)!important;padding:18px}.portrait{width:min(100%,250px)}.code-terminal{width:100%!important}.terminal-line{font-size:11px!important;min-height:55px!important}.focus-track article{grid-template-columns:34px 1fr}.focus-track b{grid-column:2;width:max-content}.focus-heading h2{font-size:38px;letter-spacing:-1.5px}}
 .header{top:12px!important;width:min(1320px,calc(100% - 32px))!important;padding-inline:22px!important;background:rgba(8,11,18,.6)!important;border:1px solid rgba(255,255,255,.095)!important;border-radius:18px;backdrop-filter:blur(20px) saturate(145%)!important;-webkit-backdrop-filter:blur(20px) saturate(145%)!important;box-shadow:0 18px 55px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.045);transition:background .25s,border-color .25s,box-shadow .25s,transform .25s!important}.header.scrolled{background:rgba(8,11,18,.84)!important;border-color:rgba(140,255,193,.2)!important;box-shadow:0 22px 65px rgba(0,0,0,.38),0 0 35px rgba(140,255,193,.035),inset 0 1px rgba(255,255,255,.055)}
 #particleCanvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:-2;opacity:.52}
 .brand{gap:11px;letter-spacing:0}
@@ -43,6 +47,23 @@ html,body{overflow-x:clip}.ambient{overflow:hidden}
 @media(max-width:760px){.header{top:8px!important;width:calc(100% - 20px)!important;padding-inline:14px!important;border-radius:15px}}
 @media(max-width:430px){.brand-copy{display:flex!important}.brand-copy small{display:none}.brand-copy strong{font-size:8px!important;letter-spacing:1px}.brand-mark{width:38px;height:38px;border-radius:11px}}
 @media(prefers-reduced-motion:reduce){.motion-line,.float-token{animation:none}.service:hover,.process-steps>div:hover{transform:none}}
+
+/* Final depth and readability pass */
+body{word-spacing:.035em}
+p,.hero-description,.project-info>p,.service p,.about-content>p,.contact-text,.focus-track p{line-height:1.82;letter-spacing:.008em}
+.hero h1,h2,.project h3,.service h3,.focus-track h3{word-spacing:.06em}
+.hero h1{line-height:1.05}
+.section-heading h2,.services-section h2,.about-section h2,.education-heading h2,.focus-heading h2,.contact-heading h2{line-height:1.09;letter-spacing:-2.15px}
+.eyebrow,.section-note,.project-category,.tags li{letter-spacing:.075em}
+.portrait-composition{isolation:isolate;transition:transform .42s cubic-bezier(.2,.75,.25,1),border-color .35s,box-shadow .35s}
+.portrait-composition:hover{transform:translateY(-4px);border-color:rgba(140,255,193,.2);box-shadow:0 34px 100px rgba(0,0,0,.3),0 0 48px rgba(112,165,255,.045),inset 0 1px rgba(255,255,255,.055)}
+.portrait img{transform:none!important;transition:transform .42s cubic-bezier(.2,.75,.25,1),filter .35s!important}
+.portrait-composition:hover .portrait img{transform:scale(1.012)!important;filter:saturate(1.03) contrast(1.02)}
+.focus-track article{transform-style:preserve-3d}
+.focus-track article:hover>div{transform:translateZ(14px)}
+.focus-track article>div{transition:transform .3s cubic-bezier(.2,.75,.25,1)}
+@media(max-width:760px){body{word-spacing:.02em}.hero h1{line-height:1.08}.section-heading h2,.services-section h2,.about-section h2,.education-heading h2,.focus-heading h2,.contact-heading h2{letter-spacing:-1.35px;line-height:1.13}.focus-track p{font-size:14px}.focus-track article{gap:14px;padding-block:23px}}
+[dir=rtl] body{word-spacing:.07em}[dir=rtl] p{line-height:2}[dir=rtl] .hero h1,[dir=rtl] h2,[dir=rtl] h3{word-spacing:.09em}
 
 /* Readability and glass navigation refinement */
 .navigation{gap:4px;padding:5px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.035);box-shadow:inset 0 1px rgba(255,255,255,.045),0 10px 30px rgba(0,0,0,.16);backdrop-filter:blur(14px)}
