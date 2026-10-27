@@ -1,100 +1,819 @@
 const translations = {
   ar: {
-    skip:'انتقل للمحتوى',work:'أعمالي',services:'خدماتي',about:'عنّي',contact:'تواصل معي',availability:'متاح لمشاريع فريلانس وفرص عمل للمبتدئين',hello:'أهلًا، أنا محمود أشرف.',headline:'من فكرة.<br>إلى <em>تطبيق حقيقي.</em>',intro:'مطوّر برمجيات أبني تطبيقات ويب متكاملة باستخدام Python وDjango، وأجمع بين وضوح الواجهة والوظائف العملية.',viewWork:'اكتشف أعمالي',talk:'خلّينا نتكلم',heroFoot:'فضول يدفعني للتعلّم. ومشاريع تثبت التطبيق.',portraitLabel:'THE PERSON BEHIND THE CODE',role:'مطوّر برمجيات',workingWith:'WORKING WITH',selectedWork:'أعمال مختارة',workNote:'مشروع واحد. تجربة متكاملة.',workTitle:'أفكار تتحوّل<br>إلى <em>شغل ملموس.</em>',workIntro:'نظرة على تحويل احتياج واقعي إلى تطبيق ويب متكامل.',projectCategory:'تطبيق ويب متكامل',projectTitle:'بوابة المقررات<br>والأنشطة الجامعية',projectDescription:'مكان واحد بالعربية والإنجليزية لاكتشاف المقررات الجامعية، وإنشاء حساب طالب، وإدارة التسجيل في الأنشطة. مشروع تعليمي مستوحى من جامعة بني سويف.',liveDemo:'جرّب المشروع',sourceCode:'شوف الكود',portalArt:'A campus of possibilities.',caseStudy:'وراء التنفيذ — تفاصيل المشروع',challengeTitle:'المشكلة',challenge:'جمع استكشاف المقررات والتسجيل في الأنشطة في مكان سهل الاستخدام، بتجربة مناسبة للمتحدثين بالعربية والإنجليزية.',implementationTitle:'التنفيذ',implementation:'استخدام Django لإدارة الحسابات والملفات الشخصية وقواعد التسجيل. البحث والتصنيفات يسهّلان الوصول، والتحقق من السعة ومنع التكرار يحافظان على اتساق التسجيلات.',resultTitle:'ما الذي يمكنك تجربته؟',result:'واجهة متجاوبة، ودعم العربية واتجاه الكتابة، ووضع فاتح وداكن، وملفات طلاب، ولوحة إدارة. PostgreSQL في النسخة المنشورة وSQLite للتطوير المحلي.',disclaimer:'مشروع تعليمي للعرض في البورتفوليو، وليس خدمة رسمية تابعة للجامعة. يستخدم الديمو محتوى تجريبيًا.',moreWork:'دي بداية مجموعة أعمالي. هتتوسع مع كل مشروع جديد.',visitGithub:'تصفّح GitHub',servicesLabel:'إزاي أقدر أساعدك',servicesTitle:'واجهة واضحة.<br><em>وهدف عملي.</em>',servicesIntro:'تطوير ويب لمتطلبات واضحة ونطاق شغل محدد يمكن تنفيذه ومراجعته.',serviceOneTitle:'مواقع متجاوبة',serviceOneText:'صفحات واضحة لنشاطك أو هويتك الشخصية، تتكيف مع أحجام الشاشات المختلفة وتريح المستخدم.',serviceTwoTitle:'تطبيقات ويب باستخدام Django',serviceTwoText:'تطبيقات مرتبطة بقاعدة بيانات، مع حسابات مستخدمين ونماذج ولوحة إدارة، وفقًا للوظائف التي يحتاجها مشروعك.',serviceThreeTitle:'تجارب عربية وإنجليزية',serviceThreeText:'واجهات ثنائية اللغة مع مراعاة اتجاه الكتابة، عشان كل لغة تكون طبيعية وسهلة الاستخدام.',processLabel:'خطوات بسيطة للشغل مع بعض',processOneTitle:'نفهم',processOne:'نتفق على الهدف والجمهور والوظائف الأساسية المطلوبة.',processTwoTitle:'نبني',processTwo:'نحوّل المتطلبات المتفق عليها لتجربة متجاوبة تعمل بالفعل.',processThreeTitle:'نراجع',processThree:'نراجع المسارات الأساسية مع بعض ونحسّن التفاصيل.',aboutLabel:'نبذة عنّي',aboutTitle:'فضول للتعلّم.<br><em>وتطبيق على أرض الواقع.</em>',aboutLead:'أنا محمود، مطوّر برمجيات في بداية رحلتي، بتعلّم من خلال بناء تطبيقات تعمل بالفعل.',aboutText:'تركيزي على تطوير الويب المتكامل باستخدام Python وDjango. بستمتع بربط الواجهة اللي المستخدم بيشوفها بالمنطق وقواعد البيانات اللي وراها.',aboutGoal:'بدور على مشاريع فريلانس محددة وفرص عمل للمبتدئين، أقدر أساهم فيها وأتعلّم من الملاحظات وأطوّر نفسي في هندسة البرمجيات.',toolbox:'الأدوات اللي بستخدمها حاليًا',frontend:'الواجهة',backend:'التطبيق',dataTools:'البيانات والأدوات',linkedin:'نتواصل على LinkedIn',contactLabel:'عندك فكرة في بالك؟',contactTitle:'كل شغل كويس<br>بيبدأ <em>بمحادثة.</em>',contactText:'مشروع، أو فرصة عمل للمبتدئين، أو حتى رسالة تعارف — يسعدني أسمع منك.',footerNote:'بُني باهتمام. ويتطوّر باستمرار.',backTop:'العودة للأعلى ↑'
-  }
+    skip: "انتقل للمحتوى",
+    work: "أعمالي",
+    services: "خدماتي",
+    about: "عنّي",
+    contact: "تواصل معي",
+    availability: "متاح لمشاريع فريلانس وفرص عمل للمبتدئين",
+    hello: "أهلًا، أنا محمود أشرف.",
+    headline: "من فكرة.<br>إلى <em>تطبيق حقيقي.</em>",
+    intro:
+      "مطوّر برمجيات أبني تطبيقات ويب متكاملة باستخدام Python وDjango، وأجمع بين وضوح الواجهة والوظائف العملية.",
+    viewWork: "اكتشف أعمالي",
+    talk: "خلّينا نتكلم",
+    heroFoot: "فضول يدفعني للتعلّم. ومشاريع تثبت التطبيق.",
+    portraitLabel: "THE PERSON BEHIND THE CODE",
+    role: "مطوّر برمجيات",
+    workingWith: "WORKING WITH",
+    selectedWork: "أعمال مختارة",
+    workNote: "مشروع واحد. تجربة متكاملة.",
+    workTitle: "أفكار تتحوّل<br>إلى <em>شغل ملموس.</em>",
+    workIntro: "نظرة على تحويل احتياج واقعي إلى تطبيق ويب متكامل.",
+    projectCategory: "تطبيق ويب متكامل",
+    projectTitle: "بوابة المقررات<br>والأنشطة الجامعية",
+    projectDescription:
+      "مكان واحد بالعربية والإنجليزية لاكتشاف المقررات الجامعية، وإنشاء حساب طالب، وإدارة التسجيل في الأنشطة. مشروع تعليمي مستوحى من جامعة بني سويف.",
+    liveDemo: "جرّب المشروع",
+    sourceCode: "شوف الكود",
+    portalArt: "A campus of possibilities.",
+    caseStudy: "وراء التنفيذ — تفاصيل المشروع",
+    challengeTitle: "المشكلة",
+    challenge:
+      "جمع استكشاف المقررات والتسجيل في الأنشطة في مكان سهل الاستخدام، بتجربة مناسبة للمتحدثين بالعربية والإنجليزية.",
+    implementationTitle: "التنفيذ",
+    implementation:
+      "استخدام Django لإدارة الحسابات والملفات الشخصية وقواعد التسجيل. البحث والتصنيفات يسهّلان الوصول، والتحقق من السعة ومنع التكرار يحافظان على اتساق التسجيلات.",
+    resultTitle: "ما الذي يمكنك تجربته؟",
+    result:
+      "واجهة متجاوبة، ودعم العربية واتجاه الكتابة، ووضع فاتح وداكن، وملفات طلاب، ولوحة إدارة. PostgreSQL في النسخة المنشورة وSQLite للتطوير المحلي.",
+    disclaimer:
+      "مشروع تعليمي للعرض في البورتفوليو، وليس خدمة رسمية تابعة للجامعة. يستخدم الديمو محتوى تجريبيًا.",
+    moreWork: "دي بداية مجموعة أعمالي. هتتوسع مع كل مشروع جديد.",
+    visitGithub: "تصفّح GitHub",
+    servicesLabel: "إزاي أقدر أساعدك",
+    servicesTitle: "واجهة واضحة.<br><em>وهدف عملي.</em>",
+    servicesIntro:
+      "تطوير ويب لمتطلبات واضحة ونطاق شغل محدد يمكن تنفيذه ومراجعته.",
+    serviceOneTitle: "مواقع متجاوبة",
+    serviceOneText:
+      "صفحات واضحة لنشاطك أو هويتك الشخصية، تتكيف مع أحجام الشاشات المختلفة وتريح المستخدم.",
+    serviceTwoTitle: "تطبيقات ويب باستخدام Django",
+    serviceTwoText:
+      "تطبيقات مرتبطة بقاعدة بيانات، مع حسابات مستخدمين ونماذج ولوحة إدارة، وفقًا للوظائف التي يحتاجها مشروعك.",
+    serviceThreeTitle: "تجارب عربية وإنجليزية",
+    serviceThreeText:
+      "واجهات ثنائية اللغة مع مراعاة اتجاه الكتابة، عشان كل لغة تكون طبيعية وسهلة الاستخدام.",
+    processLabel: "خطوات بسيطة للشغل مع بعض",
+    processOneTitle: "نفهم",
+    processOne: "نتفق على الهدف والجمهور والوظائف الأساسية المطلوبة.",
+    processTwoTitle: "نبني",
+    processTwo: "نحوّل المتطلبات المتفق عليها لتجربة متجاوبة تعمل بالفعل.",
+    processThreeTitle: "نراجع",
+    processThree: "نراجع المسارات الأساسية مع بعض ونحسّن التفاصيل.",
+    aboutLabel: "نبذة عنّي",
+    aboutTitle: "فضول للتعلّم.<br><em>وتطبيق على أرض الواقع.</em>",
+    aboutLead:
+      "أنا محمود، مطوّر برمجيات في بداية رحلتي، بتعلّم من خلال بناء تطبيقات تعمل بالفعل.",
+    aboutText:
+      "تركيزي على تطوير الويب المتكامل باستخدام Python وDjango. بستمتع بربط الواجهة اللي المستخدم بيشوفها بالمنطق وقواعد البيانات اللي وراها.",
+    aboutGoal:
+      "بدور على مشاريع فريلانس محددة وفرص عمل للمبتدئين، أقدر أساهم فيها وأتعلّم من الملاحظات وأطوّر نفسي في هندسة البرمجيات.",
+    toolbox: "الأدوات اللي بستخدمها حاليًا",
+    frontend: "الواجهة",
+    backend: "التطبيق",
+    dataTools: "البيانات والأدوات",
+    linkedin: "نتواصل على LinkedIn",
+    contactLabel: "عندك فكرة في بالك؟",
+    contactTitle: "كل شغل كويس<br>بيبدأ <em>بمحادثة.</em>",
+    contactText:
+      "مشروع، أو فرصة عمل للمبتدئين، أو حتى رسالة تعارف — يسعدني أسمع منك.",
+    footerNote: "بُني باهتمام. ويتطوّر باستمرار.",
+    backTop: "العودة للأعلى ↑",
+  },
 };
-Object.assign(translations.ar,{
-  education:'التعليم',educationLabel:'التعليم',educationTitle:'علوم الحاسب.<br><em>على أساس قوي.</em>',educationIntro:'دراسة أكاديمية تدعم طريقة تفكيري في البرمجيات والبيانات وبناء أنظمة قابلة للتطوير.',expected:'التخرج المتوقع',degreeType:'درجة البكالوريوس',degreeTitle:'علوم الحاسب',university:'جامعة بني سويف — كلية العلوم',studyFocus:'محاور الدراسة الحالية',
-  serviceThreeTitle:'حل المشكلات وكتابة كود منظم',
-  serviceThreeText:'حلول مرتبة تعتمد على مبادئ OOP ومنطق قابل لإعادة الاستخدام، مع كود يظل واضحًا وقابلًا للتطوير مع نمو المشروع.',
-  concepts:'المفاهيم',
-  learningNow:'أتعلم حاليًا',
-  briefLabel:'ملخص سريع للمشروع',briefTitle:'احكي لي عن الفكرة التي تريد تنفيذها.',replyTime:'عادةً أرد خلال يوم',yourName:'اسمك',projectType:'نوع المشروع',projectMessage:'ما الفكرة التي تفكر فيها؟',sendWhatsapp:'متابعة على واتساب',
-  workNote:'مشروعان مباشران / ديمو ودراسة حالة',
-  nexusArt:'إدارة الأفراد بوضوح.',
-  nexusCategory:'لوحة إدارة الموظفين',
-  nexusTitle:'TeamDesk — لوحة<br>إدارة الموظفين',
-  nexusDescription:'مساحة عمل متجاوبة لإدارة سجلات الموظفين، تجمع بين REST API وعمليات الإضافة والتعديل والحذف والبحث والتصفية والترتيب والتصدير مع حفظ التغييرات محليًا.',
-  nexusCaseStudy:'خلف TeamDesk — نظرة على المشروع',
-  nexusChallengeTitle:'التحدي',
-  nexusChallenge:'تحويل جدول API بسيط إلى مساحة عمل عملية وسهلة الاستخدام على الكمبيوتر والموبايل.',
-  nexusImplementationTitle:'التنفيذ',
-  nexusImplementation:'تدير JavaScript جلب البيانات وعمليات CRUD والبحث والتصفية والترتيب وتقسيم الصفحات والتحقق والحفظ داخل المتصفح.',
-  nexusResultTitle:'ما الذي يمكنك تجربته؟',
-  nexusResult:'عرض جدولي وبطاقات، إحصاءات مباشرة، ملفات تفصيلية، حالات تحميل وأخطاء، بحث بلوحة المفاتيح، تبديل الثيم وتصدير CSV.',
-  nexusDisclaimer:'يحاكي DummyJSON عمليات الكتابة على الخادم، وتُحفظ التغييرات محليًا في هذا المتصفح ليستمر الديمو بعد إعادة التحميل.'
+Object.assign(translations.ar, {
+  education: "التعليم",
+  educationLabel: "التعليم",
+  educationTitle: "علوم الحاسب.<br><em>على أساس قوي.</em>",
+  educationIntro:
+    "دراسة أكاديمية تدعم طريقة تفكيري في البرمجيات والبيانات وبناء أنظمة قابلة للتطوير.",
+  expected: "التخرج المتوقع",
+  degreeType: "درجة البكالوريوس",
+  degreeTitle: "علوم الحاسب",
+  university: "جامعة بني سويف — كلية العلوم",
+  studyFocus: "محاور الدراسة الحالية",
+  serviceThreeTitle: "حل المشكلات وكتابة كود منظم",
+  serviceThreeText:
+    "حلول مرتبة تعتمد على مبادئ OOP ومنطق قابل لإعادة الاستخدام، مع كود يظل واضحًا وقابلًا للتطوير مع نمو المشروع.",
+  concepts: "المفاهيم",
+  learningNow: "أتعلم حاليًا",
+  briefLabel: "ملخص سريع للمشروع",
+  briefTitle: "احكي لي عن الفكرة التي تريد تنفيذها.",
+  replyTime: "عادةً أرد خلال يوم",
+  yourName: "اسمك",
+  projectType: "نوع المشروع",
+  projectMessage: "ما الفكرة التي تفكر فيها؟",
+  sendWhatsapp: "متابعة على واتساب",
+  workNote: "مشروعان مباشران / ديمو ودراسة حالة",
+  nexusArt: "إدارة الأفراد بوضوح.",
+  nexusCategory: "لوحة إدارة الموظفين",
+  nexusTitle: "TeamDesk — لوحة<br>إدارة الموظفين",
+  nexusDescription:
+    "مساحة عمل متجاوبة لإدارة سجلات الموظفين، تجمع بين REST API وعمليات الإضافة والتعديل والحذف والبحث والتصفية والترتيب والتصدير مع حفظ التغييرات محليًا.",
+  nexusCaseStudy: "خلف TeamDesk — نظرة على المشروع",
+  nexusChallengeTitle: "التحدي",
+  nexusChallenge:
+    "تحويل جدول API بسيط إلى مساحة عمل عملية وسهلة الاستخدام على الكمبيوتر والموبايل.",
+  nexusImplementationTitle: "التنفيذ",
+  nexusImplementation:
+    "تدير JavaScript جلب البيانات وعمليات CRUD والبحث والتصفية والترتيب وتقسيم الصفحات والتحقق والحفظ داخل المتصفح.",
+  nexusResultTitle: "ما الذي يمكنك تجربته؟",
+  nexusResult:
+    "عرض جدولي وبطاقات، إحصاءات مباشرة، ملفات تفصيلية، حالات تحميل وأخطاء، بحث بلوحة المفاتيح، تبديل الثيم وتصدير CSV.",
+  nexusDisclaimer:
+    "يحاكي DummyJSON عمليات الكتابة على الخادم، وتُحفظ التغييرات محليًا في هذا المتصفح ليستمر الديمو بعد إعادة التحميل.",
 });
-const serviceList=document.querySelector('.service-list');if(serviceList){serviceList.insertAdjacentHTML('beforeend','<article class="service"><span class="service-index">04</span><div><h3 data-i18n="serviceFourTitle">API integration &amp; data flows</h3><p data-i18n="serviceFourText">Connect interfaces to REST APIs, handle loading and error states, and turn live data into useful user experiences.</p></div></article><article class="service"><span class="service-index">05</span><div><h3 data-i18n="serviceFiveTitle">Dashboards &amp; admin interfaces</h3><p data-i18n="serviceFiveText">Organized dashboards with search, filters, forms, validation, and clear responsive data presentation.</p></div></article>');}
-const portalProof=document.querySelector('.project:not(.nexus-project) .project-proof');if(portalProof){const labels=['Secure authentication','Safe enrollment rules','Private student dashboard','Search, filters & pagination','Bilingual RTL interface'];portalProof.querySelectorAll('span').forEach((item,index)=>item.textContent=labels[index]);}
-const teamProof=document.querySelector('.nexus-project .project-proof');if(teamProof){const labels=['Fetch API integration','CRUD HTTP methods','Search, filter & sort','Pagination & views','localStorage persistence'];teamProof.querySelectorAll('span').forEach((item,index)=>item.textContent=labels[index]);}
-const portalTags=document.querySelector('.project:not(.nexus-project) .tags');if(portalTags)portalTags.innerHTML='<li>Python</li><li>Django</li><li>PostgreSQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Vercel</li>';
-const teamTags=document.querySelector('.nexus-project .tags');if(teamTags)teamTags.innerHTML='<li>JavaScript</li><li>Fetch API</li><li>HTML</li><li>CSS</li><li>LocalStorage</li>';
-const portalSummary=document.querySelector('[data-i18n="caseStudy"]');const teamSummary=document.querySelector('[data-i18n="nexusCaseStudy"]');if(portalSummary)portalSummary.textContent='View project details — challenge, build & result';if(teamSummary)teamSummary.textContent='View TeamDesk details — logic, features & result';
-const nodes = [...document.querySelectorAll('[data-i18n]')];
-translations.en = Object.fromEntries(nodes.map(node => [node.dataset.i18n, node.innerHTML]));
-Object.assign(translations.en,{availability:'Available for freelance projects, part-time & full-time roles',aboutLead:'I\u2019m Mahmoud, a software developer who learns by building practical products that work.',aboutGoal:'I\u2019m open to focused freelance projects and software development roles where I can contribute, learn from feedback, and grow as an engineer.',contactText:'A project, a software development role, or a simple hello \u2014 I\u2019d love to hear from you.',workNote:'2 LIVE PROJECTS / DEMOS + CASE STUDIES',projectDescription:'A bilingual Django portal where students discover university activities, create accounts, enroll safely, and manage a private profile.',challenge:'Bring activity discovery, account access, enrollment, and student records into one clear experience for Arabic- and English-speaking users.',implementation:'Django powers registration, authentication, protected profiles, catalogue search, category filters, and pagination. Enrollment is handled through a dedicated service with capacity checks, duplicate protection, CSRF-protected POST requests, and database constraints.',result:'A tested, responsive portal with bilingual RTL support, activity lifecycle states, safe enrollment flows, private student history, Django Admin management, PostgreSQL in production, and SQLite for local development.',nexusDescription:'A responsive employee dashboard that uses the Fetch API with DummyJSON and supports create, update, and delete flows alongside search, filters, sorting, pagination, validation, reports, CSV export, and local persistence.'});
-Object.assign(translations.ar,{availability:'\u0645\u062a\u0627\u062d \u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u062d\u0631 \u0648\u0641\u0631\u0635 \u0627\u0644\u0639\u0645\u0644 \u0628\u062f\u0648\u0627\u0645 \u062c\u0632\u0626\u064a \u0623\u0648 \u0643\u0627\u0645\u0644',aboutLead:'\u0623\u0646\u0627 \u0645\u062d\u0645\u0648\u062f\u060c \u0645\u0637\u0648\u0651\u0631 \u0628\u0631\u0645\u062c\u064a\u0627\u062a \u0623\u062a\u0639\u0644\u0651\u0645 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0628\u0646\u0627\u0621 \u0645\u0646\u062a\u062c\u0627\u062a \u0639\u0645\u0644\u064a\u0629 \u062a\u0639\u0645\u0644 \u0628\u0627\u0644\u0641\u0639\u0644.',aboutGoal:'\u0645\u062a\u0627\u062d \u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0639\u0645\u0644 \u062d\u0631 \u0645\u062d\u062f\u062f\u0629 \u0648\u0641\u0631\u0635 \u0641\u064a \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a\u060c \u0623\u0642\u062f\u0631 \u0623\u0633\u0627\u0647\u0645 \u0641\u064a\u0647\u0627\u060c \u0648\u0623\u062a\u0639\u0644\u0645 \u0645\u0646 \u0627\u0644\u0645\u0644\u0627\u062d\u0638\u0627\u062a\u060c \u0648\u0623\u062a\u0637\u0648\u0631 \u0643\u0645\u0647\u0646\u062f\u0633 \u0628\u0631\u0645\u062c\u064a\u0627\u062a.',contactText:'\u0645\u0634\u0631\u0648\u0639\u060c \u0623\u0648 \u0641\u0631\u0635\u0629 \u0641\u064a \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a\u060c \u0623\u0648 \u062d\u062a\u0649 \u0631\u0633\u0627\u0644\u0629 \u062a\u0639\u0627\u0631\u0641 \u2014 \u064a\u0633\u0639\u062f\u0646\u064a \u0623\u0633\u0645\u0639 \u0645\u0646\u0643.',workNote:'\u0645\u0634\u0631\u0648\u0639\u0627\u0646 \u064a\u0639\u0645\u0644\u0627\u0646 \u0641\u0639\u0644\u064a\u064b\u0627 \u0645\u0639 \u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u062a\u0646\u0641\u064a\u0630',projectDescription:'\u0628\u0648\u0627\u0628\u0629 Django \u062b\u0646\u0627\u0626\u064a\u0629 \u0627\u0644\u0644\u063a\u0629 \u062a\u062a\u064a\u062d \u0644\u0644\u0637\u0644\u0627\u0628 \u0627\u0643\u062a\u0634\u0627\u0641 \u0627\u0644\u0623\u0646\u0634\u0637\u0629 \u0627\u0644\u062c\u0627\u0645\u0639\u064a\u0629\u060c \u0648\u0625\u0646\u0634\u0627\u0621 \u0627\u0644\u062d\u0633\u0627\u0628\u0627\u062a\u060c \u0648\u0627\u0644\u062a\u0633\u062c\u064a\u0644 \u0628\u0623\u0645\u0627\u0646\u060c \u0648\u0625\u062f\u0627\u0631\u0629 \u0645\u0644\u0641 \u0637\u0627\u0644\u0628 \u062e\u0627\u0635.',challenge:'\u062c\u0645\u0639 \u0627\u0643\u062a\u0634\u0627\u0641 \u0627\u0644\u0623\u0646\u0634\u0637\u0629\u060c \u0648\u0627\u0644\u062f\u062e\u0648\u0644 \u0644\u0644\u062d\u0633\u0627\u0628\u060c \u0648\u0627\u0644\u062a\u0633\u062c\u064a\u0644\u060c \u0648\u0633\u062c\u0644\u0627\u062a \u0627\u0644\u0637\u0627\u0644\u0628 \u0641\u064a \u062a\u062c\u0631\u0628\u0629 \u0648\u0627\u0636\u062d\u0629 \u0644\u0644\u0645\u0633\u062a\u062e\u062f\u0645 \u0628\u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0623\u0648 \u0627\u0644\u0625\u0646\u062c\u0644\u064a\u0632\u064a\u0629.',implementation:'\u064a\u062f\u064a\u0631 Django \u0625\u0646\u0634\u0627\u0621 \u0627\u0644\u062d\u0633\u0627\u0628\u060c \u0648\u0627\u0644\u0645\u0635\u0627\u062f\u0642\u0629\u060c \u0648\u0627\u0644\u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062d\u0645\u064a\u0629\u060c \u0648\u0627\u0644\u0628\u062d\u062b \u0648\u0627\u0644\u062a\u0635\u0641\u064a\u0629 \u0648\u062a\u0642\u0633\u064a\u0645 \u0627\u0644\u0646\u062a\u0627\u0626\u062c. \u0648\u062a\u0645\u0631 \u0639\u0645\u0644\u064a\u0627\u062a \u0627\u0644\u062a\u0633\u062c\u064a\u0644 \u0639\u0628\u0631 \u062e\u062f\u0645\u0629 \u0645\u062e\u0635\u0635\u0629 \u062a\u0641\u062d\u0635 \u0627\u0644\u0633\u0639\u0629\u060c \u0648\u062a\u0645\u0646\u0639 \u0627\u0644\u062a\u0643\u0631\u0627\u0631\u060c \u0648\u062a\u062d\u0645\u064a \u0637\u0644\u0628\u0627\u062a POST \u0628\u0640CSRF \u0648\u0642\u064a\u0648\u062f \u0642\u0627\u0639\u062f\u0629 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a.',result:'\u0628\u0648\u0627\u0628\u0629 \u0645\u062e\u062a\u0628\u0631\u0629 \u0648\u0645\u062a\u062c\u0627\u0648\u0628\u0629 \u062a\u062f\u0639\u0645 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0648RTL\u060c \u0648\u062d\u0627\u0644\u0627\u062a \u062f\u0648\u0631\u0629 \u062d\u064a\u0627\u0629 \u0627\u0644\u0646\u0634\u0627\u0637\u060c \u0648\u062a\u0633\u062c\u064a\u0644\u064b\u0627 \u0622\u0645\u0646\u064b\u0627\u060c \u0648\u0633\u062c\u0644\u064b\u0627 \u062e\u0627\u0635\u064b\u0627 \u0644\u0644\u0637\u0627\u0644\u0628\u060c \u0648\u0625\u062f\u0627\u0631\u0629 \u0639\u0628\u0631 Django Admin\u060c \u0645\u0639 PostgreSQL \u0641\u064a \u0627\u0644\u0625\u0646\u062a\u0627\u062c \u0648SQLite \u0644\u0644\u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0645\u062d\u0644\u064a.',nexusDescription:'\u0644\u0648\u062d\u0629 \u0645\u062a\u062c\u0627\u0648\u0628\u0629 \u0644\u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0645\u0648\u0638\u0641\u064a\u0646 \u062a\u0633\u062a\u062e\u062f\u0645 Fetch API \u0645\u0639 DummyJSON\u060c \u0648\u062a\u062f\u0639\u0645 \u0627\u0644\u0625\u0636\u0627\u0641\u0629 \u0648\u0627\u0644\u062a\u0639\u062f\u064a\u0644 \u0648\u0627\u0644\u062d\u0630\u0641\u060c \u0625\u0644\u0649 \u062c\u0627\u0646\u0628 \u0627\u0644\u0628\u062d\u062b \u0648\u0627\u0644\u062a\u0635\u0641\u064a\u0629 \u0648\u0627\u0644\u062a\u0631\u062a\u064a\u0628 \u0648\u062a\u0642\u0633\u064a\u0645 \u0627\u0644\u0635\u0641\u062d\u0627\u062a \u0648\u0627\u0644\u062a\u062d\u0642\u0642 \u0648\u0627\u0644\u062a\u0642\u0627\u0631\u064a\u0631 \u0648\u062a\u0635\u062f\u064a\u0631 CSV \u0648\u0627\u0644\u062d\u0641\u0638 \u0627\u0644\u0645\u062d\u0644\u064a.'});
-Object.assign(translations.ar,{
-  serviceFourTitle:'\u0631\u0628\u0637 APIs \u0648\u062a\u062f\u0641\u0642 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a',
-  serviceFourText:'\u0631\u0628\u0637 \u0627\u0644\u0648\u0627\u062c\u0647\u0627\u062a \u0628\u0640 REST APIs\u060c \u0648\u0645\u0639\u0627\u0644\u062c\u0629 \u062d\u0627\u0644\u0627\u062a \u0627\u0644\u062a\u062d\u0645\u064a\u0644 \u0648\u0627\u0644\u0623\u062e\u0637\u0627\u0621\u060c \u0648\u062a\u062d\u0648\u064a\u0644 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a \u0625\u0644\u0649 \u062a\u062c\u0631\u0628\u0629 \u0645\u0641\u064a\u062f\u0629.',
-  serviceFiveTitle:'\u0644\u0648\u062d\u0627\u062a \u062a\u062d\u0643\u0645 \u0648\u0648\u0627\u062c\u0647\u0627\u062a \u0625\u062f\u0627\u0631\u064a\u0629',
-  serviceFiveText:'\u0644\u0648\u062d\u0627\u062a \u0645\u0646\u0638\u0645\u0629 \u062a\u0634\u0645\u0644 \u0627\u0644\u0628\u062d\u062b \u0648\u0627\u0644\u0641\u0644\u0627\u062a\u0631 \u0648\u0627\u0644\u0646\u0645\u0627\u0630\u062c \u0648\u0627\u0644\u062a\u062d\u0642\u0642 \u0645\u0639 \u0639\u0631\u0636 \u0648\u0627\u0636\u062d \u0644\u0644\u0628\u064a\u0627\u0646\u0627\u062a.'
-});
-Object.assign(translations.ar,{focusLabel:'\u0627\u0644\u062a\u0631\u0643\u064a\u0632 \u0627\u0644\u062d\u0627\u0644\u064a',focusTitle:'\u062a\u0639\u0644\u0645 \u0645\u0633\u062a\u0645\u0631.<br><em>\u0648\u0628\u0646\u0627\u0621 \u0623\u0639\u0645\u0642.</em>',focusIntro:'\u0645\u062c\u0627\u0644\u0627\u062a \u0623\u0639\u0645\u0644 \u0639\u0644\u0649 \u062a\u0637\u0648\u064a\u0631\u0647\u0627 \u062d\u0627\u0644\u064a\u064b\u0627 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u062f\u0631\u0627\u0633\u0629 \u0648\u0627\u0644\u0645\u0634\u0627\u0631\u064a\u0639.',focusOneTitle:'\u0648\u0627\u062c\u0647\u0627\u062a \u062d\u062f\u064a\u062b\u0629',focusOneText:'React \u0648TypeScript \u0644\u0628\u0646\u0627\u0621 \u062a\u062c\u0627\u0631\u0628 \u0645\u0643\u0648\u0646\u0629 \u0648\u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u0635\u064a\u0627\u0646\u0629.',focusTwoTitle:'\u062a\u0639\u0645\u0642 \u0641\u064a \u0627\u0644\u0628\u0627\u0643 \u0625\u0646\u062f',focusTwoText:'APIs \u0623\u0642\u0648\u0649\u060c \u0648\u0646\u0645\u0630\u062c\u0629 \u0628\u064a\u0627\u0646\u0627\u062a\u060c \u0648\u0645\u0635\u0627\u062f\u0642\u0629\u060c \u0648\u0647\u064a\u0643\u0644\u0629 \u062a\u0637\u0628\u064a\u0642\u0627\u062a.',focusThreeTitle:'\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u0639\u0644\u0648\u0645 \u0627\u0644\u062d\u0627\u0633\u0628',focusThreeText:'\u0647\u064a\u0627\u0643\u0644 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a\u060c \u0648\u0627\u0644\u062e\u0648\u0627\u0631\u0632\u0645\u064a\u0627\u062a\u060c \u0648OOP\u060c \u0648\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u062a\u0635\u0645\u064a\u0645 \u0627\u0644\u0623\u0646\u0638\u0645\u0629.'});
-const languageButton = document.querySelector('#language');
-const menuButton = document.querySelector('#menu');
-const navigation = document.querySelector('#navigation');
-let currentLanguage = 'en';
-function setLanguage(language) {
-  currentLanguage = language === 'ar' ? 'ar' : 'en';
-  document.documentElement.lang = currentLanguage;
-  document.documentElement.dir = currentLanguage === 'ar' ? 'rtl' : 'ltr';
-  for (const node of document.querySelectorAll('[data-i18n]')) node.innerHTML = translations[currentLanguage][node.dataset.i18n] ?? translations.en[node.dataset.i18n] ?? node.innerHTML;
-  languageButton.innerHTML = currentLanguage === 'ar' ? 'English <span aria-hidden="true">↗</span>' : 'العربية <span aria-hidden="true">↗</span>';
-  languageButton.lang = currentLanguage === 'ar' ? 'en' : 'ar';
-  languageButton.setAttribute('aria-label',currentLanguage === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
-  navigation.setAttribute('aria-label',currentLanguage === 'ar' ? 'التنقل الرئيسي' : 'Main navigation');
-  document.querySelector('.portrait img').alt = currentLanguage === 'ar' ? 'محمود أشرف يرتدي بدلة كحلية ونظارة' : 'Mahmoud Ashraf wearing a navy suit and glasses';
-  document.querySelector('#copyEmail').setAttribute('aria-label',currentLanguage === 'ar' ? 'نسخ البريد الإلكتروني' : 'Copy email address');
-  document.querySelector('.contact-arrow').setAttribute('aria-label',currentLanguage === 'ar' ? 'تواصل مع محمود على واتساب' : 'Chat with Mahmoud on WhatsApp');
-  document.querySelector('.project-visual').setAttribute('aria-label',currentLanguage === 'ar' ? 'افتح الديمو المباشر للبوابة الجامعية' : 'Open the university portal live demo');
-  document.title = currentLanguage === 'ar' ? 'محمود أشرف — مطوّر برمجيات' : 'Mahmoud Ashraf — Software Developer';
-  document.querySelector('meta[name="description"]').content = currentLanguage === 'ar' ? 'محمود أشرف، مطوّر برمجيات. تطبيقات ويب متجاوبة بالعربية والإنجليزية باستخدام Python وDjango. استكشف أعمالي وتواصل معي.' : 'Mahmoud Ashraf — Software Developer building responsive, bilingual web applications with Python and Django. Explore my work and get in touch.';
-  closeMenu();
-  document.querySelector('#copyStatus').textContent = '';
-  try { localStorage.setItem('portfolio-language',currentLanguage); } catch {}
+const serviceList = document.querySelector(".service-list");
+if (serviceList) {
+  serviceList.insertAdjacentHTML(
+    "beforeend",
+    '<article class="service"><span class="service-index">04</span><div><h3 data-i18n="serviceFourTitle">API integration &amp; data flows</h3><p data-i18n="serviceFourText">Connect interfaces to REST APIs, handle loading and error states, and turn live data into useful user experiences.</p></div></article><article class="service"><span class="service-index">05</span><div><h3 data-i18n="serviceFiveTitle">Dashboards &amp; admin interfaces</h3><p data-i18n="serviceFiveText">Organized dashboards with search, filters, forms, validation, and clear responsive data presentation.</p></div></article>',
+  );
 }
-function closeMenu(){navigation.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label',currentLanguage === 'ar' ? 'فتح قائمة التنقل' : 'Open navigation');}
-languageButton.addEventListener('click',()=>setLanguage(currentLanguage === 'en' ? 'ar' : 'en'));
-menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';navigation.classList.toggle('open',open);menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',currentLanguage==='ar'?(open?'إغلاق قائمة التنقل':'فتح قائمة التنقل'):(open?'Close navigation':'Open navigation'));});
-navigation.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
-document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menuButton.getAttribute('aria-expanded')==='true'){closeMenu();menuButton.focus();}});
-document.addEventListener('click',event=>{if(!event.target.closest('.header'))closeMenu();});
-matchMedia('(min-width:761px)').addEventListener('change',closeMenu);
-document.querySelector('#year').textContent=new Date().getFullYear();
-document.querySelector('#copyEmail').addEventListener('click',async()=>{const status=document.querySelector('#copyStatus');try{await navigator.clipboard.writeText('mahmoudashraf.9244@gmail.com');status.textContent=currentLanguage==='ar'?'تم نسخ البريد الإلكتروني':'Email copied';}catch{status.textContent=currentLanguage==='ar'?'يمكنك تحديد البريد ونسخه، أو الضغط عليه للمراسلة.':'Select the email to copy it, or click it to send a message.';}});
-if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(!entry.isIntersecting)continue;navigation.querySelectorAll('a').forEach(link=>{if(link.hash==='#'+entry.target.id)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});}},{rootMargin:'-15% 0px -45% 0px'});document.querySelectorAll('main section[id]').forEach(section=>observer.observe(section));const revealObserver=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}}},{threshold:.12});document.querySelectorAll('.project,.case-study,.service,.process,.about-content,.contact-heading,.contact-bottom').forEach((element,index)=>{element.classList.add('reveal');element.style.transitionDelay=`${Math.min(index%4,3)*70}ms`;revealObserver.observe(element);});revealObserver.observe(document.querySelector('.portrait-composition'));}else{document.querySelectorAll('.reveal').forEach(element=>element.classList.add('visible'));}
-const cursorGlow=document.querySelector('#cursorGlow');if(matchMedia('(pointer:fine)').matches){document.addEventListener('pointermove',event=>{cursorGlow.style.left=`${event.clientX}px`;cursorGlow.style.top=`${event.clientY}px`;cursorGlow.style.opacity='1';},{passive:true});document.addEventListener('pointerleave',()=>{cursorGlow.style.opacity='0';});document.addEventListener('pointerover',event=>{cursorGlow.classList.toggle('cursor-hover',Boolean(event.target.closest('a,button,summary,input,select,textarea,.tilt-card')));});}
-const header=document.querySelector('.header');const scrollProgress=document.querySelector('#scrollProgress');function updateScrollUI(){const max=document.documentElement.scrollHeight-innerHeight;const progress=max>0?Math.min(scrollY/max,1):0;scrollProgress.style.transform=`scaleX(${progress})`;header.classList.toggle('scrolled',scrollY>18);}updateScrollUI();addEventListener('scroll',updateScrollUI,{passive:true});
-const projectVisuals=document.querySelectorAll('.project-visual');if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches){projectVisuals.forEach(projectVisual=>{projectVisual.addEventListener('pointermove',event=>{const box=projectVisual.getBoundingClientRect();const x=(event.clientX-box.left)/box.width-.5;const y=(event.clientY-box.top)/box.height-.5;projectVisual.style.setProperty('--tilt-x',`${(-y*5).toFixed(2)}deg`);projectVisual.style.setProperty('--tilt-y',`${(x*6).toFixed(2)}deg`);projectVisual.style.setProperty('--visual-x',`${(x*18).toFixed(1)}px`);projectVisual.style.setProperty('--visual-y',`${(y*14).toFixed(1)}px`);});projectVisual.addEventListener('pointerleave',()=>{projectVisual.style.setProperty('--tilt-x','0deg');projectVisual.style.setProperty('--tilt-y','0deg');projectVisual.style.setProperty('--visual-x','0px');projectVisual.style.setProperty('--visual-y','0px');});});}
-let initial='en';try{initial=localStorage.getItem('portfolio-language')||'en';}catch{}setLanguage(initial);
-const motionOK=!matchMedia('(prefers-reduced-motion: reduce)').matches;
-const main=document.querySelector('#main');const aboutSection=document.querySelector('#about');const workSection=document.querySelector('#work');if(main&&aboutSection&&workSection){main.insertBefore(aboutSection,workSection);const aboutNumber=aboutSection.querySelector('.section-number');const workNumber=workSection.querySelector('.section-number');if(aboutNumber)aboutNumber.textContent='01 /';if(workNumber)workNumber.textContent='02 /';}
-const contactNumber=document.querySelector('#contact .section-number');if(contactNumber)contactNumber.textContent='06 /';
-if(motionOK&&matchMedia('(pointer:fine)').matches){document.querySelectorAll('.project,.service,.process-steps>div,.toolbox,.contact-card').forEach(card=>{card.classList.add('tilt-card');card.addEventListener('pointermove',event=>{const box=card.getBoundingClientRect();const x=(event.clientX-box.left)/box.width;const y=(event.clientY-box.top)/box.height;card.style.setProperty('--mouse-x',`${x*100}%`);card.style.setProperty('--mouse-y',`${y*100}%`);card.style.transform=`perspective(1000px) rotateX(${((.5-y)*3.5).toFixed(2)}deg) rotateY(${((x-.5)*4.5).toFixed(2)}deg) translateY(-4px)`;});card.addEventListener('pointerleave',()=>{card.style.transform='';});});}
-const canvas=document.querySelector('#particleCanvas');if(canvas&&motionOK){const context=canvas.getContext('2d');let particles=[];let frame;const pointer={x:-500,y:-500};const resize=()=>{const ratio=Math.min(devicePixelRatio||1,2);canvas.width=innerWidth*ratio;canvas.height=innerHeight*ratio;canvas.style.width=`${innerWidth}px`;canvas.style.height=`${innerHeight}px`;context.setTransform(ratio,0,0,ratio,0,0);const count=matchMedia('(pointer:fine)').matches?Math.min(46,Math.floor(innerWidth/30)):10;particles=Array.from({length:count},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.3+.6}));};addEventListener('resize',resize,{passive:true});addEventListener('pointermove',event=>{pointer.x=event.clientX;pointer.y=event.clientY;},{passive:true});resize();const draw=()=>{context.clearRect(0,0,innerWidth,innerHeight);for(const particle of particles){particle.x+=particle.vx;particle.y+=particle.vy;if(particle.x<0)particle.x=innerWidth;if(particle.x>innerWidth)particle.x=0;if(particle.y<0)particle.y=innerHeight;if(particle.y>innerHeight)particle.y=0;const dx=particle.x-pointer.x,dy=particle.y-pointer.y,distance=Math.hypot(dx,dy);if(distance<90&&distance>0){particle.x+=dx/distance*.35;particle.y+=dy/distance*.35;}context.beginPath();context.arc(particle.x,particle.y,particle.r,0,Math.PI*2);context.fillStyle='rgba(140,255,193,.38)';context.fill();}if(matchMedia('(pointer:fine)').matches){for(let i=0;i<particles.length;i++)for(let j=i+1;j<particles.length;j++){const distance=Math.hypot(particles[i].x-particles[j].x,particles[i].y-particles[j].y);if(distance<105){context.beginPath();context.moveTo(particles[i].x,particles[i].y);context.lineTo(particles[j].x,particles[j].y);context.strokeStyle=`rgba(112,165,255,${(1-distance/105)*.11})`;context.lineWidth=.6;context.stroke();}}}frame=requestAnimationFrame(draw);};draw();document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(frame);else draw();});}
-const contactForm=document.querySelector('#contactForm');if(contactForm){contactForm.addEventListener('submit',event=>{event.preventDefault();if(!contactForm.reportValidity())return;const name=document.querySelector('#senderName').value.trim();const type=document.querySelector('#projectType').value;const message=document.querySelector('#senderMessage').value.trim();const text=`Hello Mahmoud, my name is ${name}.%0AProject type: ${type}.%0A${message}`;window.open(`https://wa.me/201005567643?text=${encodeURIComponent(text.replaceAll('%0A','\n'))}`,'_blank','noopener');});}
-if(motionOK&&matchMedia('(pointer:fine)').matches){document.querySelectorAll('.navigation a').forEach(link=>{link.addEventListener('pointermove',event=>{const box=link.getBoundingClientRect();link.style.transform=`translate(${((event.clientX-box.left-box.width/2)*.1).toFixed(1)}px,${((event.clientY-box.top-box.height/2)*.16).toFixed(1)}px)`;});link.addEventListener('pointerleave',()=>{link.style.transform='';});});}
-const typedSkill=document.querySelector('#typedSkill');if(typedSkill){const codeLines=['const ui = ["HTML", "CSS", "Bootstrap"];','const logic = ["JavaScript", "OOP", "REST API"];','const backend = ["Python", "Django"];','const server = ["Node.js", "Express"];','learning.now("React", "TypeScript");'];if(!motionOK){typedSkill.textContent=codeLines[4];}else{let line=0,index=0,deleting=false;const type=()=>{const text=codeLines[line];typedSkill.textContent=text.slice(0,index);if(!deleting&&index<text.length){index++;setTimeout(type,38);}else if(!deleting){deleting=true;setTimeout(type,1500);}else if(index>0){index--;setTimeout(type,18);}else{deleting=false;line=(line+1)%codeLines.length;setTimeout(type,300);}};type();}}
-if('IntersectionObserver' in window){const focusReveal=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('visible');focusReveal.unobserve(entry.target);}}},{threshold:.14});document.querySelectorAll('.focus-heading,.focus-track article').forEach((element,index)=>{element.classList.add('reveal');element.style.transitionDelay=`${index*80}ms`;focusReveal.observe(element);});}
-const contactBottom=document.querySelector('.contact-bottom');if(contactBottom){contactBottom.innerHTML=`<nav class="contact-links" aria-label="Direct contact links"><a class="contact-link contact-link-email" href="mailto:mahmoudashraf.9244@gmail.com" aria-label="Email Mahmoud"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17v11h-17z"/><path d="m4.5 7.5 7.5 6 7.5-6"/></svg><span>Email</span></a><a class="contact-link contact-link-github" href="https://github.com/mahmoudashraf9244-cloud" target="_blank" rel="noopener noreferrer" aria-label="Mahmoud on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.3 9.3 0 0 0-3 18.1c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.4 9.4 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.6 4.9.4.3.7.9.7 1.8v2.7c0 .3.2.6.7.5A9.3 9.3 0 0 0 12 2.8Z"/></svg><span>GitHub</span></a><a class="contact-link contact-link-linkedin" href="https://www.linkedin.com/in/mahmoud9244" target="_blank" rel="noopener noreferrer" aria-label="Mahmoud on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v10M5 5.5v.1M10 19v-5.6c0-2.6 4-2.8 4 0V19M10 9v10M3 3h18v18H3z"/></svg><span>LinkedIn</span></a></nav>`;}
-if(motionOK&&matchMedia('(pointer:fine)').matches){document.querySelectorAll('.education-card,.project-proof span,.study-focus span,.toolbox-row,.contact-link').forEach(element=>{element.addEventListener('pointermove',event=>{const box=element.getBoundingClientRect();const x=(event.clientX-box.left)/box.width-.5;const y=(event.clientY-box.top)/box.height-.5;element.style.setProperty('--micro-x',`${(x*5).toFixed(1)}px`);element.style.setProperty('--micro-y',`${(y*4).toFixed(1)}px`);});element.addEventListener('pointerleave',()=>{element.style.removeProperty('--micro-x');element.style.removeProperty('--micro-y');});});}
-Object.assign(translations.en,{serviceSixTitle:'Performance & accessibility',serviceSixText:'Faster loading, clear interaction states, and comfortable keyboard and screen-reader experiences.'});Object.assign(translations.ar,{serviceSixTitle:'\u0627\u0644\u0623\u062f\u0627\u0621 \u0648\u0633\u0647\u0648\u0644\u0629 \u0627\u0644\u0648\u0635\u0648\u0644',serviceSixText:'\u062a\u062d\u0633\u064a\u0646 \u0627\u0644\u0633\u0631\u0639\u0629\u060c \u0648\u0648\u0636\u0648\u062d \u0627\u0644\u062a\u0641\u0627\u0639\u0644\u0627\u062a\u060c \u0648\u062a\u062c\u0631\u0628\u0629 \u0645\u0631\u064a\u062d\u0629 \u0644\u0644\u0648\u062d\u0629 \u0627\u0644\u0645\u0641\u0627\u062a\u064a\u062d \u0648\u0642\u0627\u0631\u0626\u0627\u062a \u0627\u0644\u0634\u0627\u0634\u0629.'});
-if(serviceList&&!serviceList.querySelector('[data-i18n="serviceSixTitle"]')){serviceList.insertAdjacentHTML('beforeend','<article class="service"><span class="service-index">06</span><div><h3 data-i18n="serviceSixTitle">Performance &amp; accessibility</h3><p data-i18n="serviceSixText">Faster loading, clear interaction states, and comfortable keyboard and screen-reader experiences.</p></div></article>');const title=serviceList.querySelector('[data-i18n="serviceSixTitle"]');const text=serviceList.querySelector('[data-i18n="serviceSixText"]');if(currentLanguage==='ar'){title.innerHTML=translations.ar.serviceSixTitle;text.innerHTML=translations.ar.serviceSixText;}}
-document.querySelectorAll('.case-study').forEach(details=>{details.addEventListener('toggle',()=>details.classList.toggle('is-open',details.open));});
-if(motionOK&&matchMedia('(pointer:fine)').matches){document.querySelectorAll('.project,.education-card').forEach(card=>{card.addEventListener('pointermove',event=>{const box=card.getBoundingClientRect();const x=(event.clientX-box.left)/box.width-.5;const y=(event.clientY-box.top)/box.height-.5;const strength=card.classList.contains('project')?7.5:5.5;card.style.transform=`perspective(1200px) rotateX(${(-y*strength).toFixed(2)}deg) rotateY(${(x*strength).toFixed(2)}deg) translateY(-6px)`;card.style.setProperty('--card-x',`${(x+.5)*100}%`);card.style.setProperty('--card-y',`${(y+.5)*100}%`);});card.addEventListener('pointerleave',()=>{card.style.transform='';});});}
-const footerIdentity=document.querySelector('.footer-identity');if(footerIdentity&&!footerIdentity.querySelector('.footer-availability')){footerIdentity.insertAdjacentHTML('beforeend','<small class="footer-availability">Available for freelance projects, part-time and full-time roles.</small>');}
-Object.assign(translations.en,{aboutEngineering:'I approach software as more than code: understand the problem, structure the solution, and refine the experience until it feels dependable. Every project is a chance to strengthen my engineering judgment and build something people can use with confidence.'});Object.assign(translations.ar,{aboutEngineering:'\u0623\u062a\u0639\u0627\u0645\u0644 \u0645\u0639 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a \u0643\u0623\u0643\u062b\u0631 \u0645\u0646 \u0645\u062c\u0631\u062f \u0643\u0648\u062f: \u0623\u0641\u0647\u0645 \u0627\u0644\u0645\u0634\u0643\u0644\u0629\u060c \u0648\u0623\u0646\u0638\u0645 \u0627\u0644\u062d\u0644\u060c \u062b\u0645 \u0623\u0637\u0648\u0631 \u0627\u0644\u062a\u062c\u0631\u0628\u0629 \u062d\u062a\u0649 \u062a\u0635\u0628\u062d \u0648\u0627\u0636\u062d\u0629 \u0648\u0645\u0648\u062b\u0648\u0642\u0629. \u0643\u0644 \u0645\u0634\u0631\u0648\u0639 \u0641\u0631\u0635\u0629 \u0644\u062a\u0637\u0648\u064a\u0631 \u062a\u0641\u0643\u064a\u0631\u064a \u0627\u0644\u0647\u0646\u062f\u0633\u064a \u0648\u0628\u0646\u0627\u0621 \u0634\u064a\u0621 \u064a\u0633\u062a\u062e\u062f\u0645\u0647 \u0627\u0644\u0646\u0627\u0633 \u0628\u062b\u0642\u0629.'});
-const aboutHeading=document.querySelector('.about-section>div:first-child');const aboutSignature=aboutHeading?.querySelector('.about-signature');if(aboutHeading&&aboutSignature&&!aboutHeading.querySelector('.about-engineering')){const paragraph=document.createElement('p');paragraph.className='about-engineering';paragraph.dataset.i18n='aboutEngineering';paragraph.textContent=translations[currentLanguage].aboutEngineering;aboutHeading.insertBefore(paragraph,aboutSignature);}
-if(motionOK){const denseCanvas=document.createElement('canvas');denseCanvas.id='particleCanvasDense';denseCanvas.setAttribute('aria-hidden','true');document.body.insertBefore(denseCanvas,document.body.firstChild);const denseContext=denseCanvas.getContext('2d');let denseParticles=[];let denseFrame;const densePointer={x:-500,y:-500};const resizeDense=()=>{const ratio=Math.min(devicePixelRatio||1,2);denseCanvas.width=innerWidth*ratio;denseCanvas.height=innerHeight*ratio;denseCanvas.style.width=`${innerWidth}px`;denseCanvas.style.height=`${innerHeight}px`;denseContext.setTransform(ratio,0,0,ratio,0,0);const count=matchMedia('(pointer:fine)').matches?Math.min(62,Math.floor(innerWidth/19)):14;denseParticles=Array.from({length:count},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*.85+.35}));};addEventListener('resize',resizeDense,{passive:true});addEventListener('pointermove',event=>{densePointer.x=event.clientX;densePointer.y=event.clientY;},{passive:true});resizeDense();const drawDense=()=>{denseContext.clearRect(0,0,innerWidth,innerHeight);for(const point of denseParticles){point.x=(point.x+point.vx+innerWidth)%innerWidth;point.y=(point.y+point.vy+innerHeight)%innerHeight;const dx=point.x-densePointer.x,dy=point.y-densePointer.y,distance=Math.hypot(dx,dy);if(distance<115&&distance>0){point.x+=dx/distance*.22;point.y+=dy/distance*.22;}denseContext.beginPath();denseContext.arc(point.x,point.y,point.r,0,Math.PI*2);denseContext.fillStyle='rgba(156,203,255,.28)';denseContext.fill();}for(let i=0;i<denseParticles.length;i++)for(let j=i+1;j<denseParticles.length;j++){const distance=Math.hypot(denseParticles[i].x-denseParticles[j].x,denseParticles[i].y-denseParticles[j].y);if(distance<125){denseContext.beginPath();denseContext.moveTo(denseParticles[i].x,denseParticles[i].y);denseContext.lineTo(denseParticles[j].x,denseParticles[j].y);denseContext.strokeStyle=`rgba(140,255,193,${(1-distance/125)*.075})`;denseContext.lineWidth=.5;denseContext.stroke();}}denseFrame=requestAnimationFrame(drawDense);};drawDense();document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(denseFrame);else drawDense();});}
-if(contactBottom&&!document.querySelector('#copyEmail')){contactBottom.insertAdjacentHTML('beforeend','<button id="copyEmail" type="button" hidden aria-hidden="true"></button><span id="copyStatus" hidden></span>');}
+const portalProof = document.querySelector(
+  ".project:not(.nexus-project) .project-proof",
+);
+if (portalProof) {
+  const labels = [
+    "Secure authentication",
+    "Safe enrollment rules",
+    "Private student dashboard",
+    "Search, filters & pagination",
+    "Bilingual RTL interface",
+  ];
+  portalProof
+    .querySelectorAll("span")
+    .forEach((item, index) => (item.textContent = labels[index]));
+}
+const teamProof = document.querySelector(".nexus-project .project-proof");
+if (teamProof) {
+  const labels = [
+    "Fetch API integration",
+    "CRUD HTTP methods",
+    "Search, filter & sort",
+    "Pagination & views",
+    "localStorage persistence",
+  ];
+  teamProof
+    .querySelectorAll("span")
+    .forEach((item, index) => (item.textContent = labels[index]));
+}
+const portalTags = document.querySelector(".project:not(.nexus-project) .tags");
+if (portalTags)
+  portalTags.innerHTML =
+    "<li>Python</li><li>Django</li><li>PostgreSQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Vercel</li>";
+const teamTags = document.querySelector(".nexus-project .tags");
+if (teamTags)
+  teamTags.innerHTML =
+    "<li>JavaScript</li><li>Fetch API</li><li>HTML</li><li>CSS</li><li>LocalStorage</li>";
+const portalSummary = document.querySelector('[data-i18n="caseStudy"]');
+const teamSummary = document.querySelector('[data-i18n="nexusCaseStudy"]');
+if (portalSummary)
+  portalSummary.textContent =
+    "View project details — challenge, build & result";
+if (teamSummary)
+  teamSummary.textContent = "View TeamDesk details — logic, features & result";
+const nodes = [...document.querySelectorAll("[data-i18n]")];
+translations.en = Object.fromEntries(
+  nodes.map((node) => [node.dataset.i18n, node.innerHTML]),
+);
+Object.assign(translations.en, {
+  availability: "Available for freelance projects, part-time & full-time roles",
+  aboutLead:
+    "I\u2019m Mahmoud, a software developer who learns by building practical products that work.",
+  aboutGoal:
+    "I\u2019m open to focused freelance projects and software development roles where I can contribute, learn from feedback, and grow as an engineer.",
+  contactText:
+    "A project, a software development role, or a simple hello \u2014 I\u2019d love to hear from you.",
+  workNote: "2 LIVE PROJECTS / DEMOS + CASE STUDIES",
+  projectDescription:
+    "A bilingual Django portal where students discover university activities, create accounts, enroll safely, and manage a private profile.",
+  challenge:
+    "Bring activity discovery, account access, enrollment, and student records into one clear experience for Arabic- and English-speaking users.",
+  implementation:
+    "Django powers registration, authentication, protected profiles, catalogue search, category filters, and pagination. Enrollment is handled through a dedicated service with capacity checks, duplicate protection, CSRF-protected POST requests, and database constraints.",
+  result:
+    "A tested, responsive portal with bilingual RTL support, activity lifecycle states, safe enrollment flows, private student history, Django Admin management, PostgreSQL in production, and SQLite for local development.",
+  nexusDescription:
+    "A responsive employee dashboard that uses the Fetch API with DummyJSON and supports create, update, and delete flows alongside search, filters, sorting, pagination, validation, reports, CSV export, and local persistence.",
+});
+Object.assign(translations.ar, {
+  availability:
+    "\u0645\u062a\u0627\u062d \u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u062d\u0631 \u0648\u0641\u0631\u0635 \u0627\u0644\u0639\u0645\u0644 \u0628\u062f\u0648\u0627\u0645 \u062c\u0632\u0626\u064a \u0623\u0648 \u0643\u0627\u0645\u0644",
+  aboutLead:
+    "\u0623\u0646\u0627 \u0645\u062d\u0645\u0648\u062f\u060c \u0645\u0637\u0648\u0651\u0631 \u0628\u0631\u0645\u062c\u064a\u0627\u062a \u0623\u062a\u0639\u0644\u0651\u0645 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0628\u0646\u0627\u0621 \u0645\u0646\u062a\u062c\u0627\u062a \u0639\u0645\u0644\u064a\u0629 \u062a\u0639\u0645\u0644 \u0628\u0627\u0644\u0641\u0639\u0644.",
+  aboutGoal:
+    "\u0645\u062a\u0627\u062d \u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0639\u0645\u0644 \u062d\u0631 \u0645\u062d\u062f\u062f\u0629 \u0648\u0641\u0631\u0635 \u0641\u064a \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a\u060c \u0623\u0642\u062f\u0631 \u0623\u0633\u0627\u0647\u0645 \u0641\u064a\u0647\u0627\u060c \u0648\u0623\u062a\u0639\u0644\u0645 \u0645\u0646 \u0627\u0644\u0645\u0644\u0627\u062d\u0638\u0627\u062a\u060c \u0648\u0623\u062a\u0637\u0648\u0631 \u0643\u0645\u0647\u0646\u062f\u0633 \u0628\u0631\u0645\u062c\u064a\u0627\u062a.",
+  contactText:
+    "\u0645\u0634\u0631\u0648\u0639\u060c \u0623\u0648 \u0641\u0631\u0635\u0629 \u0641\u064a \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a\u060c \u0623\u0648 \u062d\u062a\u0649 \u0631\u0633\u0627\u0644\u0629 \u062a\u0639\u0627\u0631\u0641 \u2014 \u064a\u0633\u0639\u062f\u0646\u064a \u0623\u0633\u0645\u0639 \u0645\u0646\u0643.",
+  workNote:
+    "\u0645\u0634\u0631\u0648\u0639\u0627\u0646 \u064a\u0639\u0645\u0644\u0627\u0646 \u0641\u0639\u0644\u064a\u064b\u0627 \u0645\u0639 \u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u062a\u0646\u0641\u064a\u0630",
+  projectDescription:
+    "\u0628\u0648\u0627\u0628\u0629 Django \u062b\u0646\u0627\u0626\u064a\u0629 \u0627\u0644\u0644\u063a\u0629 \u062a\u062a\u064a\u062d \u0644\u0644\u0637\u0644\u0627\u0628 \u0627\u0643\u062a\u0634\u0627\u0641 \u0627\u0644\u0623\u0646\u0634\u0637\u0629 \u0627\u0644\u062c\u0627\u0645\u0639\u064a\u0629\u060c \u0648\u0625\u0646\u0634\u0627\u0621 \u0627\u0644\u062d\u0633\u0627\u0628\u0627\u062a\u060c \u0648\u0627\u0644\u062a\u0633\u062c\u064a\u0644 \u0628\u0623\u0645\u0627\u0646\u060c \u0648\u0625\u062f\u0627\u0631\u0629 \u0645\u0644\u0641 \u0637\u0627\u0644\u0628 \u062e\u0627\u0635.",
+  challenge:
+    "\u062c\u0645\u0639 \u0627\u0643\u062a\u0634\u0627\u0641 \u0627\u0644\u0623\u0646\u0634\u0637\u0629\u060c \u0648\u0627\u0644\u062f\u062e\u0648\u0644 \u0644\u0644\u062d\u0633\u0627\u0628\u060c \u0648\u0627\u0644\u062a\u0633\u062c\u064a\u0644\u060c \u0648\u0633\u062c\u0644\u0627\u062a \u0627\u0644\u0637\u0627\u0644\u0628 \u0641\u064a \u062a\u062c\u0631\u0628\u0629 \u0648\u0627\u0636\u062d\u0629 \u0644\u0644\u0645\u0633\u062a\u062e\u062f\u0645 \u0628\u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0623\u0648 \u0627\u0644\u0625\u0646\u062c\u0644\u064a\u0632\u064a\u0629.",
+  implementation:
+    "\u064a\u062f\u064a\u0631 Django \u0625\u0646\u0634\u0627\u0621 \u0627\u0644\u062d\u0633\u0627\u0628\u060c \u0648\u0627\u0644\u0645\u0635\u0627\u062f\u0642\u0629\u060c \u0648\u0627\u0644\u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062d\u0645\u064a\u0629\u060c \u0648\u0627\u0644\u0628\u062d\u062b \u0648\u0627\u0644\u062a\u0635\u0641\u064a\u0629 \u0648\u062a\u0642\u0633\u064a\u0645 \u0627\u0644\u0646\u062a\u0627\u0626\u062c. \u0648\u062a\u0645\u0631 \u0639\u0645\u0644\u064a\u0627\u062a \u0627\u0644\u062a\u0633\u062c\u064a\u0644 \u0639\u0628\u0631 \u062e\u062f\u0645\u0629 \u0645\u062e\u0635\u0635\u0629 \u062a\u0641\u062d\u0635 \u0627\u0644\u0633\u0639\u0629\u060c \u0648\u062a\u0645\u0646\u0639 \u0627\u0644\u062a\u0643\u0631\u0627\u0631\u060c \u0648\u062a\u062d\u0645\u064a \u0637\u0644\u0628\u0627\u062a POST \u0628\u0640CSRF \u0648\u0642\u064a\u0648\u062f \u0642\u0627\u0639\u062f\u0629 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a.",
+  result:
+    "\u0628\u0648\u0627\u0628\u0629 \u0645\u062e\u062a\u0628\u0631\u0629 \u0648\u0645\u062a\u062c\u0627\u0648\u0628\u0629 \u062a\u062f\u0639\u0645 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0648RTL\u060c \u0648\u062d\u0627\u0644\u0627\u062a \u062f\u0648\u0631\u0629 \u062d\u064a\u0627\u0629 \u0627\u0644\u0646\u0634\u0627\u0637\u060c \u0648\u062a\u0633\u062c\u064a\u0644\u064b\u0627 \u0622\u0645\u0646\u064b\u0627\u060c \u0648\u0633\u062c\u0644\u064b\u0627 \u062e\u0627\u0635\u064b\u0627 \u0644\u0644\u0637\u0627\u0644\u0628\u060c \u0648\u0625\u062f\u0627\u0631\u0629 \u0639\u0628\u0631 Django Admin\u060c \u0645\u0639 PostgreSQL \u0641\u064a \u0627\u0644\u0625\u0646\u062a\u0627\u062c \u0648SQLite \u0644\u0644\u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0645\u062d\u0644\u064a.",
+  nexusDescription:
+    "\u0644\u0648\u062d\u0629 \u0645\u062a\u062c\u0627\u0648\u0628\u0629 \u0644\u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0645\u0648\u0638\u0641\u064a\u0646 \u062a\u0633\u062a\u062e\u062f\u0645 Fetch API \u0645\u0639 DummyJSON\u060c \u0648\u062a\u062f\u0639\u0645 \u0627\u0644\u0625\u0636\u0627\u0641\u0629 \u0648\u0627\u0644\u062a\u0639\u062f\u064a\u0644 \u0648\u0627\u0644\u062d\u0630\u0641\u060c \u0625\u0644\u0649 \u062c\u0627\u0646\u0628 \u0627\u0644\u0628\u062d\u062b \u0648\u0627\u0644\u062a\u0635\u0641\u064a\u0629 \u0648\u0627\u0644\u062a\u0631\u062a\u064a\u0628 \u0648\u062a\u0642\u0633\u064a\u0645 \u0627\u0644\u0635\u0641\u062d\u0627\u062a \u0648\u0627\u0644\u062a\u062d\u0642\u0642 \u0648\u0627\u0644\u062a\u0642\u0627\u0631\u064a\u0631 \u0648\u062a\u0635\u062f\u064a\u0631 CSV \u0648\u0627\u0644\u062d\u0641\u0638 \u0627\u0644\u0645\u062d\u0644\u064a.",
+});
+Object.assign(translations.ar, {
+  serviceFourTitle:
+    "\u0631\u0628\u0637 APIs \u0648\u062a\u062f\u0641\u0642 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a",
+  serviceFourText:
+    "\u0631\u0628\u0637 \u0627\u0644\u0648\u0627\u062c\u0647\u0627\u062a \u0628\u0640 REST APIs\u060c \u0648\u0645\u0639\u0627\u0644\u062c\u0629 \u062d\u0627\u0644\u0627\u062a \u0627\u0644\u062a\u062d\u0645\u064a\u0644 \u0648\u0627\u0644\u0623\u062e\u0637\u0627\u0621\u060c \u0648\u062a\u062d\u0648\u064a\u0644 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a \u0625\u0644\u0649 \u062a\u062c\u0631\u0628\u0629 \u0645\u0641\u064a\u062f\u0629.",
+  serviceFiveTitle:
+    "\u0644\u0648\u062d\u0627\u062a \u062a\u062d\u0643\u0645 \u0648\u0648\u0627\u062c\u0647\u0627\u062a \u0625\u062f\u0627\u0631\u064a\u0629",
+  serviceFiveText:
+    "\u0644\u0648\u062d\u0627\u062a \u0645\u0646\u0638\u0645\u0629 \u062a\u0634\u0645\u0644 \u0627\u0644\u0628\u062d\u062b \u0648\u0627\u0644\u0641\u0644\u0627\u062a\u0631 \u0648\u0627\u0644\u0646\u0645\u0627\u0630\u062c \u0648\u0627\u0644\u062a\u062d\u0642\u0642 \u0645\u0639 \u0639\u0631\u0636 \u0648\u0627\u0636\u062d \u0644\u0644\u0628\u064a\u0627\u0646\u0627\u062a.",
+});
+Object.assign(translations.ar, {
+  focusLabel:
+    "\u0627\u0644\u062a\u0631\u0643\u064a\u0632 \u0627\u0644\u062d\u0627\u0644\u064a",
+  focusTitle:
+    "\u062a\u0639\u0644\u0645 \u0645\u0633\u062a\u0645\u0631.<br><em>\u0648\u0628\u0646\u0627\u0621 \u0623\u0639\u0645\u0642.</em>",
+  focusIntro:
+    "\u0645\u062c\u0627\u0644\u0627\u062a \u0623\u0639\u0645\u0644 \u0639\u0644\u0649 \u062a\u0637\u0648\u064a\u0631\u0647\u0627 \u062d\u0627\u0644\u064a\u064b\u0627 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u062f\u0631\u0627\u0633\u0629 \u0648\u0627\u0644\u0645\u0634\u0627\u0631\u064a\u0639.",
+  focusOneTitle:
+    "\u0648\u0627\u062c\u0647\u0627\u062a \u062d\u062f\u064a\u062b\u0629",
+  focusOneText:
+    "React \u0648TypeScript \u0644\u0628\u0646\u0627\u0621 \u062a\u062c\u0627\u0631\u0628 \u0645\u0643\u0648\u0646\u0629 \u0648\u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u0635\u064a\u0627\u0646\u0629.",
+  focusTwoTitle:
+    "\u062a\u0639\u0645\u0642 \u0641\u064a \u0627\u0644\u0628\u0627\u0643 \u0625\u0646\u062f",
+  focusTwoText:
+    "APIs \u0623\u0642\u0648\u0649\u060c \u0648\u0646\u0645\u0630\u062c\u0629 \u0628\u064a\u0627\u0646\u0627\u062a\u060c \u0648\u0645\u0635\u0627\u062f\u0642\u0629\u060c \u0648\u0647\u064a\u0643\u0644\u0629 \u062a\u0637\u0628\u064a\u0642\u0627\u062a.",
+  focusThreeTitle:
+    "\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u0639\u0644\u0648\u0645 \u0627\u0644\u062d\u0627\u0633\u0628",
+  focusThreeText:
+    "\u0647\u064a\u0627\u0643\u0644 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a\u060c \u0648\u0627\u0644\u062e\u0648\u0627\u0631\u0632\u0645\u064a\u0627\u062a\u060c \u0648OOP\u060c \u0648\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u062a\u0635\u0645\u064a\u0645 \u0627\u0644\u0623\u0646\u0638\u0645\u0629.",
+});
+const languageButton = document.querySelector("#language");
+const menuButton = document.querySelector("#menu");
+const navigation = document.querySelector("#navigation");
+let currentLanguage = "en";
+function setLanguage(language) {
+  currentLanguage = language === "ar" ? "ar" : "en";
+  document.documentElement.lang = currentLanguage;
+  document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
+  for (const node of document.querySelectorAll("[data-i18n]"))
+    node.innerHTML =
+      translations[currentLanguage][node.dataset.i18n] ??
+      translations.en[node.dataset.i18n] ??
+      node.innerHTML;
+  languageButton.innerHTML =
+    currentLanguage === "ar"
+      ? 'English <span aria-hidden="true">↗</span>'
+      : 'العربية <span aria-hidden="true">↗</span>';
+  languageButton.lang = currentLanguage === "ar" ? "en" : "ar";
+  languageButton.setAttribute(
+    "aria-label",
+    currentLanguage === "ar" ? "Switch to English" : "التبديل إلى العربية",
+  );
+  navigation.setAttribute(
+    "aria-label",
+    currentLanguage === "ar" ? "التنقل الرئيسي" : "Main navigation",
+  );
+  document.querySelector(".portrait img").alt =
+    currentLanguage === "ar"
+      ? "محمود أشرف يرتدي بدلة كحلية ونظارة"
+      : "Mahmoud Ashraf wearing a navy suit and glasses";
+  document
+    .querySelector("#copyEmail")
+    .setAttribute(
+      "aria-label",
+      currentLanguage === "ar" ? "نسخ البريد الإلكتروني" : "Copy email address",
+    );
+  document
+    .querySelector(".contact-arrow")
+    .setAttribute(
+      "aria-label",
+      currentLanguage === "ar"
+        ? "تواصل مع محمود على واتساب"
+        : "Chat with Mahmoud on WhatsApp",
+    );
+  document
+    .querySelector(".project-visual")
+    .setAttribute(
+      "aria-label",
+      currentLanguage === "ar"
+        ? "افتح الديمو المباشر للبوابة الجامعية"
+        : "Open the university portal live demo",
+    );
+  document.title =
+    currentLanguage === "ar"
+      ? "محمود أشرف — مطوّر برمجيات"
+      : "Mahmoud Ashraf — Software Developer";
+  document.querySelector('meta[name="description"]').content =
+    currentLanguage === "ar"
+      ? "محمود أشرف، مطوّر برمجيات. تطبيقات ويب متجاوبة بالعربية والإنجليزية باستخدام Python وDjango. استكشف أعمالي وتواصل معي."
+      : "Mahmoud Ashraf — Software Developer building responsive, bilingual web applications with Python and Django. Explore my work and get in touch.";
+  closeMenu();
+  document.querySelector("#copyStatus").textContent = "";
+  try {
+    localStorage.setItem("portfolio-language", currentLanguage);
+  } catch {}
+}
+function closeMenu() {
+  navigation.classList.remove("open");
+  menuButton.setAttribute("aria-expanded", "false");
+  menuButton.setAttribute(
+    "aria-label",
+    currentLanguage === "ar" ? "فتح قائمة التنقل" : "Open navigation",
+  );
+}
+languageButton.addEventListener("click", () =>
+  setLanguage(currentLanguage === "en" ? "ar" : "en"),
+);
+menuButton.addEventListener("click", () => {
+  const open = menuButton.getAttribute("aria-expanded") !== "true";
+  navigation.classList.toggle("open", open);
+  menuButton.setAttribute("aria-expanded", String(open));
+  menuButton.setAttribute(
+    "aria-label",
+    currentLanguage === "ar"
+      ? open
+        ? "إغلاق قائمة التنقل"
+        : "فتح قائمة التنقل"
+      : open
+        ? "Close navigation"
+        : "Open navigation",
+  );
+});
+navigation
+  .querySelectorAll("a")
+  .forEach((link) => link.addEventListener("click", closeMenu));
+document.addEventListener("keydown", (event) => {
+  if (
+    event.key === "Escape" &&
+    menuButton.getAttribute("aria-expanded") === "true"
+  ) {
+    closeMenu();
+    menuButton.focus();
+  }
+});
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".header")) closeMenu();
+});
+matchMedia("(min-width:761px)").addEventListener("change", closeMenu);
+document.querySelector("#year").textContent = new Date().getFullYear();
+document.querySelector("#copyEmail").addEventListener("click", async () => {
+  const status = document.querySelector("#copyStatus");
+  try {
+    await navigator.clipboard.writeText("mahmoudashraf.9244@gmail.com");
+    status.textContent =
+      currentLanguage === "ar" ? "تم نسخ البريد الإلكتروني" : "Email copied";
+  } catch {
+    status.textContent =
+      currentLanguage === "ar"
+        ? "يمكنك تحديد البريد ونسخه، أو الضغط عليه للمراسلة."
+        : "Select the email to copy it, or click it to send a message.";
+  }
+});
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        navigation.querySelectorAll("a").forEach((link) => {
+          if (link.hash === "#" + entry.target.id)
+            link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
+        });
+      }
+    },
+    { rootMargin: "-15% 0px -45% 0px" },
+  );
+  document
+    .querySelectorAll("main section[id]")
+    .forEach((section) => observer.observe(section));
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      }
+    },
+    { threshold: 0.12 },
+  );
+  document
+    .querySelectorAll(
+      ".project,.case-study,.service,.process,.about-content,.contact-heading,.contact-bottom",
+    )
+    .forEach((element, index) => {
+      element.classList.add("reveal");
+      element.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
+      revealObserver.observe(element);
+    });
+  revealObserver.observe(document.querySelector(".portrait-composition"));
+} else {
+  document
+    .querySelectorAll(".reveal")
+    .forEach((element) => element.classList.add("visible"));
+}
+const cursorGlow = document.querySelector("#cursorGlow");
+if (matchMedia("(pointer:fine)").matches) {
+  document.addEventListener(
+    "pointermove",
+    (event) => {
+      cursorGlow.style.left = `${event.clientX}px`;
+      cursorGlow.style.top = `${event.clientY}px`;
+      cursorGlow.style.opacity = "1";
+    },
+    { passive: true },
+  );
+  document.addEventListener("pointerleave", () => {
+    cursorGlow.style.opacity = "0";
+  });
+  document.addEventListener("pointerover", (event) => {
+    cursorGlow.classList.toggle(
+      "cursor-hover",
+      Boolean(
+        event.target.closest(
+          "a,button,summary,input,select,textarea,.tilt-card",
+        ),
+      ),
+    );
+  });
+}
+const header = document.querySelector(".header");
+const scrollProgress = document.querySelector("#scrollProgress");
+function updateScrollUI() {
+  const max = document.documentElement.scrollHeight - innerHeight;
+  const progress = max > 0 ? Math.min(scrollY / max, 1) : 0;
+  scrollProgress.style.transform = `scaleX(${progress})`;
+  header.classList.toggle("scrolled", scrollY > 18);
+}
+updateScrollUI();
+addEventListener("scroll", updateScrollUI, { passive: true });
+const projectVisuals = document.querySelectorAll(".project-visual");
+if (
+  matchMedia("(pointer:fine)").matches &&
+  !matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+  projectVisuals.forEach((projectVisual) => {
+    let box;
+    let frame = 0;
+    let clientX = 0;
+    let clientY = 0;
+    const render = () => {
+      frame = 0;
+      if (!box) return;
+      const x = (clientX - box.left) / box.width - 0.5;
+      const y = (clientY - box.top) / box.height - 0.5;
+      projectVisual.style.setProperty("--tilt-x", `${(-y * 5).toFixed(2)}deg`);
+      projectVisual.style.setProperty("--tilt-y", `${(x * 6).toFixed(2)}deg`);
+      projectVisual.style.setProperty("--visual-x", `${(x * 18).toFixed(1)}px`);
+      projectVisual.style.setProperty("--visual-y", `${(y * 14).toFixed(1)}px`);
+    };
+    projectVisual.addEventListener("pointerenter", () => {
+      box = projectVisual.getBoundingClientRect();
+      projectVisual.classList.add("is-tilting");
+    });
+    projectVisual.addEventListener(
+      "pointermove",
+      (event) => {
+        clientX = event.clientX;
+        clientY = event.clientY;
+        if (!frame) frame = requestAnimationFrame(render);
+      },
+      { passive: true },
+    );
+    projectVisual.addEventListener("pointerleave", () => {
+      if (frame) cancelAnimationFrame(frame);
+      frame = 0;
+      box = null;
+      projectVisual.classList.remove("is-tilting");
+      projectVisual.style.setProperty("--tilt-x", "0deg");
+      projectVisual.style.setProperty("--tilt-y", "0deg");
+      projectVisual.style.setProperty("--visual-x", "0px");
+      projectVisual.style.setProperty("--visual-y", "0px");
+    });
+  });
+}
+let initial = "en";
+try {
+  initial = localStorage.getItem("portfolio-language") || "en";
+} catch {}
+setLanguage(initial);
+const motionOK = !matchMedia("(prefers-reduced-motion: reduce)").matches;
+const main = document.querySelector("#main");
+const aboutSection = document.querySelector("#about");
+const workSection = document.querySelector("#work");
+if (main && aboutSection && workSection) {
+  main.insertBefore(aboutSection, workSection);
+  const aboutNumber = aboutSection.querySelector(".section-number");
+  const workNumber = workSection.querySelector(".section-number");
+  if (aboutNumber) aboutNumber.textContent = "01 /";
+  if (workNumber) workNumber.textContent = "02 /";
+}
+const contactNumber = document.querySelector("#contact .section-number");
+if (contactNumber) contactNumber.textContent = "06 /";
+if (motionOK && matchMedia("(pointer:fine)").matches) {
+  document
+    .querySelectorAll(".service,.process-steps>div,.toolbox,.contact-card")
+    .forEach((card) => {
+      card.classList.add("tilt-card");
+      card.addEventListener("pointermove", (event) => {
+        const box = card.getBoundingClientRect();
+        const x = (event.clientX - box.left) / box.width;
+        const y = (event.clientY - box.top) / box.height;
+        card.style.setProperty("--mouse-x", `${x * 100}%`);
+        card.style.setProperty("--mouse-y", `${y * 100}%`);
+        card.style.transform = `perspective(1000px) rotateX(${((0.5 - y) * 3.5).toFixed(2)}deg) rotateY(${((x - 0.5) * 4.5).toFixed(2)}deg) translateY(-4px)`;
+      });
+      card.addEventListener("pointerleave", () => {
+        card.style.transform = "";
+      });
+    });
+}
+const contactForm = document.querySelector("#contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!contactForm.reportValidity()) return;
+    const name = document.querySelector("#senderName").value.trim();
+    const type = document.querySelector("#projectType").value;
+    const message = document.querySelector("#senderMessage").value.trim();
+    const text = `Hello Mahmoud, my name is ${name}.%0AProject type: ${type}.%0A${message}`;
+    window.open(
+      `https://wa.me/201005567643?text=${encodeURIComponent(text.replaceAll("%0A", "\n"))}`,
+      "_blank",
+      "noopener",
+    );
+  });
+}
+if (motionOK && matchMedia("(pointer:fine)").matches) {
+  document.querySelectorAll(".navigation a").forEach((link) => {
+    link.addEventListener("pointermove", (event) => {
+      const box = link.getBoundingClientRect();
+      link.style.transform = `translate(${((event.clientX - box.left - box.width / 2) * 0.1).toFixed(1)}px,${((event.clientY - box.top - box.height / 2) * 0.16).toFixed(1)}px)`;
+    });
+    link.addEventListener("pointerleave", () => {
+      link.style.transform = "";
+    });
+  });
+}
+const typedSkill = document.querySelector("#typedSkill");
+if (typedSkill) {
+  const codeLines = [
+    'const ui = ["HTML", "CSS", "Bootstrap"];',
+    'const logic = ["JavaScript", "OOP", "REST API"];',
+    'const backend = ["Python", "Django"];',
+    'const server = ["Node.js", "Express"];',
+    'learning.now("React", "TypeScript");',
+  ];
+  if (!motionOK) {
+    typedSkill.textContent = codeLines[4];
+  } else {
+    let line = 0,
+      index = 0,
+      deleting = false;
+    const type = () => {
+      const text = codeLines[line];
+      typedSkill.textContent = text.slice(0, index);
+      if (!deleting && index < text.length) {
+        index++;
+        setTimeout(type, 38);
+      } else if (!deleting) {
+        deleting = true;
+        setTimeout(type, 1500);
+      } else if (index > 0) {
+        index--;
+        setTimeout(type, 18);
+      } else {
+        deleting = false;
+        line = (line + 1) % codeLines.length;
+        setTimeout(type, 300);
+      }
+    };
+    type();
+  }
+}
+if ("IntersectionObserver" in window) {
+  const focusReveal = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          focusReveal.unobserve(entry.target);
+        }
+      }
+    },
+    { threshold: 0.14 },
+  );
+  document
+    .querySelectorAll(".focus-heading,.focus-track article")
+    .forEach((element, index) => {
+      element.classList.add("reveal");
+      element.style.transitionDelay = `${index * 80}ms`;
+      focusReveal.observe(element);
+    });
+}
+const contactBottom = document.querySelector(".contact-bottom");
+if (contactBottom) {
+  contactBottom.innerHTML = `<nav class="contact-links" aria-label="Direct contact links"><a class="contact-link contact-link-email" href="mailto:mahmoudashraf.9244@gmail.com" aria-label="Email Mahmoud"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17v11h-17z"/><path d="m4.5 7.5 7.5 6 7.5-6"/></svg><span>Email</span></a><a class="contact-link contact-link-github" href="https://github.com/mahmoudashraf9244-cloud" target="_blank" rel="noopener noreferrer" aria-label="Mahmoud on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.3 9.3 0 0 0-3 18.1c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.4 9.4 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.6 4.9.4.3.7.9.7 1.8v2.7c0 .3.2.6.7.5A9.3 9.3 0 0 0 12 2.8Z"/></svg><span>GitHub</span></a><a class="contact-link contact-link-linkedin" href="https://www.linkedin.com/in/mahmoud9244" target="_blank" rel="noopener noreferrer" aria-label="Mahmoud on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v10M5 5.5v.1M10 19v-5.6c0-2.6 4-2.8 4 0V19M10 9v10M3 3h18v18H3z"/></svg><span>LinkedIn</span></a></nav>`;
+}
+if (motionOK && matchMedia("(pointer:fine)").matches) {
+  document
+    .querySelectorAll(
+      ".education-card,.project-proof span,.study-focus span,.toolbox-row,.contact-link",
+    )
+    .forEach((element) => {
+      element.addEventListener("pointermove", (event) => {
+        const box = element.getBoundingClientRect();
+        const x = (event.clientX - box.left) / box.width - 0.5;
+        const y = (event.clientY - box.top) / box.height - 0.5;
+        element.style.setProperty("--micro-x", `${(x * 5).toFixed(1)}px`);
+        element.style.setProperty("--micro-y", `${(y * 4).toFixed(1)}px`);
+      });
+      element.addEventListener("pointerleave", () => {
+        element.style.removeProperty("--micro-x");
+        element.style.removeProperty("--micro-y");
+      });
+    });
+}
+Object.assign(translations.en, {
+  serviceSixTitle: "Performance & accessibility",
+  serviceSixText:
+    "Faster loading, clear interaction states, and comfortable keyboard and screen-reader experiences.",
+});
+Object.assign(translations.ar, {
+  serviceSixTitle:
+    "\u0627\u0644\u0623\u062f\u0627\u0621 \u0648\u0633\u0647\u0648\u0644\u0629 \u0627\u0644\u0648\u0635\u0648\u0644",
+  serviceSixText:
+    "\u062a\u062d\u0633\u064a\u0646 \u0627\u0644\u0633\u0631\u0639\u0629\u060c \u0648\u0648\u0636\u0648\u062d \u0627\u0644\u062a\u0641\u0627\u0639\u0644\u0627\u062a\u060c \u0648\u062a\u062c\u0631\u0628\u0629 \u0645\u0631\u064a\u062d\u0629 \u0644\u0644\u0648\u062d\u0629 \u0627\u0644\u0645\u0641\u0627\u062a\u064a\u062d \u0648\u0642\u0627\u0631\u0626\u0627\u062a \u0627\u0644\u0634\u0627\u0634\u0629.",
+});
+if (
+  serviceList &&
+  !serviceList.querySelector('[data-i18n="serviceSixTitle"]')
+) {
+  serviceList.insertAdjacentHTML(
+    "beforeend",
+    '<article class="service"><span class="service-index">06</span><div><h3 data-i18n="serviceSixTitle">Performance &amp; accessibility</h3><p data-i18n="serviceSixText">Faster loading, clear interaction states, and comfortable keyboard and screen-reader experiences.</p></div></article>',
+  );
+  const title = serviceList.querySelector('[data-i18n="serviceSixTitle"]');
+  const text = serviceList.querySelector('[data-i18n="serviceSixText"]');
+  if (currentLanguage === "ar") {
+    title.innerHTML = translations.ar.serviceSixTitle;
+    text.innerHTML = translations.ar.serviceSixText;
+  }
+}
+document.querySelectorAll(".case-study").forEach((details) => {
+  details.addEventListener("toggle", () =>
+    details.classList.toggle("is-open", details.open),
+  );
+});
+if (motionOK && matchMedia("(pointer:fine)").matches) {
+  document.querySelectorAll(".project,.education-card").forEach((card) => {
+    let box;
+    let frame = 0;
+    let clientX = 0;
+    let clientY = 0;
+    const strength = card.classList.contains("project") ? 7.5 : 5.5;
+    const render = () => {
+      frame = 0;
+      if (!box) return;
+      const x = (clientX - box.left) / box.width - 0.5;
+      const y = (clientY - box.top) / box.height - 0.5;
+      card.style.transform = `perspective(1200px) rotateX(${(-y * strength).toFixed(2)}deg) rotateY(${(x * strength).toFixed(2)}deg) translate3d(0,-6px,0)`;
+      card.style.setProperty("--card-x", `${(x + 0.5) * 100}%`);
+      card.style.setProperty("--card-y", `${(y + 0.5) * 100}%`);
+    };
+    card.addEventListener("pointerenter", () => {
+      box = card.getBoundingClientRect();
+      card.classList.add("is-tilting");
+    });
+    card.addEventListener(
+      "pointermove",
+      (event) => {
+        clientX = event.clientX;
+        clientY = event.clientY;
+        if (!frame) frame = requestAnimationFrame(render);
+      },
+      { passive: true },
+    );
+    card.addEventListener("pointerleave", () => {
+      if (frame) cancelAnimationFrame(frame);
+      frame = 0;
+      box = null;
+      card.classList.remove("is-tilting");
+      card.style.transform = "";
+    });
+  });
+}
+const footerIdentity = document.querySelector(".footer-identity");
+if (footerIdentity && !footerIdentity.querySelector(".footer-availability")) {
+  footerIdentity.insertAdjacentHTML(
+    "beforeend",
+    '<small class="footer-availability">Available for freelance projects, part-time and full-time roles.</small>',
+  );
+}
+Object.assign(translations.en, {
+  aboutEngineering:
+    "I approach software as more than code: understand the problem, structure the solution, and refine the experience until it feels dependable. Every project is a chance to strengthen my engineering judgment and build something people can use with confidence.",
+});
+Object.assign(translations.ar, {
+  aboutEngineering:
+    "\u0623\u062a\u0639\u0627\u0645\u0644 \u0645\u0639 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a \u0643\u0623\u0643\u062b\u0631 \u0645\u0646 \u0645\u062c\u0631\u062f \u0643\u0648\u062f: \u0623\u0641\u0647\u0645 \u0627\u0644\u0645\u0634\u0643\u0644\u0629\u060c \u0648\u0623\u0646\u0638\u0645 \u0627\u0644\u062d\u0644\u060c \u062b\u0645 \u0623\u0637\u0648\u0631 \u0627\u0644\u062a\u062c\u0631\u0628\u0629 \u062d\u062a\u0649 \u062a\u0635\u0628\u062d \u0648\u0627\u0636\u062d\u0629 \u0648\u0645\u0648\u062b\u0648\u0642\u0629. \u0643\u0644 \u0645\u0634\u0631\u0648\u0639 \u0641\u0631\u0635\u0629 \u0644\u062a\u0637\u0648\u064a\u0631 \u062a\u0641\u0643\u064a\u0631\u064a \u0627\u0644\u0647\u0646\u062f\u0633\u064a \u0648\u0628\u0646\u0627\u0621 \u0634\u064a\u0621 \u064a\u0633\u062a\u062e\u062f\u0645\u0647 \u0627\u0644\u0646\u0627\u0633 \u0628\u062b\u0642\u0629.",
+});
+const aboutHeading = document.querySelector(".about-section>div:first-child");
+const aboutSignature = aboutHeading?.querySelector(".about-signature");
+if (
+  aboutHeading &&
+  aboutSignature &&
+  !aboutHeading.querySelector(".about-engineering")
+) {
+  const paragraph = document.createElement("p");
+  paragraph.className = "about-engineering";
+  paragraph.dataset.i18n = "aboutEngineering";
+  paragraph.textContent = translations[currentLanguage].aboutEngineering;
+  aboutHeading.insertBefore(paragraph, aboutSignature);
+}
+if (motionOK) {
+  const denseCanvas = document.createElement("canvas");
+  denseCanvas.id = "particleCanvasDense";
+  denseCanvas.setAttribute("aria-hidden", "true");
+  document.body.insertBefore(denseCanvas, document.body.firstChild);
+  const denseContext = denseCanvas.getContext("2d");
+  let denseParticles = [];
+  let denseFrame;
+  const densePointer = { x: -500, y: -500 };
+  const resizeDense = () => {
+    const ratio = Math.min(devicePixelRatio || 1, 2);
+    denseCanvas.width = innerWidth * ratio;
+    denseCanvas.height = innerHeight * ratio;
+    denseCanvas.style.width = `${innerWidth}px`;
+    denseCanvas.style.height = `${innerHeight}px`;
+    denseContext.setTransform(ratio, 0, 0, ratio, 0, 0);
+    const count = matchMedia("(pointer:fine)").matches
+      ? Math.min(62, Math.floor(innerWidth / 19))
+      : 14;
+    denseParticles = Array.from({ length: count }, () => ({
+      x: Math.random() * innerWidth,
+      y: Math.random() * innerHeight,
+      vx: (Math.random() - 0.5) * 0.22,
+      vy: (Math.random() - 0.5) * 0.22,
+      r: Math.random() * 0.85 + 0.35,
+    }));
+  };
+  addEventListener("resize", resizeDense, { passive: true });
+  addEventListener(
+    "pointermove",
+    (event) => {
+      densePointer.x = event.clientX;
+      densePointer.y = event.clientY;
+    },
+    { passive: true },
+  );
+  resizeDense();
+  const drawDense = () => {
+    denseContext.clearRect(0, 0, innerWidth, innerHeight);
+    for (const point of denseParticles) {
+      point.x = (point.x + point.vx + innerWidth) % innerWidth;
+      point.y = (point.y + point.vy + innerHeight) % innerHeight;
+      const dx = point.x - densePointer.x,
+        dy = point.y - densePointer.y,
+        distance = Math.hypot(dx, dy);
+      if (distance < 115 && distance > 0) {
+        point.x += (dx / distance) * 0.22;
+        point.y += (dy / distance) * 0.22;
+      }
+      denseContext.beginPath();
+      denseContext.arc(point.x, point.y, point.r, 0, Math.PI * 2);
+      denseContext.fillStyle = "rgba(156,203,255,.28)";
+      denseContext.fill();
+    }
+    for (let i = 0; i < denseParticles.length; i++)
+      for (let j = i + 1; j < denseParticles.length; j++) {
+        const distance = Math.hypot(
+          denseParticles[i].x - denseParticles[j].x,
+          denseParticles[i].y - denseParticles[j].y,
+        );
+        if (distance < 125) {
+          denseContext.beginPath();
+          denseContext.moveTo(denseParticles[i].x, denseParticles[i].y);
+          denseContext.lineTo(denseParticles[j].x, denseParticles[j].y);
+          denseContext.strokeStyle = `rgba(140,255,193,${(1 - distance / 125) * 0.075})`;
+          denseContext.lineWidth = 0.5;
+          denseContext.stroke();
+        }
+      }
+    denseFrame = requestAnimationFrame(drawDense);
+  };
+  drawDense();
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) cancelAnimationFrame(denseFrame);
+    else drawDense();
+  });
+}
+if (contactBottom && !document.querySelector("#copyEmail")) {
+  contactBottom.insertAdjacentHTML(
+    "beforeend",
+    '<button id="copyEmail" type="button" hidden aria-hidden="true"></button><span id="copyStatus" hidden></span>',
+  );
+}
