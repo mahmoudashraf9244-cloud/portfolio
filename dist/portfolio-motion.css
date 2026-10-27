@@ -113,6 +113,22 @@ a,button,summary,.project-proof span,.study-focus span,.toolbox-row{transform-st
 @media(max-width:760px){.portrait-composition{animation-duration:6.6s}.education-card{animation:none}.toolbox{animation-duration:8s}.ambient:after{background-size:90px 90px,130px 130px;opacity:.25}}
 @media(prefers-reduced-motion:reduce){.portrait-composition,.toolbox,.education-card,.focus-track article:nth-child(2),.ambient:after{animation:none!important;translate:none!important}}
 
+/* Closing refinements */
+.about-engineering{max-width:500px;margin-top:31px;padding-inline-start:18px;border-inline-start:2px solid rgba(140,255,193,.34);color:#aeb9c7;font-size:14px;line-height:1.9;letter-spacing:.008em}.about-signature{margin-top:34px!important}
+.case-study{interpolate-size:allow-keywords}.case-study::details-content{overflow:clip;block-size:0;opacity:0;transform:translateY(-10px);transition:block-size .68s cubic-bezier(.2,.75,.25,1),opacity .42s ease,transform .6s cubic-bezier(.2,.75,.25,1),content-visibility .68s allow-discrete}.case-study[open]::details-content{block-size:auto;opacity:1;transform:none}.case-study .case-grid,.case-study .project-disclaimer{animation-duration:.62s!important}
+.contact-card.tilt-card:before{display:none!important}.contact-card{--mouse-x:50%!important;--mouse-y:50%!important}
+#particleCanvasDense{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:-2;opacity:.82}.footer-nav{padding:7px!important;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.025);box-shadow:inset 0 1px rgba(255,255,255,.045),0 12px 35px rgba(0,0,0,.14);gap:5px!important}.footer-nav a{padding:8px 11px;border-radius:10px;transition:background .2s,color .2s,transform .2s}.footer-nav a:hover{background:rgba(140,255,193,.08);transform:translateY(-2px);color:#fff!important}
+@media(max-width:760px){.about-engineering{font-size:13px;margin-top:24px}.footer-nav{gap:4px!important}.footer-nav a{padding:7px 9px;font-size:11px!important}#particleCanvasDense{opacity:.5}}
+@media(prefers-reduced-motion:reduce){.case-study::details-content{transition:none!important}.case-study[open]::details-content{block-size:auto}#particleCanvasDense{display:none!important}}
+
+/* Closing refinements */
+.about-engineering{max-width:500px;margin-top:31px;padding-inline-start:18px;border-inline-start:2px solid rgba(140,255,193,.34);color:#aeb9c7;font-size:14px;line-height:1.9;letter-spacing:.008em}.about-signature{margin-top:34px!important}
+.case-study{interpolate-size:allow-keywords}.case-study::details-content{overflow:clip;block-size:0;opacity:0;transform:translateY(-10px);transition:block-size .68s cubic-bezier(.2,.75,.25,1),opacity .42s ease,transform .6s cubic-bezier(.2,.75,.25,1),content-visibility .68s allow-discrete}.case-study[open]::details-content{block-size:auto;opacity:1;transform:none}.case-study .case-grid,.case-study .project-disclaimer{animation-duration:.62s!important}
+.contact-card.tilt-card:before{display:none!important}.contact-card{--mouse-x:50%!important;--mouse-y:50%!important}
+#particleCanvasDense{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:-2;opacity:.82}.footer-nav{padding:7px!important;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.025);box-shadow:inset 0 1px rgba(255,255,255,.045),0 12px 35px rgba(0,0,0,.14);gap:5px!important}.footer-nav a{padding:8px 11px;border-radius:10px;transition:background .2s,color .2s,transform .2s}.footer-nav a:hover{background:rgba(140,255,193,.08);transform:translateY(-2px);color:#fff!important}
+@media(max-width:760px){.about-engineering{font-size:13px;margin-top:24px}.footer-nav{gap:4px!important}.footer-nav a{padding:7px 9px;font-size:11px!important}#particleCanvasDense{opacity:.5}}
+@media(prefers-reduced-motion:reduce){.case-study::details-content{transition:none!important}.case-study[open]::details-content{block-size:auto}#particleCanvasDense{display:none!important}}
+
 /* Readability and glass navigation refinement */
 .navigation{gap:4px;padding:5px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.035);box-shadow:inset 0 1px rgba(255,255,255,.045),0 10px 30px rgba(0,0,0,.16);backdrop-filter:blur(14px)}
 .navigation a{min-width:72px;padding:7px 13px;border-radius:999px;text-align:center;font-size:13px;transition:color .2s,background .2s,box-shadow .2s,transform .18s}
