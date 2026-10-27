@@ -1,25 +1,75 @@
-# Mahmoud Ashraf — Portfolio
+# React + TypeScript + Vite
 
-A responsive Arabic/English dark portfolio using plain HTML, CSS and JavaScript. It includes ambient motion, scroll reveals, a sticky glass header, scroll progress, an animated technology marquee, interactive project artwork and reduced-motion support. No build or package installation is needed. The deployable site is `dist/`.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Preview
+Currently, two official plugins are available:
 
-Run `node preview.mjs`, then open http://127.0.0.1:4173 .
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Edit
+## React Compiler
 
-- `dist/index.html`: English content, project details and contact links.
-- `dist/app.js`: Arabic copy, language persistence, mobile menu and email copying.
-- `dist/styles.css`: visual system, responsive layouts and RTL rules.
-- `dist/assets/mahmoud-portrait.webp`: selected first portrait, cropped in the interface to a compact head-and-shoulders presentation.
-- `.openai/hosting.json`: Sites hosting configuration; it is not shown to visitors.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-The educational university portal is the only featured project. No invented clients, employment, reviews or performance figures are included. Add education and training when the owner supplies the details. The project illustration is a conceptual graphic, not a screenshot of the live application.
+## Expanding the ESLint configuration
 
-The site remembers the language on the same device. Contact links use the visitor's email application; there is no contact form backend.
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-Fonts are loaded from Google Fonts with local fallback stacks. All core navigation, content and project links remain available without JavaScript in English.
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-## Portrait
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-Edited using the built-in image generation tool from the owner's original photograph. The selected revision uses a restrained navy suit, white shirt, neutral real-world wall, and ordinary daylight, with instructions to preserve facial features, glasses, expression, body proportions and skin texture without beautification. The original photograph remains unchanged in the parent workspace. Full edit prompt: `portrait-edit-prompt.txt`.
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+
+```
+
+You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+
+```

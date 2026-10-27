@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <meta name="description" content="TeamDesk is a responsive employee management dashboard demonstrating REST API integration, CRUD operations, filters and export workflows.">
+  <title>TeamDesk — Employee Management Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="motion.css">
+  <link rel="stylesheet" href="reports.css">
+  <link rel="stylesheet" href="identity.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to workspace</a>
+  <div class="motion-field" aria-hidden="true"><span class="motion-orb orb-one"></span><span class="motion-orb orb-two"></span><span class="motion-line line-one"></span><span class="motion-line line-two"></span><i class="data-node node-a">EMP</i><i class="data-node node-b">HR</i><i class="data-node node-c">OPS</i><i class="data-node node-d">01</i></div>
+  <div class="page-glow" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="TeamDesk dashboard home"><span class="brand-mark">T</span><span><strong>TEAMDESK</strong><small>PEOPLE OPERATIONS</small></span></a>
+    <div class="topbar-meta"><span class="api-status"><i></i><span id="apiStatus">Connecting to API</span></span><button class="icon-button" id="themeButton" type="button" aria-label="Toggle color theme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6 7 7m10 10 1.4 1.4m0-12.8L17 7M7 17l-1.4 1.4"/><circle cx="12" cy="12" r="4"/></svg></button><div class="profile-chip"><span>MA</span><div><strong>Mahmoud</strong><small>Administrator</small></div></div></div>
+  </header>
+  <aside class="sidebar" aria-label="Workspace navigation"><nav><a class="active" href="#workspace" aria-label="Overview"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg><span>Overview</span></a><a href="#directory" aria-label="Employees"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-4 2-7 6-7s6 3 6 7M16 5c3 0 5 2 5 5m-4 3c2.5.5 4 2.8 4 6"/></svg><span>Employees</span></a><a href="#reports" aria-label="Departments"><svg viewBox="0 0 24 24"><path d="M4 21V7l8-4 8 4v14M9 21v-4h6v4M8 9h1m6 0h1M8 13h1m6 0h1"/></svg><span>Departments</span></a><a href="#reports" aria-label="Reports"><svg viewBox="0 0 24 24"><path d="M5 20V10m7 10V4m7 16v-7"/></svg><span>Reports</span></a></nav><div class="sidebar-pulse"><i></i><span>System online</span></div></aside>
+
+  <main id="workspace" class="shell">
+    <section class="intro">
+      <div><p class="kicker">PEOPLE OPERATIONS / OVERVIEW</p><h1>People operations, made clear.</h1><p>Manage employee records, monitor access roles, and turn people data into clear operational insights.</p></div>
+      <div class="intro-actions"><a class="ghost-button reports-link" href="#reports">View reports</a><button class="ghost-button" id="exportBtn" type="button" disabled>Export CSV</button><button class="primary-button" id="addBtn" type="button" disabled><span aria-hidden="true">＋</span> Add employee</button></div>
+    </section>
+
+    <section class="stats" aria-label="Employee statistics">
+      <article><span class="stat-icon violet">◎</span><div><small>Total employees</small><strong id="totalStat">—</strong><span>In current dataset</span></div></article>
+      <article><span class="stat-icon green">⌁</span><div><small>Administrators</small><strong id="adminStat">—</strong><span>Elevated access</span></div></article>
+      <article><span class="stat-icon blue">◇</span><div><small>Moderators</small><strong id="moderatorStat">—</strong><span>Content operations</span></div></article>
+      <article><span class="stat-icon amber">↗</span><div><small>Workspace changes</small><strong id="changesStat">0</strong><span>Saved on this device</span></div></article>
+    </section>
+
+    <section class="workspace-panel" id="directory">
+      <div class="panel-head"><div><p class="kicker">DIRECTORY</p><h2>Employees</h2><p id="resultSummary">Preparing the workspace…</p></div><div class="view-switch" aria-label="Choose view"><button id="tableViewBtn" class="active" type="button" aria-label="Table view" aria-pressed="true"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg></button><button id="gridViewBtn" type="button" aria-label="Grid view" aria-pressed="false"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg></button></div></div>
+      <div class="toolbar">
+        <label class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg><span class="sr-only">Search employees</span><input id="searchInput" type="search" placeholder="Search name, email or phone…" autocomplete="off" disabled><kbd>/</kbd></label>
+        <label><span class="sr-only">Filter by role</span><select id="roleFilter" disabled><option value="all">All roles</option><option value="admin">Administrators</option><option value="moderator">Moderators</option><option value="user">Users</option></select></label>
+        <label><span class="sr-only">Sort employees</span><select id="sortSelect" disabled><option value="name-asc">Name A–Z</option><option value="name-desc">Name Z–A</option><option value="age-asc">Age: low to high</option><option value="age-desc">Age: high to low</option></select></label>
+        <button class="ghost-button" id="resetBtn" type="button" disabled>Reset</button>
+      </div>
+
+      <div id="message" class="toast" role="status" aria-live="polite"></div>
+      <div id="errorState" class="state-card error-state" hidden><span>!</span><h3>We couldn’t load the employees</h3><p>Check your connection and try the request again.</p><button class="secondary-button" id="retryBtn" type="button">Try again</button></div>
+      <div id="emptyState" class="state-card" hidden><span>⌕</span><h3>No matching employees</h3><p>Try a different search or clear the active filters.</p><button class="secondary-button" id="clearFiltersBtn" type="button">Clear filters</button></div>
+      <div id="loadingState" class="skeleton-list" aria-label="Loading employees"><i></i><i></i><i></i><i></i><i></i></div>
+
+      <div id="tableView" class="data-table" hidden>
+        <table><thead><tr><th>Employee</th><th>Contact</th><th>Age</th><th>Gender</th><th>Role</th><th><span class="sr-only">Actions</span></th></tr></thead><tbody id="usersBody"></tbody></table>
+      </div>
+      <div id="gridView" class="user-grid" hidden></div>
+      <footer id="pagination" class="pagination" hidden><p id="pageSummary"></p><div><button id="previousPage" type="button" aria-label="Previous page">←</button><span id="pageButtons"></span><button id="nextPage" type="button" aria-label="Next page">→</button></div></footer>
+    </section>
+    <section class="reports-panel" id="reports"><div class="reports-heading"><div><p class="kicker">REPORTS / LIVE DATA</p><h2>Workforce insights</h2><p>Role distribution and operational signals generated from the current employee dataset.</p></div><span class="report-badge"><i></i> Live summary</span></div><div class="report-grid"><article class="role-chart"><div class="report-title"><h3>Role distribution</h3><span id="roleTotal">0 employees</span></div><div class="bar-item"><div><span>Employees</span><b id="userReportValue">0%</b></div><i><span id="userReportBar"></span></i></div><div class="bar-item"><div><span>Moderators</span><b id="moderatorReportValue">0%</b></div><i><span id="moderatorReportBar"></span></i></div><div class="bar-item"><div><span>Administrators</span><b id="adminReportValue">0%</b></div><i><span id="adminReportBar"></span></i></div></article><article class="operations-card"><div class="report-title"><h3>Workspace health</h3><span>Operational</span></div><div class="health-score"><strong id="healthScore">100</strong><span>/100</span></div><p>Data loaded, controls enabled, and local changes tracked in this browser.</p><div class="health-row"><span>API connectivity</span><b>Online</b></div><div class="health-row"><span>Records displayed</span><b id="visibleReport">0</b></div><div class="health-row"><span>Local changes</span><b id="changesReport">0</b></div></article></div><div class="report-metrics"><article><span>Average age</span><strong id="averageAgeReport">—</strong><small>Across current records</small></article><article><span>Female employees</span><strong id="femaleReport">—</strong><small>Share of workforce</small></article><article><span>Male employees</span><strong id="maleReport">—</strong><small>Share of workforce</small></article><article><span>Departments</span><strong id="departmentReport">—</strong><small>Represented in data</small></article></div></section>
+    <p class="demo-note"><strong>Demo behavior:</strong> DummyJSON simulates write requests. Added, edited and deleted records are persisted in this browser so the prototype behaves consistently after refresh.</p>
+  </main>
+
+  <dialog id="detailsDialog" class="dialog"><div class="dialog-card"><button class="dialog-close" type="button" data-close="detailsDialog" aria-label="Close details">×</button><div id="detailsBody"></div></div></dialog>
+  <dialog id="formDialog" class="dialog"><form id="userForm" class="dialog-card form-card" novalidate><div class="dialog-header"><div><p class="kicker">EMPLOYEE RECORD</p><h2 id="formTitle">Add employee</h2></div><button class="dialog-close" type="button" data-close="formDialog" aria-label="Close form">×</button></div><p id="formError" class="form-error" role="alert" hidden></p><input id="userId" type="hidden"><div class="form-grid"><label>First name<input id="firstName" required autocomplete="given-name"></label><label>Last name<input id="lastName" required autocomplete="family-name"></label><label class="wide">Email<input id="email" type="email" required autocomplete="email"></label><label>Phone<input id="phone" type="tel" required autocomplete="tel"></label><label>Age<input id="age" type="number" min="1" max="120" required></label><label>Gender<select id="gender" required><option value="">Choose…</option><option value="male">Male</option><option value="female">Female</option></select></label><label>Role<select id="role" required><option value="">Choose…</option><option value="admin">Administrator</option><option value="moderator">Moderator</option><option value="user">User</option></select></label></div><div class="dialog-actions"><button class="ghost-button" type="button" data-close="formDialog">Cancel</button><button class="primary-button" id="saveButton" type="submit">Save employee</button></div></form></dialog>
+  <dialog id="deleteDialog" class="dialog"><div class="dialog-card confirm-card"><span class="danger-icon">!</span><h2>Delete employee?</h2><p id="deleteText">This record will be removed from your local workspace.</p><div class="dialog-actions"><button class="ghost-button" type="button" data-close="deleteDialog">Cancel</button><button class="danger-button" id="confirmDelete" type="button">Delete employee</button></div></div></dialog>
+</body>
+</html>
