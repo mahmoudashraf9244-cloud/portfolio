@@ -1,6 +1,7 @@
 dist/assets/*.png
 node_modules/
 .sites-local/
+outputs/
 .DS_Store
 Thumbs.db
 .idea/
