@@ -124,56 +124,6 @@ Object.assign(translations.ar, {
   nexusDisclaimer:
     "يحاكي DummyJSON عمليات الكتابة على الخادم، وتُحفظ التغييرات محليًا في هذا المتصفح ليستمر الديمو بعد إعادة التحميل.",
 });
-const serviceList = document.querySelector(".service-list");
-if (serviceList) {
-  serviceList.insertAdjacentHTML(
-    "beforeend",
-    '<article class="service"><span class="service-index">04</span><div><h3 data-i18n="serviceFourTitle">API integration &amp; data flows</h3><p data-i18n="serviceFourText">Connect interfaces to REST APIs, handle loading and error states, and turn live data into useful user experiences.</p></div></article><article class="service"><span class="service-index">05</span><div><h3 data-i18n="serviceFiveTitle">Dashboards &amp; admin interfaces</h3><p data-i18n="serviceFiveText">Organized dashboards with search, filters, forms, validation, and clear responsive data presentation.</p></div></article>',
-  );
-}
-const portalProof = document.querySelector(
-  ".project:not(.nexus-project) .project-proof",
-);
-if (portalProof) {
-  const labels = [
-    "Secure authentication",
-    "Safe enrollment rules",
-    "Private student dashboard",
-    "Search, filters & pagination",
-    "Bilingual RTL interface",
-  ];
-  portalProof
-    .querySelectorAll("span")
-    .forEach((item, index) => (item.textContent = labels[index]));
-}
-const teamProof = document.querySelector(".nexus-project .project-proof");
-if (teamProof) {
-  const labels = [
-    "Fetch API integration",
-    "CRUD HTTP methods",
-    "Search, filter & sort",
-    "Pagination & views",
-    "localStorage persistence",
-  ];
-  teamProof
-    .querySelectorAll("span")
-    .forEach((item, index) => (item.textContent = labels[index]));
-}
-const portalTags = document.querySelector(".project:not(.nexus-project) .tags");
-if (portalTags)
-  portalTags.innerHTML =
-    "<li>Python</li><li>Django</li><li>PostgreSQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Vercel</li>";
-const teamTags = document.querySelector(".nexus-project .tags");
-if (teamTags)
-  teamTags.innerHTML =
-    "<li>JavaScript</li><li>Fetch API</li><li>HTML</li><li>CSS</li><li>LocalStorage</li>";
-const portalSummary = document.querySelector('[data-i18n="caseStudy"]');
-const teamSummary = document.querySelector('[data-i18n="nexusCaseStudy"]');
-if (portalSummary)
-  portalSummary.textContent =
-    "View project details — challenge, build & result";
-if (teamSummary)
-  teamSummary.textContent = "View TeamDesk details — logic, features & result";
 const nodes = [...document.querySelectorAll("[data-i18n]")];
 translations.en = Object.fromEntries(
   nodes.map((node) => [node.dataset.i18n, node.innerHTML]),
@@ -281,12 +231,6 @@ function setLanguage(language) {
       ? "محمود أشرف يرتدي بدلة كحلية ونظارة"
       : "Mahmoud Ashraf wearing a navy suit and glasses";
   document
-    .querySelector("#copyEmail")
-    .setAttribute(
-      "aria-label",
-      currentLanguage === "ar" ? "نسخ البريد الإلكتروني" : "Copy email address",
-    );
-  document
     .querySelector(".contact-arrow")
     .setAttribute(
       "aria-label",
@@ -311,7 +255,6 @@ function setLanguage(language) {
       ? "محمود أشرف، مطوّر برمجيات يبني منتجات ويب متجاوبة عبر تقنيات الواجهة الأمامية والخلفية. استكشف المشاريع وتواصل معي."
       : "Mahmoud Ashraf — Software Developer building responsive products across frontend and backend technologies. Explore my projects and get in touch.";
   closeMenu();
-  document.querySelector("#copyStatus").textContent = "";
   try {
     localStorage.setItem("portfolio-language", currentLanguage);
   } catch {}
@@ -359,19 +302,6 @@ document.addEventListener("click", (event) => {
 });
 matchMedia("(min-width:761px)").addEventListener("change", closeMenu);
 document.querySelector("#year").textContent = new Date().getFullYear();
-document.querySelector("#copyEmail").addEventListener("click", async () => {
-  const status = document.querySelector("#copyStatus");
-  try {
-    await navigator.clipboard.writeText("mahmoudashraf.9244@gmail.com");
-    status.textContent =
-      currentLanguage === "ar" ? "تم نسخ البريد الإلكتروني" : "Email copied";
-  } catch {
-    status.textContent =
-      currentLanguage === "ar"
-        ? "يمكنك تحديد البريد ونسخه، أو الضغط عليه للمراسلة."
-        : "Select the email to copy it, or click it to send a message.";
-  }
-});
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -499,7 +429,6 @@ let initial = "en";
 try {
   initial = localStorage.getItem("portfolio-language") || "en";
 } catch {}
-setLanguage(initial);
 const motionOK = !matchMedia("(prefers-reduced-motion: reduce)").matches;
 const main = document.querySelector("#main");
 const aboutSection = document.querySelector("#about");
@@ -623,10 +552,6 @@ if ("IntersectionObserver" in window) {
       focusReveal.observe(element);
     });
 }
-const contactBottom = document.querySelector(".contact-bottom");
-if (contactBottom) {
-  contactBottom.innerHTML = `<nav class="contact-links" aria-label="Direct contact links"><a class="contact-link contact-link-email" href="mailto:mahmoudashraf.9244@gmail.com" aria-label="Email Mahmoud"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17v11h-17z"/><path d="m4.5 7.5 7.5 6 7.5-6"/></svg><span>Email</span></a><a class="contact-link contact-link-github" href="https://github.com/mahmoudashraf9244-cloud" target="_blank" rel="noopener noreferrer" aria-label="Mahmoud on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.3 9.3 0 0 0-3 18.1c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.4 9.4 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.6 4.9.4.3.7.9.7 1.8v2.7c0 .3.2.6.7.5A9.3 9.3 0 0 0 12 2.8Z"/></svg><span>GitHub</span></a><a class="contact-link contact-link-linkedin" href="https://www.linkedin.com/in/mahmoud9244" target="_blank" rel="noopener noreferrer" aria-label="Mahmoud on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v10M5 5.5v.1M10 19v-5.6c0-2.6 4-2.8 4 0V19M10 9v10M3 3h18v18H3z"/></svg><span>LinkedIn</span></a></nav>`;
-}
 if (motionOK && matchMedia("(pointer:fine)").matches) {
   document
     .querySelectorAll(
@@ -657,21 +582,6 @@ Object.assign(translations.ar, {
   serviceSixText:
     "\u062a\u062d\u0633\u064a\u0646 \u0627\u0644\u0633\u0631\u0639\u0629\u060c \u0648\u0648\u0636\u0648\u062d \u0627\u0644\u062a\u0641\u0627\u0639\u0644\u0627\u062a\u060c \u0648\u062a\u062c\u0631\u0628\u0629 \u0645\u0631\u064a\u062d\u0629 \u0644\u0644\u0648\u062d\u0629 \u0627\u0644\u0645\u0641\u0627\u062a\u064a\u062d \u0648\u0642\u0627\u0631\u0626\u0627\u062a \u0627\u0644\u0634\u0627\u0634\u0629.",
 });
-if (
-  serviceList &&
-  !serviceList.querySelector('[data-i18n="serviceSixTitle"]')
-) {
-  serviceList.insertAdjacentHTML(
-    "beforeend",
-    '<article class="service"><span class="service-index">06</span><div><h3 data-i18n="serviceSixTitle">Performance &amp; accessibility</h3><p data-i18n="serviceSixText">Faster loading, clear interaction states, and comfortable keyboard and screen-reader experiences.</p></div></article>',
-  );
-  const title = serviceList.querySelector('[data-i18n="serviceSixTitle"]');
-  const text = serviceList.querySelector('[data-i18n="serviceSixText"]');
-  if (currentLanguage === "ar") {
-    title.innerHTML = translations.ar.serviceSixTitle;
-    text.innerHTML = translations.ar.serviceSixText;
-  }
-}
 document.querySelectorAll(".case-study").forEach((details) => {
   details.addEventListener("toggle", () =>
     details.classList.toggle("is-open", details.open),
@@ -715,13 +625,6 @@ if (motionOK && matchMedia("(pointer:fine)").matches) {
     });
   });
 }
-const footerIdentity = document.querySelector(".footer-identity");
-if (footerIdentity && !footerIdentity.querySelector(".footer-availability")) {
-  footerIdentity.insertAdjacentHTML(
-    "beforeend",
-    '<small class="footer-availability">Open to freelance projects, internships, and software roles.</small>',
-  );
-}
 Object.assign(translations.en, {
   aboutEngineering:
     "I approach software as more than code: understand the problem, structure the solution, and refine the experience until it feels dependable. Every project is a chance to strengthen my engineering judgment and build something people can use with confidence.",
@@ -730,24 +633,8 @@ Object.assign(translations.ar, {
   aboutEngineering:
     "\u0623\u062a\u0639\u0627\u0645\u0644 \u0645\u0639 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a \u0643\u0623\u0643\u062b\u0631 \u0645\u0646 \u0645\u062c\u0631\u062f \u0643\u0648\u062f: \u0623\u0641\u0647\u0645 \u0627\u0644\u0645\u0634\u0643\u0644\u0629\u060c \u0648\u0623\u0646\u0638\u0645 \u0627\u0644\u062d\u0644\u060c \u062b\u0645 \u0623\u0637\u0648\u0631 \u0627\u0644\u062a\u062c\u0631\u0628\u0629 \u062d\u062a\u0649 \u062a\u0635\u0628\u062d \u0648\u0627\u0636\u062d\u0629 \u0648\u0645\u0648\u062b\u0648\u0642\u0629. \u0643\u0644 \u0645\u0634\u0631\u0648\u0639 \u0641\u0631\u0635\u0629 \u0644\u062a\u0637\u0648\u064a\u0631 \u062a\u0641\u0643\u064a\u0631\u064a \u0627\u0644\u0647\u0646\u062f\u0633\u064a \u0648\u0628\u0646\u0627\u0621 \u0634\u064a\u0621 \u064a\u0633\u062a\u062e\u062f\u0645\u0647 \u0627\u0644\u0646\u0627\u0633 \u0628\u062b\u0642\u0629.",
 });
-const aboutHeading = document.querySelector(".about-section>div:first-child");
-const aboutSignature = aboutHeading?.querySelector(".about-signature");
-if (
-  aboutHeading &&
-  aboutSignature &&
-  !aboutHeading.querySelector(".about-engineering")
-) {
-  const paragraph = document.createElement("p");
-  paragraph.className = "about-engineering";
-  paragraph.dataset.i18n = "aboutEngineering";
-  paragraph.textContent = translations[currentLanguage].aboutEngineering;
-  aboutHeading.insertBefore(paragraph, aboutSignature);
-}
-if (motionOK) {
-  const denseCanvas = document.createElement("canvas");
-  denseCanvas.id = "particleCanvasDense";
-  denseCanvas.setAttribute("aria-hidden", "true");
-  document.body.insertBefore(denseCanvas, document.body.firstChild);
+const denseCanvas = document.querySelector("#particleCanvasDense");
+if (motionOK && denseCanvas) {
   const denseContext = denseCanvas.getContext("2d");
   let denseParticles = [];
   let denseFrame;
@@ -820,9 +707,4 @@ if (motionOK) {
     else drawDense();
   });
 }
-if (contactBottom && !document.querySelector("#copyEmail")) {
-  contactBottom.insertAdjacentHTML(
-    "beforeend",
-    '<button id="copyEmail" type="button" hidden aria-hidden="true"></button><span id="copyStatus" hidden></span>',
-  );
-}
+setLanguage(initial);

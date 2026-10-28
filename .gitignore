@@ -1,6 +1,10 @@
 dist/assets/*.png
 node_modules/
 .sites-local/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
 *.zip
 .chrome-qa*/
 *-preview.png
