@@ -5,13 +5,13 @@ const translations = {
     services: "خدماتي",
     about: "عنّي",
     contact: "تواصل معي",
-    availability: "متاح لمشاريع فريلانس وفرص عمل للمبتدئين",
+    availability: "متاح لمشاريع العمل الحر والتدريب وفرص تطوير البرمجيات",
     hello: "أهلًا، أنا محمود أشرف.",
     headline: "من فكرة.<br>إلى <em>تطبيق حقيقي.</em>",
     intro:
       "مطوّر برمجيات أبني منتجات ويب متجاوبة عبر تقنيات الواجهة الأمامية والخلفية، وأحوّل الأفكار الواضحة إلى تجارب موثوقة تركّز على المستخدم.",
-    viewWork: "اكتشف أعمالي",
-    talk: "خلّينا نتكلم",
+    viewWork: "شاهد المشاريع",
+    talk: "ابدأ مشروعًا",
     heroFoot: "فضول يدفعني للتعلّم. ومشاريع تثبت التطبيق.",
     portraitLabel: "THE PERSON BEHIND THE CODE",
     role: "مطوّر برمجيات",
@@ -20,7 +20,7 @@ const translations = {
     workNote: "مشروع واحد. تجربة متكاملة.",
     workTitle: "أفكار تتحوّل<br>إلى <em>شغل ملموس.</em>",
     workIntro: "نظرة على تحويل احتياج واقعي إلى تطبيق ويب متكامل.",
-    projectCategory: "تطبيق ويب متكامل",
+    projectCategory: "مشروع Full-Stack مميز",
     projectTitle: "بوابة المقررات<br>والأنشطة الجامعية",
     projectDescription:
       "مكان واحد بالعربية والإنجليزية لاكتشاف المقررات الجامعية، وإنشاء حساب طالب، وإدارة التسجيل في الأنشطة. مشروع تعليمي مستوحى من جامعة بني سويف.",
@@ -66,10 +66,10 @@ const translations = {
     aboutLead:
       "أنا محمود، مطوّر برمجيات في بداية رحلتي، بتعلّم من خلال بناء تطبيقات تعمل بالفعل.",
     aboutText:
-      "تركيزي على تطوير الويب المتكامل باستخدام Python وDjango. بستمتع بربط الواجهة اللي المستخدم بيشوفها بالمنطق وقواعد البيانات اللي وراها.",
+      "أبني عبر تقنيات الويب المختلفة، وأربط الواجهات الواضحة بمنطق التطبيق والبيانات ومسارات العمل خلفها. وتثبت مشاريعي الحالية استخدام JavaScript وPython وDjango وقواعد البيانات وربط APIs.",
     aboutGoal:
-      "بدور على مشاريع فريلانس محددة وفرص عمل للمبتدئين، أقدر أساهم فيها وأتعلّم من الملاحظات وأطوّر نفسي في هندسة البرمجيات.",
-    toolbox: "الأدوات اللي بستخدمها حاليًا",
+      "متاح لمشاريع عمل حر محددة وفرص تدريب وأدوار في تطوير البرمجيات، أقدر أساهم فيها وأتعلم من الملاحظات وأتطور كمهندس برمجيات.",
+    toolbox: "أستخدم حاليًا",
     frontend: "الواجهة",
     backend: "التطبيق",
     dataTools: "البيانات والأدوات",
@@ -179,11 +179,11 @@ translations.en = Object.fromEntries(
   nodes.map((node) => [node.dataset.i18n, node.innerHTML]),
 );
 Object.assign(translations.en, {
-  availability: "Available for freelance projects, part-time & full-time roles",
+  availability: "Open to freelance projects, internships & software roles",
   aboutLead:
     "I\u2019m Mahmoud, a software developer who learns by building practical products that work.",
   aboutGoal:
-    "I\u2019m open to focused freelance projects and software development roles where I can contribute, learn from feedback, and grow as an engineer.",
+    "I\u2019m open to focused freelance projects, internships, and software development roles where I can contribute, learn from feedback, and grow as an engineer.",
   contactText:
     "A project, a software development role, or a simple hello \u2014 I\u2019d love to hear from you.",
   workNote: "2 LIVE PROJECTS / DEMOS + CASE STUDIES",
@@ -200,11 +200,11 @@ Object.assign(translations.en, {
 });
 Object.assign(translations.ar, {
   availability:
-    "\u0645\u062a\u0627\u062d \u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u062d\u0631 \u0648\u0641\u0631\u0635 \u0627\u0644\u0639\u0645\u0644 \u0628\u062f\u0648\u0627\u0645 \u062c\u0632\u0626\u064a \u0623\u0648 \u0643\u0627\u0645\u0644",
+    "\u0645\u062a\u0627\u062d \u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u062d\u0631 \u0648\u0627\u0644\u062a\u062f\u0631\u064a\u0628 \u0648\u0641\u0631\u0635 \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a",
   aboutLead:
     "\u0623\u0646\u0627 \u0645\u062d\u0645\u0648\u062f\u060c \u0645\u0637\u0648\u0651\u0631 \u0628\u0631\u0645\u062c\u064a\u0627\u062a \u0623\u062a\u0639\u0644\u0651\u0645 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0628\u0646\u0627\u0621 \u0645\u0646\u062a\u062c\u0627\u062a \u0639\u0645\u0644\u064a\u0629 \u062a\u0639\u0645\u0644 \u0628\u0627\u0644\u0641\u0639\u0644.",
   aboutGoal:
-    "\u0645\u062a\u0627\u062d \u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0639\u0645\u0644 \u062d\u0631 \u0645\u062d\u062f\u062f\u0629 \u0648\u0641\u0631\u0635 \u0641\u064a \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a\u060c \u0623\u0642\u062f\u0631 \u0623\u0633\u0627\u0647\u0645 \u0641\u064a\u0647\u0627\u060c \u0648\u0623\u062a\u0639\u0644\u0645 \u0645\u0646 \u0627\u0644\u0645\u0644\u0627\u062d\u0638\u0627\u062a\u060c \u0648\u0623\u062a\u0637\u0648\u0631 \u0643\u0645\u0647\u0646\u062f\u0633 \u0628\u0631\u0645\u062c\u064a\u0627\u062a.",
+    "\u0645\u062a\u0627\u062d \u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0639\u0645\u0644 \u062d\u0631 \u0645\u062d\u062f\u062f\u0629 \u0648\u0641\u0631\u0635 \u062a\u062f\u0631\u064a\u0628 \u0648\u0623\u062f\u0648\u0627\u0631 \u0641\u064a \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a\u060c \u0623\u0642\u062f\u0631 \u0623\u0633\u0627\u0647\u0645 \u0641\u064a\u0647\u0627 \u0648\u0623\u062a\u0639\u0644\u0645 \u0645\u0646 \u0627\u0644\u0645\u0644\u0627\u062d\u0638\u0627\u062a \u0648\u0623\u062a\u0637\u0648\u0631 \u0643\u0645\u0647\u0646\u062f\u0633 \u0628\u0631\u0645\u062c\u064a\u0627\u062a.",
   contactText:
     "\u0645\u0634\u0631\u0648\u0639\u060c \u0623\u0648 \u0641\u0631\u0635\u0629 \u0641\u064a \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a\u060c \u0623\u0648 \u062d\u062a\u0649 \u0631\u0633\u0627\u0644\u0629 \u062a\u0639\u0627\u0631\u0641 \u2014 \u064a\u0633\u0639\u062f\u0646\u064a \u0623\u0633\u0645\u0639 \u0645\u0646\u0643.",
   workNote:
@@ -240,11 +240,11 @@ Object.assign(translations.ar, {
   focusOneTitle:
     "\u0648\u0627\u062c\u0647\u0627\u062a \u062d\u062f\u064a\u062b\u0629",
   focusOneText:
-    "React \u0648TypeScript \u0644\u0628\u0646\u0627\u0621 \u062a\u062c\u0627\u0631\u0628 \u0645\u0643\u0648\u0646\u0629 \u0648\u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u0635\u064a\u0627\u0646\u0629.",
+    "React \u0648TypeScript \u0644\u0628\u0646\u0627\u0621 \u0648\u0627\u062c\u0647\u0627\u062a \u0645\u0643\u0648\u0646\u0629 \u0648\u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u0635\u064a\u0627\u0646\u0629 \u0648\u062a\u062c\u0627\u0631\u0628 \u0645\u0633\u062a\u062e\u062f\u0645 \u0623\u063a\u0646\u0649.",
   focusTwoTitle:
     "\u062a\u0639\u0645\u0642 \u0641\u064a \u0627\u0644\u0628\u0627\u0643 \u0625\u0646\u062f",
   focusTwoText:
-    "APIs \u0623\u0642\u0648\u0649\u060c \u0648\u0646\u0645\u0630\u062c\u0629 \u0628\u064a\u0627\u0646\u0627\u062a\u060c \u0648\u0645\u0635\u0627\u062f\u0642\u0629\u060c \u0648\u0647\u064a\u0643\u0644\u0629 \u062a\u0637\u0628\u064a\u0642\u0627\u062a.",
+    "Node.js \u0648Express \u0648\u062a\u0635\u0645\u064a\u0645 APIs \u0648\u0646\u0645\u0630\u062c\u0629 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a \u0648\u0627\u0644\u0645\u0635\u0627\u062f\u0642\u0629 \u0648\u0647\u064a\u0643\u0644\u0629 \u0627\u0644\u062a\u0637\u0628\u064a\u0642\u0627\u062a.",
   focusThreeTitle:
     "\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u0639\u0644\u0648\u0645 \u0627\u0644\u062d\u0627\u0633\u0628",
   focusThreeText:
@@ -504,12 +504,21 @@ const motionOK = !matchMedia("(prefers-reduced-motion: reduce)").matches;
 const main = document.querySelector("#main");
 const aboutSection = document.querySelector("#about");
 const workSection = document.querySelector("#work");
+const servicesSection = document.querySelector("#services");
+const focusSection = document.querySelector("#focus");
 if (main && aboutSection && workSection) {
   main.insertBefore(aboutSection, workSection);
   const aboutNumber = aboutSection.querySelector(".section-number");
   const workNumber = workSection.querySelector(".section-number");
   if (aboutNumber) aboutNumber.textContent = "01 /";
   if (workNumber) workNumber.textContent = "02 /";
+}
+if (main && servicesSection && focusSection) {
+  main.insertBefore(servicesSection, focusSection);
+  const servicesNumber = servicesSection.querySelector(".section-number");
+  const focusNumber = focusSection.querySelector(".section-number");
+  if (servicesNumber) servicesNumber.textContent = "04 /";
+  if (focusNumber) focusNumber.textContent = "05 /";
 }
 const contactNumber = document.querySelector("#contact .section-number");
 if (contactNumber) contactNumber.textContent = "06 /";
@@ -564,11 +573,11 @@ if (typedSkill) {
     'const ui = ["HTML", "CSS", "Bootstrap"];',
     'const logic = ["JavaScript", "OOP", "REST API"];',
     'const backend = ["Python", "Django"];',
-    'const server = ["Node.js", "Express"];',
-    'learning.now("React", "TypeScript");',
+    'learning.next("React", "TypeScript");',
+    'learning.next("Node.js", "Express");',
   ];
   if (!motionOK) {
-    typedSkill.textContent = codeLines[4];
+    typedSkill.textContent = codeLines[3];
   } else {
     let line = 0,
       index = 0,
@@ -710,7 +719,7 @@ const footerIdentity = document.querySelector(".footer-identity");
 if (footerIdentity && !footerIdentity.querySelector(".footer-availability")) {
   footerIdentity.insertAdjacentHTML(
     "beforeend",
-    '<small class="footer-availability">Available for freelance projects, part-time and full-time roles.</small>',
+    '<small class="footer-availability">Open to freelance projects, internships, and software roles.</small>',
   );
 }
 Object.assign(translations.en, {

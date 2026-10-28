@@ -639,15 +639,6 @@ body {
   stroke: currentColor;
   stroke-width: 1.8;
 }
-.learning-row {
-  background: linear-gradient(90deg, rgba(112, 165, 255, 0.06), transparent);
-}
-.learning-row > span {
-  color: #9fc1ff;
-}
-.learning-row p {
-  color: #c9dcff;
-}
 .button span[aria-hidden],
 .text-link > span[aria-hidden],
 .language span[aria-hidden] {
