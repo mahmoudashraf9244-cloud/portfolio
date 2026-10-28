@@ -2678,3 +2678,134 @@ summary:active {
 .case-study[open] .plus {
   transform: rotate(45deg);
 }
+
+/* Final readability and identity refinements */
+.brand-mark {
+  background: linear-gradient(145deg, #30251d, #15181f) !important;
+  border-color: rgba(245, 184, 102, 0.48) !important;
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.09),
+    0 10px 26px rgba(0, 0, 0, 0.28),
+    0 0 22px rgba(245, 184, 102, 0.08) !important;
+}
+.brand-mark:before {
+  border-color: rgba(245, 184, 102, 0.38) transparent rgba(255, 255, 255, 0.12)
+    transparent !important;
+}
+.brand-mark span {
+  color: #fff7ed !important;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+}
+.brand-mark span:last-child {
+  color: #f5b866 !important;
+  border-inline-start-color: rgba(245, 184, 102, 0.28) !important;
+}
+.brand:hover .brand-mark {
+  border-color: rgba(245, 184, 102, 0.78) !important;
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.12),
+    0 13px 32px rgba(0, 0, 0, 0.32),
+    0 0 30px rgba(245, 184, 102, 0.14) !important;
+}
+.hero .eyebrow [data-i18n="availability"] {
+  color: #f8fafc;
+  font-size: 12.5px;
+  font-weight: 650;
+  letter-spacing: 0.025em;
+}
+.form-status,
+.footer-availability {
+  color: #e8edf3 !important;
+}
+.section > .eyebrow,
+.section-top > .eyebrow,
+.services-section .section > .eyebrow,
+.about-section > div > .eyebrow,
+.education-section .eyebrow,
+.focus-heading > .eyebrow,
+.contact-section .eyebrow {
+  color: #f4f7fb !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.055em !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.09),
+    rgba(255, 255, 255, 0.035)
+  ) !important;
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.075),
+    0 13px 32px rgba(0, 0, 0, 0.19) !important;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+  user-select: none;
+}
+.section > .eyebrow:hover,
+.section-top > .eyebrow:hover,
+.services-section .section > .eyebrow:hover,
+.about-section > div > .eyebrow:hover,
+.education-section .eyebrow:hover,
+.focus-heading > .eyebrow:hover,
+.contact-section .eyebrow:hover {
+  transform: translateY(-3px);
+  border-color: rgba(245, 184, 102, 0.42) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 184, 102, 0.11),
+    rgba(255, 255, 255, 0.045)
+  ) !important;
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.1),
+    0 17px 38px rgba(0, 0, 0, 0.24),
+    0 0 24px rgba(245, 184, 102, 0.06) !important;
+}
+.section > .eyebrow:active,
+.section-top > .eyebrow:active,
+.services-section .section > .eyebrow:active,
+.about-section > div > .eyebrow:active,
+.education-section .eyebrow:active,
+.focus-heading > .eyebrow:active,
+.contact-section .eyebrow:active {
+  transform: translateY(0) scale(0.98);
+}
+.section-number {
+  min-width: 39px !important;
+  color: #f5b866 !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+.project,
+.education-card,
+.toolbox,
+.service,
+.focus-track article,
+.contact-card {
+  transition-property: transform, border-color, box-shadow, filter;
+}
+.project:active,
+.education-card:active,
+.toolbox:active,
+.service:active,
+.focus-track article:active,
+.contact-card:active {
+  filter: brightness(1.07);
+}
+@media (max-width: 760px) {
+  .hero .eyebrow [data-i18n="availability"] {
+    font-size: 10.5px;
+  }
+  .section > .eyebrow,
+  .section-top > .eyebrow,
+  .services-section .section > .eyebrow,
+  .about-section > div > .eyebrow,
+  .education-section .eyebrow,
+  .focus-heading > .eyebrow,
+  .contact-section .eyebrow {
+    font-size: 11px !important;
+    letter-spacing: 0.035em !important;
+  }
+}

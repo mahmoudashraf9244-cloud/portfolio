@@ -9,14 +9,14 @@ const translations = {
     hello: "أهلًا، أنا محمود أشرف.",
     headline: "من فكرة.<br>إلى <em>تطبيق حقيقي.</em>",
     intro:
-      "مطوّر برمجيات أبني تطبيقات ويب متكاملة باستخدام Python وDjango، وأجمع بين وضوح الواجهة والوظائف العملية.",
+      "مطوّر برمجيات أبني منتجات ويب متجاوبة عبر تقنيات الواجهة الأمامية والخلفية، وأحوّل الأفكار الواضحة إلى تجارب موثوقة تركّز على المستخدم.",
     viewWork: "اكتشف أعمالي",
     talk: "خلّينا نتكلم",
     heroFoot: "فضول يدفعني للتعلّم. ومشاريع تثبت التطبيق.",
     portraitLabel: "THE PERSON BEHIND THE CODE",
     role: "مطوّر برمجيات",
     workingWith: "WORKING WITH",
-    selectedWork: "أعمال مختارة",
+    selectedWork: "المشاريع",
     workNote: "مشروع واحد. تجربة متكاملة.",
     workTitle: "أفكار تتحوّل<br>إلى <em>شغل ملموس.</em>",
     workIntro: "نظرة على تحويل احتياج واقعي إلى تطبيق ويب متكامل.",
@@ -41,7 +41,7 @@ const translations = {
       "مشروع تعليمي للعرض في البورتفوليو، وليس خدمة رسمية تابعة للجامعة. يستخدم الديمو محتوى تجريبيًا.",
     moreWork: "دي بداية مجموعة أعمالي. هتتوسع مع كل مشروع جديد.",
     visitGithub: "تصفّح GitHub",
-    servicesLabel: "إزاي أقدر أساعدك",
+    servicesLabel: "الخدمات والقدرات",
     servicesTitle: "واجهة واضحة.<br><em>وهدف عملي.</em>",
     servicesIntro:
       "تطوير ويب لمتطلبات واضحة ونطاق شغل محدد يمكن تنفيذه ومراجعته.",
@@ -61,7 +61,7 @@ const translations = {
     processTwo: "نحوّل المتطلبات المتفق عليها لتجربة متجاوبة تعمل بالفعل.",
     processThreeTitle: "نراجع",
     processThree: "نراجع المسارات الأساسية مع بعض ونحسّن التفاصيل.",
-    aboutLabel: "نبذة عنّي",
+    aboutLabel: "عنّي",
     aboutTitle: "فضول للتعلّم.<br><em>وتطبيق على أرض الواقع.</em>",
     aboutLead:
       "أنا محمود، مطوّر برمجيات في بداية رحلتي، بتعلّم من خلال بناء تطبيقات تعمل بالفعل.",
@@ -74,7 +74,7 @@ const translations = {
     backend: "التطبيق",
     dataTools: "البيانات والأدوات",
     linkedin: "نتواصل على LinkedIn",
-    contactLabel: "عندك فكرة في بالك؟",
+    contactLabel: "خلّينا نبني حاجة مميزة",
     contactTitle: "كل شغل كويس<br>بيبدأ <em>بمحادثة.</em>",
     contactText:
       "مشروع، أو فرصة عمل للمبتدئين، أو حتى رسالة تعارف — يسعدني أسمع منك.",
@@ -308,8 +308,8 @@ function setLanguage(language) {
       : "Mahmoud Ashraf — Software Developer";
   document.querySelector('meta[name="description"]').content =
     currentLanguage === "ar"
-      ? "محمود أشرف، مطوّر برمجيات. تطبيقات ويب متجاوبة بالعربية والإنجليزية باستخدام Python وDjango. استكشف أعمالي وتواصل معي."
-      : "Mahmoud Ashraf — Software Developer building responsive, bilingual web applications with Python and Django. Explore my work and get in touch.";
+      ? "محمود أشرف، مطوّر برمجيات يبني منتجات ويب متجاوبة عبر تقنيات الواجهة الأمامية والخلفية. استكشف المشاريع وتواصل معي."
+      : "Mahmoud Ashraf — Software Developer building responsive products across frontend and backend technologies. Explore my projects and get in touch.";
   closeMenu();
   document.querySelector("#copyStatus").textContent = "";
   try {

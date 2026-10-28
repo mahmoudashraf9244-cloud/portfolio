@@ -1,25 +1,51 @@
 # Mahmoud Ashraf — Portfolio
 
-A responsive Arabic/English dark portfolio using plain HTML, CSS and JavaScript. It includes ambient motion, scroll reveals, a sticky glass header, scroll progress, an animated technology marquee, interactive project artwork and reduced-motion support. No build or package installation is needed. The deployable site is `dist/`.
+A responsive Arabic/English portfolio for Mahmoud Ashraf, a software developer focused on practical full-stack web applications.
 
-## Preview
+## Highlights
 
-Run `node preview.mjs`, then open http://127.0.0.1:4173 .
+- Responsive dark interface with Arabic RTL support
+- Accessible navigation, reduced-motion support, and keyboard-friendly controls
+- Optimized pointer-based 3D interactions and a single animated particle layer
+- Verified case studies for the University Activities Portal and TeamDesk
+- Direct email, GitHub, LinkedIn, and WhatsApp contact flows
 
-## Edit
+## Project structure
 
-- `dist/index.html`: English content, project details and contact links.
-- `dist/app.js`: Arabic copy, language persistence, mobile menu and email copying.
-- `dist/styles.css`: visual system, responsive layouts and RTL rules.
-- `dist/assets/mahmoud-portrait.webp`: selected first portrait, cropped in the interface to a compact head-and-shoulders presentation.
-- `.openai/hosting.json`: Sites hosting configuration; it is not shown to visitors.
+```text
+dist/
+├── index.html                    Portfolio page
+├── app.js                       Language, navigation, motion, and contact behavior
+├── styles.css                   Core visual system and responsive layout
+├── enhancements.css             Header and interaction refinements
+├── nexus-project.css            TeamDesk project presentation
+├── portfolio-motion.css         Motion and 3D interaction styles
+├── assets/                      Images and favicon used by the site
+└── projects/teamdesk/           Standalone employee dashboard demo
+```
 
-The educational university portal is the only featured project. No invented clients, employment, reviews or performance figures are included. Add education and training when the owner supplies the details. The project illustration is a conceptual graphic, not a screenshot of the live application.
+The deployable static site is contained entirely in `dist/`. No build step or package installation is required.
 
-The site remembers the language on the same device. Contact links use the visitor's email application; there is no contact form backend.
+## Local preview
 
-Fonts are loaded from Google Fonts with local fallback stacks. All core navigation, content and project links remain available without JavaScript in English.
+Run:
 
-## Portrait
+```powershell
+node preview.mjs
+```
 
-Edited using the built-in image generation tool from the owner's original photograph. The selected revision uses a restrained navy suit, white shirt, neutral real-world wall, and ordinary daylight, with instructions to preserve facial features, glasses, expression, body proportions and skin texture without beautification. The original photograph remains unchanged in the parent workspace. Full edit prompt: `portrait-edit-prompt.txt`.
+Then open `http://127.0.0.1:4173`.
+
+## Featured projects
+
+### University Courses & Activities Portal
+
+A bilingual Django application with authentication, protected student profiles, catalogue search and filtering, safe activity enrollment rules, Django Admin, and PostgreSQL in production.
+
+### TeamDesk
+
+A responsive employee-management dashboard using the Fetch API with DummyJSON. It demonstrates CRUD flows, search, filters, sorting, pagination, reports, CSV export, validation, and local persistence.
+
+## Deployment
+
+`.openai/hosting.json` contains the Sites hosting configuration. Only the static `dist/` directory is published.
