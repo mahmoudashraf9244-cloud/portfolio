@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="enhancements.css" />
     <link rel="stylesheet" href="nexus-project.css" />
     <link rel="stylesheet" href="portfolio-motion.css" />
+    <link rel="stylesheet" href="skills.css" />
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -63,6 +64,7 @@
       <nav id="navigation" class="navigation" aria-label="Main navigation">
         <a href="#about" data-i18n="about">About</a
         ><a href="#work" data-i18n="work">Work</a
+        ><a href="#skills" data-i18n="skills">Skills</a
         ><a href="#education" data-i18n="education">Education</a
         ><a href="#services" data-i18n="services">Services</a
         ><a href="#contact" data-i18n="contact">Contact</a>
@@ -511,6 +513,90 @@
         </div>
       </section>
       <section
+        class="skills-section section wrap"
+        id="skills"
+        aria-labelledby="skills-title"
+      >
+        <div class="skills-heading">
+          <p class="eyebrow" data-i18n="skillsLabel">SKILLS &amp; TOOLKIT</p>
+          <h2 id="skills-title" data-i18n="skillsTitle">
+            What I use.<br /><em>What I’m growing.</em>
+          </h2>
+          <p data-i18n="skillsIntro">
+            A clear view of the technologies I use in projects today and the
+            tools I am actively learning next.
+          </p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <span class="skill-card-index">01</span>
+            <div class="skill-card-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3 data-i18n="skillFrontend">Frontend foundations</h3>
+            <p data-i18n="skillFrontendText">
+              Responsive, accessible interfaces with clear interaction states.
+            </p>
+            <div class="skill-chips">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span
+              ><span>Bootstrap</span><span>Responsive UI</span>
+            </div>
+          </article>
+          <article class="skill-card">
+            <span class="skill-card-index">02</span>
+            <div class="skill-card-icon" aria-hidden="true">{ }</div>
+            <h3 data-i18n="skillBackend">Backend &amp; web apps</h3>
+            <p data-i18n="skillBackendText">
+              Database-backed applications with accounts, forms, and admin
+              workflows.
+            </p>
+            <div class="skill-chips">
+              <span>Python</span><span>Django</span><span>Authentication</span
+              ><span>Forms</span><span>Django Admin</span>
+            </div>
+          </article>
+          <article class="skill-card">
+            <span class="skill-card-index">03</span>
+            <div class="skill-card-icon" aria-hidden="true">DB</div>
+            <h3 data-i18n="skillData">Data &amp; integration</h3>
+            <p data-i18n="skillDataText">
+              Working with stored data, browser APIs, and reliable data flows.
+            </p>
+            <div class="skill-chips">
+              <span>PostgreSQL</span><span>SQLite</span><span>Fetch API</span
+              ><span>REST concepts</span><span>LocalStorage</span>
+            </div>
+          </article>
+          <article class="skill-card">
+            <span class="skill-card-index">04</span>
+            <div class="skill-card-icon" aria-hidden="true">CS</div>
+            <h3 data-i18n="skillEngineering">Engineering foundations</h3>
+            <p data-i18n="skillEngineeringText">
+              Core concepts and tools that keep solutions structured and
+              understandable.
+            </p>
+            <div class="skill-chips">
+              <span>OOP</span><span>Data Structures</span><span>Algorithms</span
+              ><span>Git &amp; GitHub</span><span>Linux &amp; Bash</span>
+            </div>
+          </article>
+          <article class="skill-card skill-card-learning">
+            <span class="skill-card-index">05</span>
+            <span class="learning-badge" data-i18n="learningBadge"
+              >LEARNING NOW</span
+            >
+            <div class="skill-card-icon" aria-hidden="true">↗</div>
+            <h3 data-i18n="skillLearning">Modern JavaScript stack</h3>
+            <p data-i18n="skillLearningText">
+              Building toward component-based interfaces and JavaScript backend
+              development.
+            </p>
+            <div class="skill-chips">
+              <span>React</span><span>TypeScript</span><span>Node.js</span
+              ><span>Express</span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section
         class="education-section section wrap"
         id="education"
         aria-labelledby="education-title"
@@ -740,19 +826,13 @@
               Good things start<br />with a <em>conversation.</em>
             </h2>
             <a
-              href="https://wa.me/201005567643"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-arrow whatsapp-cta"
-              aria-label="Chat with Mahmoud on WhatsApp"
+              href="mailto:mahmoudashraf.9244@gmail.com"
+              class="contact-arrow email-cta"
+              aria-label="Email Mahmoud"
               ><svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.3-4.3a8.5 8.5 0 1 1 15.7-4.4Z"
-                />
-                <path
-                  d="M8.3 7.8c.2-.4.4-.4.7-.4h.5l1 2.2c.1.3 0 .5-.2.7l-.7.8c.8 1.6 2 2.8 3.7 3.6l.7-.9c.2-.2.5-.3.8-.2l2.1 1c.3.1.4.4.4.7-.1 1.4-1.2 2.3-2.6 2.4-3.7.1-8.4-4-8.5-8 0-.8.4-1.5.8-1.9Z"
-                /></svg
-              ><span>WhatsApp</span></a
+                <path d="M3.5 6.5h17v11h-17z" />
+                <path d="m4.5 7.5 7.5 6 7.5-6" /></svg
+              ><span>Email</span></a
             >
           </div>
           <p class="contact-text" data-i18n="contactText">
@@ -782,13 +862,20 @@
                   autocomplete="name"
                   placeholder="Your name" /></label
               ><label
-                ><span data-i18n="projectType">Project type</span
-                ><select id="projectType">
-                  <option>Website</option>
-                  <option>Web application</option>
-                  <option>Dashboard</option>
-                  <option>Other</option>
-                </select></label
+                ><span data-i18n="yourEmail">Email address</span
+                ><input
+                  id="senderEmail"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  placeholder="you@example.com" /></label
+              ><label class="message-field"
+                ><span data-i18n="messageSubject">Subject</span
+                ><input
+                  id="messageSubject"
+                  required
+                  minlength="3"
+                  placeholder="Project inquiry or opportunity" /></label
               ><label class="message-field"
                 ><span data-i18n="projectMessage"
                   >What do you have in mind?</span
@@ -801,7 +888,7 @@
               </label>
             </div>
             <button class="contact-submit" type="submit">
-              <span data-i18n="sendWhatsapp">Continue on WhatsApp</span
+              <span data-i18n="sendEmail">Compose &amp; send email</span
               ><svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
@@ -854,6 +941,7 @@
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#about">About</a><a href="#work">Work</a
+        ><a href="#skills">Skills</a
         ><a href="#education">Education</a><a href="#services">Services</a
         ><a href="#contact">Contact</a
         ><a

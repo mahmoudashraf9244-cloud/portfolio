@@ -2,6 +2,7 @@ const translations = {
   ar: {
     skip: "انتقل للمحتوى",
     work: "أعمالي",
+    skills: "المهارات",
     services: "خدماتي",
     about: "عنّي",
     contact: "تواصل معي",
@@ -103,9 +104,29 @@ Object.assign(translations.ar, {
   briefTitle: "احكي لي عن الفكرة التي تريد تنفيذها.",
   replyTime: "عادةً أرد خلال يوم",
   yourName: "اسمك",
-  projectType: "نوع المشروع",
+    yourEmail: "البريد الإلكتروني",
+    messageSubject: "عنوان الرسالة",
   projectMessage: "ما الفكرة التي تفكر فيها؟",
-  sendWhatsapp: "متابعة على واتساب",
+    sendEmail: "اكتب وأرسل البريد",
+    skillsLabel: "المهارات والأدوات",
+    skillsTitle: "ما أستخدمه.<br><em>وما أتعلمه الآن.</em>",
+    skillsIntro:
+      "صورة واضحة للتقنيات التي أستخدمها في مشاريعي حاليًا، والأدوات التي أعمل على تعلمها للمرحلة القادمة.",
+    skillFrontend: "أساسيات الواجهة الأمامية",
+    skillFrontendText: "واجهات متجاوبة وسهلة الوصول بحالات تفاعل واضحة.",
+    skillBackend: "الخلفية وتطبيقات الويب",
+    skillBackendText:
+      "تطبيقات مرتبطة بقواعد بيانات، مع حسابات ونماذج ومسارات إدارة.",
+    skillData: "البيانات والربط",
+    skillDataText:
+      "التعامل مع البيانات المخزنة وواجهات المتصفح وتدفقات البيانات الموثوقة.",
+    skillEngineering: "الأساس الهندسي",
+    skillEngineeringText:
+      "مفاهيم وأدوات أساسية تجعل الحلول منظمة ومفهومة وقابلة للتطوير.",
+    learningBadge: "أتعلم حاليًا",
+    skillLearning: "منظومة JavaScript الحديثة",
+    skillLearningText:
+      "أتجه لبناء واجهات معتمدة على المكونات وتطوير الخلفية باستخدام JavaScript.",
   workNote: "مشروعان مباشران / ديمو ودراسة حالة",
   nexusArt: "إدارة الأفراد بوضوح.",
   nexusCategory: "لوحة إدارة الموظفين",
@@ -236,8 +257,8 @@ function setLanguage(language) {
     .setAttribute(
       "aria-label",
       currentLanguage === "ar"
-        ? "تواصل مع محمود على واتساب"
-        : "Chat with Mahmoud on WhatsApp",
+        ? "راسل محمود عبر البريد الإلكتروني"
+        : "Email Mahmoud",
     );
   document
     .querySelector(".project-visual")
@@ -333,7 +354,7 @@ if ("IntersectionObserver" in window) {
   );
   document
     .querySelectorAll(
-      ".project,.case-study,.service,.process,.about-content,.contact-heading,.contact-bottom",
+      ".project,.case-study,.skill-card,.service,.process,.about-content,.contact-heading,.contact-bottom",
     )
     .forEach((element, index) => {
       element.classList.add("reveal");
@@ -433,11 +454,13 @@ try {
 const motionOK = !matchMedia("(prefers-reduced-motion: reduce)").matches;
 const main = document.querySelector("#main");
 const aboutSection = document.querySelector("#about");
+const skillsSection = document.querySelector("#skills");
 const workSection = document.querySelector("#work");
 const servicesSection = document.querySelector("#services");
 const focusSection = document.querySelector("#focus");
 if (main && aboutSection && workSection) {
   main.insertBefore(aboutSection, workSection);
+  if (skillsSection) main.insertBefore(skillsSection, workSection);
   const aboutNumber = aboutSection.querySelector(".section-number");
   const workNumber = workSection.querySelector(".section-number");
   if (aboutNumber) aboutNumber.textContent = "01 /";
@@ -454,7 +477,9 @@ const contactNumber = document.querySelector("#contact .section-number");
 if (contactNumber) contactNumber.textContent = "06 /";
 if (motionOK && matchMedia("(pointer:fine)").matches) {
   document
-    .querySelectorAll(".service,.process-steps>div,.toolbox,.contact-card")
+    .querySelectorAll(
+      ".skill-card,.service,.process-steps>div,.toolbox,.contact-card",
+    )
     .forEach((card) => {
       card.classList.add("tilt-card");
       card.addEventListener("pointermove", (event) => {
@@ -463,6 +488,8 @@ if (motionOK && matchMedia("(pointer:fine)").matches) {
         const y = (event.clientY - box.top) / box.height;
         card.style.setProperty("--mouse-x", `${x * 100}%`);
         card.style.setProperty("--mouse-y", `${y * 100}%`);
+        card.style.setProperty("--skill-x", `${x * 100}%`);
+        card.style.setProperty("--skill-y", `${y * 100}%`);
         card.style.transform = `perspective(1000px) rotateX(${((0.5 - y) * 3.5).toFixed(2)}deg) rotateY(${((x - 0.5) * 4.5).toFixed(2)}deg) translateY(-4px)`;
       });
       card.addEventListener("pointerleave", () => {
@@ -476,14 +503,11 @@ if (contactForm) {
     event.preventDefault();
     if (!contactForm.reportValidity()) return;
     const name = document.querySelector("#senderName").value.trim();
-    const type = document.querySelector("#projectType").value;
+    const email = document.querySelector("#senderEmail").value.trim();
+    const subject = document.querySelector("#messageSubject").value.trim();
     const message = document.querySelector("#senderMessage").value.trim();
-    const text = `Hello Mahmoud, my name is ${name}.%0AProject type: ${type}.%0A${message}`;
-    window.open(
-      `https://wa.me/201005567643?text=${encodeURIComponent(text.replaceAll("%0A", "\n"))}`,
-      "_blank",
-      "noopener",
-    );
+    const body = `Hello Mahmoud,\n\n${message}\n\nFrom: ${name}\nReply to: ${email}`;
+    window.location.href = `mailto:mahmoudashraf.9244@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
 if (motionOK && matchMedia("(pointer:fine)").matches) {

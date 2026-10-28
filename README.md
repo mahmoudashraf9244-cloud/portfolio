@@ -8,7 +8,7 @@ A responsive Arabic/English portfolio for Mahmoud Ashraf, a software developer f
 - Accessible navigation, reduced-motion support, and keyboard-friendly controls
 - Optimized pointer-based 3D interactions and a single animated particle layer
 - Verified case studies for the University Activities Portal and TeamDesk
-- Direct email, GitHub, LinkedIn, and WhatsApp contact flows
+- Direct email, GitHub, and LinkedIn contact flows
 
 ## Project structure
 
