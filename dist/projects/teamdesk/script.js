@@ -35,7 +35,6 @@ const elements = {
   deleteText: $("#deleteText"),
   confirmDelete: $("#confirmDelete"),
   save: $("#saveButton"),
-  theme: $("#themeButton"),
   tableButton: $("#tableViewBtn"),
   gridButton: $("#gridViewBtn"),
   stats: {
@@ -574,15 +573,6 @@ document
       ),
     ),
   );
-elements.theme.addEventListener("click", () => {
-  document.body.classList.toggle("light");
-  localStorage.setItem(
-    "teamdesk-theme",
-    document.body.classList.contains("light") ? "light" : "dark",
-  );
-});
-if (localStorage.getItem("teamdesk-theme") === "light")
-  document.body.classList.add("light");
 setView(currentView);
 loadUsers();
 const dashboardNav = document.createElement("nav");

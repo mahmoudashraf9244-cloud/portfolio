@@ -1,4 +1,5 @@
 dist/assets/*.png
+!dist/assets/teamdesk-preview-light.png
 node_modules/
 .sites-local/
 outputs/

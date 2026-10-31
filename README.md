@@ -20,8 +20,11 @@ dist/
 ├── enhancements.css             Header and interaction refinements
 ├── nexus-project.css            TeamDesk project presentation
 ├── portfolio-motion.css         Motion and 3D interaction styles
+├── skills.css                   Skills layout and card interactions
+├── section-headings.css         Shared section-title hierarchy
 ├── assets/                      Images and favicon used by the site
 └── projects/teamdesk/           Standalone employee dashboard demo
+    └── calm-dashboard.css       Calm light dashboard identity
 ```
 
 The deployable static site is contained entirely in `dist/`. No build step or package installation is required.

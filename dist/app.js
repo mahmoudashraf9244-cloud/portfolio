@@ -20,7 +20,7 @@ const translations = {
     workingWith: "WORKING WITH",
     selectedWork: "المشاريع",
     workNote: "مشروع واحد. تجربة متكاملة.",
-    workTitle: "أفكار تتحوّل<br>إلى <em>شغل ملموس.</em>",
+    workTitle: "المشاريع.<br><em>تجارب تستحق الاستكشاف.</em>",
     workIntro: "نظرة على تحويل احتياج واقعي إلى تطبيق ويب متكامل.",
     projectCategory: "مشروع Full-Stack مميز",
     projectTitle: "بوابة المقررات<br>والأنشطة الجامعية",
@@ -44,7 +44,7 @@ const translations = {
     moreWork: "دي بداية مجموعة أعمالي. هتتوسع مع كل مشروع جديد.",
     visitGithub: "تصفّح GitHub",
     servicesLabel: "الخدمات والقدرات",
-    servicesTitle: "واجهة واضحة.<br><em>وهدف عملي.</em>",
+    servicesTitle: "الخدمات.<br><em>مفيدة بتصميم واضح.</em>",
     servicesIntro:
       "تطوير ويب لمتطلبات واضحة ونطاق شغل محدد يمكن تنفيذه ومراجعته.",
     serviceOneTitle: "مواقع متجاوبة",
@@ -64,7 +64,7 @@ const translations = {
     processThreeTitle: "نراجع",
     processThree: "نراجع المسارات الأساسية مع بعض ونحسّن التفاصيل.",
     aboutLabel: "عنّي",
-    aboutTitle: "فضول للتعلّم.<br><em>وتطبيق على أرض الواقع.</em>",
+    aboutTitle: "نبذة <em>عنّي.</em>",
     aboutLead:
       "أنا محمود، مطوّر برمجيات في بداية رحلتي، بتعلّم من خلال بناء تطبيقات تعمل بالفعل.",
     aboutText:
@@ -77,7 +77,7 @@ const translations = {
     dataTools: "البيانات والأدوات",
     linkedin: "نتواصل على LinkedIn",
     contactLabel: "خلّينا نبني حاجة مميزة",
-    contactTitle: "كل شغل كويس<br>بيبدأ <em>بمحادثة.</em>",
+    contactTitle: "خلّينا <em>نتواصل.</em>",
     contactText:
       "مشروع، أو فرصة عمل للمبتدئين، أو حتى رسالة تعارف — يسعدني أسمع منك.",
     footerNote: "بُني باهتمام. ويتطوّر باستمرار.",
@@ -87,7 +87,7 @@ const translations = {
 Object.assign(translations.ar, {
   education: "التعليم",
   educationLabel: "التعليم",
-  educationTitle: "علوم الحاسب.<br><em>على أساس قوي.</em>",
+  educationTitle: "التعليم.<br><em>أساس قوي في علوم الحاسب.</em>",
   educationIntro:
     "دراسة أكاديمية تدعم طريقة تفكيري في البرمجيات والبيانات وبناء أنظمة قابلة للتطوير.",
   expected: "التخرج المتوقع",
@@ -109,11 +109,14 @@ Object.assign(translations.ar, {
   projectMessage: "ما الفكرة التي تفكر فيها؟",
     sendEmail: "اكتب وأرسل البريد",
     skillsLabel: "المهارات والأدوات",
-    skillsTitle: "ما أستخدمه.<br><em>وما أتعلمه الآن.</em>",
+    skillsTitle: "المهارات <em>والأدوات.</em>",
     skillsIntro:
       "صورة واضحة للتقنيات التي أستخدمها في مشاريعي حاليًا، والأدوات التي أعمل على تعلمها للمرحلة القادمة.",
-    skillFrontend: "أساسيات الواجهة الأمامية",
-    skillFrontendText: "واجهات متجاوبة وسهلة الوصول بحالات تفاعل واضحة.",
+    skillFrontend: "الواجهة الأمامية والواجهات الحديثة",
+    skillFrontendText:
+      "واجهات متجاوبة وسهلة الوصول أستخدمها حاليًا، مع التقدم نحو تطبيقات تعتمد على المكونات.",
+    usingNow: "أستخدم حاليًا",
+    learningNext: "أتعلم للمرحلة القادمة",
     skillBackend: "الخلفية وتطبيقات الويب",
     skillBackendText:
       "تطبيقات مرتبطة بقواعد بيانات، مع حسابات ونماذج ومسارات إدارة.",
@@ -123,10 +126,6 @@ Object.assign(translations.ar, {
     skillEngineering: "الأساس الهندسي",
     skillEngineeringText:
       "مفاهيم وأدوات أساسية تجعل الحلول منظمة ومفهومة وقابلة للتطوير.",
-    learningBadge: "أتعلم حاليًا",
-    skillLearning: "منظومة JavaScript الحديثة",
-    skillLearningText:
-      "أتجه لبناء واجهات معتمدة على المكونات وتطوير الخلفية باستخدام JavaScript.",
   workNote: "مشروعان مباشران / ديمو ودراسة حالة",
   nexusArt: "إدارة الأفراد بوضوح.",
   nexusCategory: "لوحة إدارة الموظفين",
@@ -205,8 +204,7 @@ Object.assign(translations.ar, {
 Object.assign(translations.ar, {
   focusLabel:
     "\u0627\u0644\u062a\u0631\u0643\u064a\u0632 \u0627\u0644\u062d\u0627\u0644\u064a",
-  focusTitle:
-    "\u062a\u0639\u0644\u0645 \u0645\u0633\u062a\u0645\u0631.<br><em>\u0648\u0628\u0646\u0627\u0621 \u0623\u0639\u0645\u0642.</em>",
+  focusTitle: "التركيز الحالي.<br><em>تعلّم مستمر.</em>",
   focusIntro:
     "\u0645\u062c\u0627\u0644\u0627\u062a \u0623\u0639\u0645\u0644 \u0639\u0644\u0649 \u062a\u0637\u0648\u064a\u0631\u0647\u0627 \u062d\u0627\u0644\u064a\u064b\u0627 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u062f\u0631\u0627\u0633\u0629 \u0648\u0627\u0644\u0645\u0634\u0627\u0631\u064a\u0639.",
   focusOneTitle:
@@ -461,20 +459,10 @@ const focusSection = document.querySelector("#focus");
 if (main && aboutSection && workSection) {
   main.insertBefore(aboutSection, workSection);
   if (skillsSection) main.insertBefore(skillsSection, workSection);
-  const aboutNumber = aboutSection.querySelector(".section-number");
-  const workNumber = workSection.querySelector(".section-number");
-  if (aboutNumber) aboutNumber.textContent = "01 /";
-  if (workNumber) workNumber.textContent = "02 /";
 }
 if (main && servicesSection && focusSection) {
   main.insertBefore(servicesSection, focusSection);
-  const servicesNumber = servicesSection.querySelector(".section-number");
-  const focusNumber = focusSection.querySelector(".section-number");
-  if (servicesNumber) servicesNumber.textContent = "04 /";
-  if (focusNumber) focusNumber.textContent = "05 /";
 }
-const contactNumber = document.querySelector("#contact .section-number");
-if (contactNumber) contactNumber.textContent = "06 /";
 if (motionOK && matchMedia("(pointer:fine)").matches) {
   document
     .querySelectorAll(

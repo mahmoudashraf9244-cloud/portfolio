@@ -510,11 +510,6 @@ em {
   gap: 20px;
   align-items: center;
 }
-.section-number {
-  color: var(--accent);
-  letter-spacing: 0;
-  margin-inline-end: 6px;
-}
 .section-note {
   font: 400 10px var(--mono);
   color: #778293;
@@ -967,9 +962,6 @@ h2 {
   box-shadow:
     0 0 0 70px rgba(140, 255, 193, 0.02),
     0 0 0 140px rgba(140, 255, 193, 0.015);
-}
-.contact-section .section-number {
-  color: var(--accent);
 }
 .contact-heading {
   display: flex;

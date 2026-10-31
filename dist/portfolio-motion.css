@@ -1218,13 +1218,6 @@ summary:active {
   font-size: 12px !important;
   color: #e3e9f0 !important;
 }
-.section-number {
-  display: inline-grid;
-  place-items: center;
-  min-width: 35px;
-  color: var(--accent);
-  font-weight: 800 !important;
-}
 .tags li {
   position: relative;
   overflow: hidden;
@@ -1840,10 +1833,6 @@ summary:active {
   font-size: 11px;
   letter-spacing: 1px;
   color: #c5ced8;
-}
-.section-number {
-  font-size: 11px;
-  font-weight: 600;
 }
 .service-index,
 .project-category,
@@ -2762,12 +2751,6 @@ summary:active {
 .focus-heading > .eyebrow:active,
 .contact-section .eyebrow:active {
   transform: translateY(0) scale(0.98);
-}
-.section-number {
-  min-width: 39px !important;
-  color: #f5b866 !important;
-  font-size: 12px !important;
-  font-weight: 800 !important;
 }
 .project,
 .education-card,

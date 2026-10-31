@@ -1,0 +1,155 @@
+.section-top,
+.section-heading,
+.about-section > div:first-child,
+.skills-heading,
+.education-heading,
+.focus-heading,
+.services-section .wrap > .eyebrow,
+.contact-section > .wrap > .eyebrow,
+.contact-heading {
+  text-align: center;
+}
+
+.section-top,
+.section-heading,
+.contact-heading {
+  justify-content: center;
+}
+
+.section-top {
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section-heading {
+  display: block;
+  margin: 30px auto 58px;
+}
+
+.section-heading h2,
+.about-section h2,
+.skills-heading h2,
+.education-heading h2,
+.focus-heading h2,
+.services-section h2,
+.contact-heading h2 {
+  font-size: clamp(58px, 7.4vw, 104px);
+  line-height: 0.94;
+  letter-spacing: -5px;
+}
+
+.section-heading > p,
+.skills-heading > p:last-child,
+.education-heading > p:last-child,
+.focus-heading > p:last-child,
+.services-section .section-heading > p,
+.contact-text {
+  max-width: 620px;
+  margin-inline: auto;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.section .eyebrow,
+.services-section .eyebrow,
+.contact-section .eyebrow {
+  justify-content: center;
+  width: max-content;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 9px 15px;
+  border: 1px solid rgba(140, 255, 193, 0.2);
+  border-radius: 999px;
+  background: rgba(140, 255, 193, 0.045);
+  color: #b9c8d8;
+  font-size: 10px;
+}
+
+.about-section,
+.skills-section,
+.education-section,
+.focus-section {
+  grid-template-columns: 1fr;
+  gap: 55px;
+}
+
+.about-section > div:first-child,
+.skills-heading,
+.education-heading,
+.focus-heading {
+  position: static;
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+.about-section h2,
+.skills-heading h2,
+.education-heading h2,
+.focus-heading h2 {
+  margin-top: 28px;
+}
+
+.about-engineering {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.about-signature {
+  margin-inline: auto;
+}
+
+.about-content,
+.education-card,
+.focus-track {
+  width: min(100%, 1000px);
+  margin-inline: auto;
+}
+
+.contact-heading {
+  flex-direction: column;
+  gap: 26px;
+}
+
+[dir="rtl"] .section-heading h2,
+[dir="rtl"] .about-section h2,
+[dir="rtl"] .skills-heading h2,
+[dir="rtl"] .education-heading h2,
+[dir="rtl"] .focus-heading h2,
+[dir="rtl"] .services-section h2,
+[dir="rtl"] .contact-heading h2 {
+  font-size: clamp(52px, 6.8vw, 92px);
+  letter-spacing: -2px;
+}
+
+@media (max-width: 760px) {
+  .section-heading h2,
+  .about-section h2,
+  .skills-heading h2,
+  .education-heading h2,
+  .focus-heading h2,
+  .services-section h2,
+  .contact-heading h2 {
+    font-size: clamp(44px, 13vw, 62px);
+    line-height: 0.98;
+    letter-spacing: -2.7px;
+  }
+
+  [dir="rtl"] .section-heading h2,
+  [dir="rtl"] .about-section h2,
+  [dir="rtl"] .skills-heading h2,
+  [dir="rtl"] .education-heading h2,
+  [dir="rtl"] .focus-heading h2,
+  [dir="rtl"] .services-section h2,
+  [dir="rtl"] .contact-heading h2 {
+    font-size: clamp(42px, 12vw, 58px);
+    line-height: 1.08;
+  }
+
+  .section-heading,
+  .about-section,
+  .skills-section,
+  .education-section,
+  .focus-section {
+    gap: 35px;
+  }
+}

@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="nexus-project.css" />
     <link rel="stylesheet" href="portfolio-motion.css" />
     <link rel="stylesheet" href="skills.css" />
+    <link rel="stylesheet" href="section-headings.css" />
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -181,8 +182,7 @@
       <section class="section wrap" id="work" aria-labelledby="work-title">
         <div class="section-top">
           <p class="eyebrow">
-            <span class="section-number">01 /</span
-            ><span data-i18n="selectedWork">PROJECTS</span>
+            <span data-i18n="selectedWork">PROJECTS</span>
           </p>
           <span class="section-note" data-i18n="workNote"
             >2 LIVE PROJECTS / DEMOS + CASE STUDIES</span
@@ -190,7 +190,7 @@
         </div>
         <div class="section-heading">
           <h2 id="work-title" data-i18n="workTitle">
-            Less talk.<br /><em>More building.</em>
+            Projects.<br /><em>Built to be explored.</em>
           </h2>
           <p data-i18n="workIntro">
             A closer look at turning a real use case into a complete web
@@ -335,7 +335,7 @@
             </div>
             <div class="project-screenshot teamdesk-shot">
               <img
-                src="assets/teamdesk-preview.webp"
+                src="assets/teamdesk-preview-light.png"
                 alt="TeamDesk employee management dashboard overview"
                 loading="lazy"
               />
@@ -452,11 +452,10 @@
       >
         <div>
           <p class="eyebrow">
-            <span class="section-number">02 /</span
-            ><span data-i18n="aboutLabel">ABOUT ME</span>
+            <span data-i18n="aboutLabel">ABOUT ME</span>
           </p>
           <h2 id="about-title" data-i18n="aboutTitle">
-            Curious mind.<br /><em>Hands-on approach.</em>
+            About <em>Me.</em>
           </h2>
           <p class="about-engineering" data-i18n="aboutEngineering">
             I approach software as more than code: understand the problem,
@@ -520,7 +519,7 @@
         <div class="skills-heading">
           <p class="eyebrow" data-i18n="skillsLabel">SKILLS &amp; TOOLKIT</p>
           <h2 id="skills-title" data-i18n="skillsTitle">
-            What I use.<br /><em>What I’m growing.</em>
+            Skills &amp; <em>Toolkit.</em>
           </h2>
           <p data-i18n="skillsIntro">
             A clear view of the technologies I use in projects today and the
@@ -528,16 +527,28 @@
           </p>
         </div>
         <div class="skills-grid">
-          <article class="skill-card">
+          <article class="skill-card skill-card-featured">
             <span class="skill-card-index">01</span>
             <div class="skill-card-icon" aria-hidden="true">&lt;/&gt;</div>
-            <h3 data-i18n="skillFrontend">Frontend foundations</h3>
+            <h3 data-i18n="skillFrontend">Frontend &amp; modern interfaces</h3>
             <p data-i18n="skillFrontendText">
-              Responsive, accessible interfaces with clear interaction states.
+              Responsive, accessible interfaces today — growing toward
+              component-based applications next.
             </p>
-            <div class="skill-chips">
-              <span>HTML5</span><span>CSS3</span><span>JavaScript</span
-              ><span>Bootstrap</span><span>Responsive UI</span>
+            <div class="skill-levels">
+              <div>
+                <strong data-i18n="usingNow">USING NOW</strong>
+                <div class="skill-chips">
+                  <span>HTML5</span><span>CSS3</span><span>JavaScript</span
+                  ><span>Bootstrap</span><span>Responsive UI</span>
+                </div>
+              </div>
+              <div>
+                <strong data-i18n="learningNext">LEARNING NEXT</strong>
+                <div class="skill-chips skill-chips-learning">
+                  <span>React</span><span>TypeScript</span>
+                </div>
+              </div>
             </div>
           </article>
           <article class="skill-card">
@@ -578,22 +589,6 @@
               ><span>Git &amp; GitHub</span><span>Linux &amp; Bash</span>
             </div>
           </article>
-          <article class="skill-card skill-card-learning">
-            <span class="skill-card-index">05</span>
-            <span class="learning-badge" data-i18n="learningBadge"
-              >LEARNING NOW</span
-            >
-            <div class="skill-card-icon" aria-hidden="true">↗</div>
-            <h3 data-i18n="skillLearning">Modern JavaScript stack</h3>
-            <p data-i18n="skillLearningText">
-              Building toward component-based interfaces and JavaScript backend
-              development.
-            </p>
-            <div class="skill-chips">
-              <span>React</span><span>TypeScript</span><span>Node.js</span
-              ><span>Express</span>
-            </div>
-          </article>
         </div>
       </section>
       <section
@@ -603,11 +598,10 @@
       >
         <div class="education-heading">
           <p class="eyebrow">
-            <span class="section-number">03 /</span
-            ><span data-i18n="educationLabel">EDUCATION</span>
+            <span data-i18n="educationLabel">EDUCATION</span>
           </p>
           <h2 id="education-title" data-i18n="educationTitle">
-            Computer science.<br /><em>Built on strong foundations.</em>
+            Education.<br /><em>Computer Science foundations.</em>
           </h2>
           <p data-i18n="educationIntro">
             Academic study that supports the way I think about software, data,
@@ -646,11 +640,10 @@
       >
         <div class="focus-heading">
           <p class="eyebrow">
-            <span class="section-number">05 /</span
-            ><span data-i18n="focusLabel">CURRENT FOCUS</span>
+            <span data-i18n="focusLabel">CURRENT FOCUS</span>
           </p>
           <h2 id="focus-title" data-i18n="focusTitle">
-            Learning forward.<br /><em>Building deeper.</em>
+            Current Focus.<br /><em>Learning forward.</em>
           </h2>
           <p data-i18n="focusIntro">
             The areas I am actively strengthening through study and practical
@@ -700,12 +693,11 @@
       >
         <div class="wrap section">
           <p class="eyebrow">
-            <span class="section-number">04 /</span
-            ><span data-i18n="servicesLabel">SERVICES &amp; CAPABILITIES</span>
+            <span data-i18n="servicesLabel">SERVICES &amp; CAPABILITIES</span>
           </p>
           <div class="section-heading">
             <h2 id="services-title" data-i18n="servicesTitle">
-              Useful by design.<br /><em>Built with purpose.</em>
+              Services.<br /><em>Useful by design.</em>
             </h2>
             <p data-i18n="servicesIntro">
               Focused web development for a clear brief and a manageable scope.
@@ -818,12 +810,11 @@
       >
         <div class="wrap">
           <p class="eyebrow">
-            <span class="section-number">06 /</span
-            ><span data-i18n="contactLabel">LET'S BUILD SOMETHING</span>
+            <span data-i18n="contactLabel">LET'S BUILD SOMETHING</span>
           </p>
           <div class="contact-heading">
             <h2 id="contact-title" data-i18n="contactTitle">
-              Good things start<br />with a <em>conversation.</em>
+              Let’s <em>Connect.</em>
             </h2>
             <a
               href="mailto:mahmoudashraf.9244@gmail.com"
