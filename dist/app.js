@@ -80,7 +80,7 @@ const translations = {
     contactTitle: "خلّينا <em>نتواصل.</em>",
     contactText:
       "مشروع، أو فرصة عمل للمبتدئين، أو حتى رسالة تعارف — يسعدني أسمع منك.",
-    footerNote: "بُني باهتمام. ويتطوّر باستمرار.",
+    footerNote: "بُني باستخدام HTML وCSS وJavaScript.",
     backTop: "العودة للأعلى ↑",
   },
 };
@@ -104,28 +104,28 @@ Object.assign(translations.ar, {
   briefTitle: "احكي لي عن الفكرة التي تريد تنفيذها.",
   replyTime: "عادةً أرد خلال يوم",
   yourName: "اسمك",
-    yourEmail: "البريد الإلكتروني",
-    messageSubject: "عنوان الرسالة",
+  yourEmail: "البريد الإلكتروني",
+  messageSubject: "عنوان الرسالة",
   projectMessage: "ما الفكرة التي تفكر فيها؟",
-    sendEmail: "اكتب وأرسل البريد",
-    skillsLabel: "المهارات والأدوات",
-    skillsTitle: "المهارات <em>والأدوات.</em>",
-    skillsIntro:
-      "صورة واضحة للتقنيات التي أستخدمها في مشاريعي حاليًا، والأدوات التي أعمل على تعلمها للمرحلة القادمة.",
-    skillFrontend: "الواجهة الأمامية والواجهات الحديثة",
-    skillFrontendText:
-      "واجهات متجاوبة وسهلة الوصول أستخدمها حاليًا، مع التقدم نحو تطبيقات تعتمد على المكونات.",
-    usingNow: "أستخدم حاليًا",
-    learningNext: "أتعلم للمرحلة القادمة",
-    skillBackend: "الخلفية وتطبيقات الويب",
-    skillBackendText:
-      "تطبيقات مرتبطة بقواعد بيانات، مع حسابات ونماذج ومسارات إدارة.",
-    skillData: "البيانات والربط",
-    skillDataText:
-      "التعامل مع البيانات المخزنة وواجهات المتصفح وتدفقات البيانات الموثوقة.",
-    skillEngineering: "الأساس الهندسي",
-    skillEngineeringText:
-      "مفاهيم وأدوات أساسية تجعل الحلول منظمة ومفهومة وقابلة للتطوير.",
+  sendEmail: "اكتب وأرسل البريد",
+  skillsLabel: "المهارات والأدوات",
+  skillsTitle: "المهارات <em>والأدوات.</em>",
+  skillsIntro:
+    "صورة واضحة للتقنيات التي أستخدمها في مشاريعي حاليًا، والأدوات التي أعمل على تعلمها للمرحلة القادمة.",
+  skillFrontend: "الواجهة الأمامية والواجهات الحديثة",
+  skillFrontendText:
+    "واجهات متجاوبة وسهلة الوصول أستخدمها حاليًا، مع التقدم نحو تطبيقات تعتمد على المكونات.",
+  usingNow: "أستخدم حاليًا",
+  learningNext: "أتعلم للمرحلة القادمة",
+  skillBackend: "الخلفية وتطبيقات الويب",
+  skillBackendText:
+    "تطبيقات مرتبطة بقواعد بيانات، مع حسابات ونماذج ومسارات إدارة.",
+  skillData: "البيانات والربط",
+  skillDataText:
+    "التعامل مع البيانات المخزنة وواجهات المتصفح وتدفقات البيانات الموثوقة.",
+  skillEngineering: "الأساس الهندسي",
+  skillEngineeringText:
+    "مفاهيم وأدوات أساسية تجعل الحلول منظمة ومفهومة وقابلة للتطوير.",
   workNote: "مشروعان مباشران / ديمو ودراسة حالة",
   nexusArt: "إدارة الأفراد بوضوح.",
   nexusCategory: "لوحة إدارة الموظفين",
@@ -150,13 +150,20 @@ translations.en = Object.fromEntries(
   nodes.map((node) => [node.dataset.i18n, node.innerHTML]),
 );
 Object.assign(translations.en, {
+  intro: "I build responsive web products from interface to backend logic.",
   availability: "Open to freelance projects, internships & software roles",
   aboutLead:
-    "I\u2019m Mahmoud, a software developer who learns by building practical products that work.",
-  aboutGoal:
-    "I\u2019m open to focused freelance projects, internships, and software development roles where I can contribute, learn from feedback, and grow as an engineer.",
-  contactText:
-    "A project, a software development role, or a simple hello \u2014 I\u2019d love to hear from you.",
+    "I\u2019m Mahmoud, a software developer who learns by building useful products.",
+  aboutText:
+    "My projects connect responsive interfaces with Django, databases, and API integration.",
+  aboutGoal: "Open to freelance projects, internships, and software roles.",
+  contactText: "Have a project or opportunity? Send me a message.",
+  servicesIntro: "Focused web development for clear, manageable scopes.",
+  educationIntro:
+    "Computer Science study supporting software, data, and system design.",
+  focusIntro: "Technologies I\u2019m strengthening through study and projects.",
+  skillsIntro: "The technologies I use now and what I\u2019m learning next.",
+  footerNote: "Built with HTML, CSS & JavaScript.",
   workNote: "2 LIVE PROJECTS / DEMOS + CASE STUDIES",
   projectDescription:
     "A bilingual Django portal where students discover university activities, create accounts, enroll safely, and manage a private profile.",
@@ -167,17 +174,23 @@ Object.assign(translations.en, {
   result:
     "A tested, responsive portal with bilingual RTL support, activity lifecycle states, safe enrollment flows, private student history, Django Admin management, PostgreSQL in production, and SQLite for local development.",
   nexusDescription:
-    "A responsive employee dashboard that uses the Fetch API with DummyJSON and supports create, update, and delete flows alongside search, filters, sorting, pagination, validation, reports, CSV export, and local persistence.",
+    "An employee dashboard with API-driven CRUD, filters, reports, CSV export, and local persistence.",
 });
 Object.assign(translations.ar, {
+  intro: "أبني منتجات ويب متجاوبة من الواجهة إلى منطق التطبيق.",
   availability:
     "\u0645\u062a\u0627\u062d \u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u062d\u0631 \u0648\u0627\u0644\u062a\u062f\u0631\u064a\u0628 \u0648\u0641\u0631\u0635 \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a",
-  aboutLead:
-    "\u0623\u0646\u0627 \u0645\u062d\u0645\u0648\u062f\u060c \u0645\u0637\u0648\u0651\u0631 \u0628\u0631\u0645\u062c\u064a\u0627\u062a \u0623\u062a\u0639\u0644\u0651\u0645 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0628\u0646\u0627\u0621 \u0645\u0646\u062a\u062c\u0627\u062a \u0639\u0645\u0644\u064a\u0629 \u062a\u0639\u0645\u0644 \u0628\u0627\u0644\u0641\u0639\u0644.",
-  aboutGoal:
-    "\u0645\u062a\u0627\u062d \u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0639\u0645\u0644 \u062d\u0631 \u0645\u062d\u062f\u062f\u0629 \u0648\u0641\u0631\u0635 \u062a\u062f\u0631\u064a\u0628 \u0648\u0623\u062f\u0648\u0627\u0631 \u0641\u064a \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a\u060c \u0623\u0642\u062f\u0631 \u0623\u0633\u0627\u0647\u0645 \u0641\u064a\u0647\u0627 \u0648\u0623\u062a\u0639\u0644\u0645 \u0645\u0646 \u0627\u0644\u0645\u0644\u0627\u062d\u0638\u0627\u062a \u0648\u0623\u062a\u0637\u0648\u0631 \u0643\u0645\u0647\u0646\u062f\u0633 \u0628\u0631\u0645\u062c\u064a\u0627\u062a.",
-  contactText:
-    "\u0645\u0634\u0631\u0648\u0639\u060c \u0623\u0648 \u0641\u0631\u0635\u0629 \u0641\u064a \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a\u060c \u0623\u0648 \u062d\u062a\u0649 \u0631\u0633\u0627\u0644\u0629 \u062a\u0639\u0627\u0631\u0641 \u2014 \u064a\u0633\u0639\u062f\u0646\u064a \u0623\u0633\u0645\u0639 \u0645\u0646\u0643.",
+  aboutLead: "أنا محمود، مطوّر برمجيات أتعلّم ببناء منتجات مفيدة.",
+  aboutText:
+    "تربط مشاريعي بين واجهات متجاوبة وDjango وقواعد البيانات وربط APIs.",
+  aboutGoal: "متاح لمشاريع العمل الحر والتدريب وفرص تطوير البرمجيات.",
+  contactText: "لديك مشروع أو فرصة؟ أرسل لي رسالة.",
+  servicesIntro: "تطوير ويب مركز لمتطلبات واضحة ونطاق محدد.",
+  educationIntro:
+    "دراسة علوم الحاسب تدعم فهمي للبرمجيات والبيانات وتصميم الأنظمة.",
+  focusIntro: "تقنيات أطوّرها من خلال الدراسة والمشاريع.",
+  skillsIntro: "التقنيات التي أستخدمها الآن، وما أتعلمه للمرحلة القادمة.",
+  footerNote: "بُني باستخدام HTML وCSS وJavaScript.",
   workNote:
     "\u0645\u0634\u0631\u0648\u0639\u0627\u0646 \u064a\u0639\u0645\u0644\u0627\u0646 \u0641\u0639\u0644\u064a\u064b\u0627 \u0645\u0639 \u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u062a\u0646\u0641\u064a\u0630",
   projectDescription:
@@ -189,7 +202,7 @@ Object.assign(translations.ar, {
   result:
     "\u0628\u0648\u0627\u0628\u0629 \u0645\u062e\u062a\u0628\u0631\u0629 \u0648\u0645\u062a\u062c\u0627\u0648\u0628\u0629 \u062a\u062f\u0639\u0645 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0648RTL\u060c \u0648\u062d\u0627\u0644\u0627\u062a \u062f\u0648\u0631\u0629 \u062d\u064a\u0627\u0629 \u0627\u0644\u0646\u0634\u0627\u0637\u060c \u0648\u062a\u0633\u062c\u064a\u0644\u064b\u0627 \u0622\u0645\u0646\u064b\u0627\u060c \u0648\u0633\u062c\u0644\u064b\u0627 \u062e\u0627\u0635\u064b\u0627 \u0644\u0644\u0637\u0627\u0644\u0628\u060c \u0648\u0625\u062f\u0627\u0631\u0629 \u0639\u0628\u0631 Django Admin\u060c \u0645\u0639 PostgreSQL \u0641\u064a \u0627\u0644\u0625\u0646\u062a\u0627\u062c \u0648SQLite \u0644\u0644\u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0645\u062d\u0644\u064a.",
   nexusDescription:
-    "\u0644\u0648\u062d\u0629 \u0645\u062a\u062c\u0627\u0648\u0628\u0629 \u0644\u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0645\u0648\u0638\u0641\u064a\u0646 \u062a\u0633\u062a\u062e\u062f\u0645 Fetch API \u0645\u0639 DummyJSON\u060c \u0648\u062a\u062f\u0639\u0645 \u0627\u0644\u0625\u0636\u0627\u0641\u0629 \u0648\u0627\u0644\u062a\u0639\u062f\u064a\u0644 \u0648\u0627\u0644\u062d\u0630\u0641\u060c \u0625\u0644\u0649 \u062c\u0627\u0646\u0628 \u0627\u0644\u0628\u062d\u062b \u0648\u0627\u0644\u062a\u0635\u0641\u064a\u0629 \u0648\u0627\u0644\u062a\u0631\u062a\u064a\u0628 \u0648\u062a\u0642\u0633\u064a\u0645 \u0627\u0644\u0635\u0641\u062d\u0627\u062a \u0648\u0627\u0644\u062a\u062d\u0642\u0642 \u0648\u0627\u0644\u062a\u0642\u0627\u0631\u064a\u0631 \u0648\u062a\u0635\u062f\u064a\u0631 CSV \u0648\u0627\u0644\u062d\u0641\u0638 \u0627\u0644\u0645\u062d\u0644\u064a.",
+    "لوحة موظفين تدعم CRUD عبر API، والتصفية، والتقارير، وتصدير CSV، والحفظ المحلي.",
 });
 Object.assign(translations.ar, {
   serviceFourTitle:
@@ -601,12 +614,12 @@ document.querySelectorAll(".case-study").forEach((details) => {
   );
 });
 if (motionOK && matchMedia("(pointer:fine)").matches) {
-  document.querySelectorAll(".project,.education-card").forEach((card) => {
+  document.querySelectorAll(".education-card").forEach((card) => {
     let box;
     let frame = 0;
     let clientX = 0;
     let clientY = 0;
-    const strength = card.classList.contains("project") ? 7.5 : 5.5;
+    const strength = 5.5;
     const render = () => {
       frame = 0;
       if (!box) return;
@@ -638,14 +651,6 @@ if (motionOK && matchMedia("(pointer:fine)").matches) {
     });
   });
 }
-Object.assign(translations.en, {
-  aboutEngineering:
-    "I approach software as more than code: understand the problem, structure the solution, and refine the experience until it feels dependable. Every project is a chance to strengthen my engineering judgment and build something people can use with confidence.",
-});
-Object.assign(translations.ar, {
-  aboutEngineering:
-    "\u0623\u062a\u0639\u0627\u0645\u0644 \u0645\u0639 \u0627\u0644\u0628\u0631\u0645\u062c\u064a\u0627\u062a \u0643\u0623\u0643\u062b\u0631 \u0645\u0646 \u0645\u062c\u0631\u062f \u0643\u0648\u062f: \u0623\u0641\u0647\u0645 \u0627\u0644\u0645\u0634\u0643\u0644\u0629\u060c \u0648\u0623\u0646\u0638\u0645 \u0627\u0644\u062d\u0644\u060c \u062b\u0645 \u0623\u0637\u0648\u0631 \u0627\u0644\u062a\u062c\u0631\u0628\u0629 \u062d\u062a\u0649 \u062a\u0635\u0628\u062d \u0648\u0627\u0636\u062d\u0629 \u0648\u0645\u0648\u062b\u0648\u0642\u0629. \u0643\u0644 \u0645\u0634\u0631\u0648\u0639 \u0641\u0631\u0635\u0629 \u0644\u062a\u0637\u0648\u064a\u0631 \u062a\u0641\u0643\u064a\u0631\u064a \u0627\u0644\u0647\u0646\u062f\u0633\u064a \u0648\u0628\u0646\u0627\u0621 \u0634\u064a\u0621 \u064a\u0633\u062a\u062e\u062f\u0645\u0647 \u0627\u0644\u0646\u0627\u0633 \u0628\u062b\u0642\u0629.",
-});
 const denseCanvas = document.querySelector("#particleCanvasDense");
 if (motionOK && denseCanvas) {
   const denseContext = denseCanvas.getContext("2d");
@@ -660,7 +665,7 @@ if (motionOK && denseCanvas) {
     denseCanvas.style.height = `${innerHeight}px`;
     denseContext.setTransform(ratio, 0, 0, ratio, 0, 0);
     const count = matchMedia("(pointer:fine)").matches
-      ? Math.min(62, Math.floor(innerWidth / 19))
+      ? Math.min(38, Math.floor(innerWidth / 34))
       : 14;
     denseParticles = Array.from({ length: count }, () => ({
       x: Math.random() * innerWidth,

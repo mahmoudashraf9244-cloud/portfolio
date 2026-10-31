@@ -11,6 +11,7 @@
   --amber: #b18a52;
   --danger: #b85f5f;
   --font: "Manrope", sans-serif;
+  --mono: "Manrope", sans-serif;
   color-scheme: light;
 }
 
@@ -39,12 +40,14 @@ body.light {
 .user-card p,
 .panel-head > div > p:last-child,
 .demo-note {
-  font-size: 12px;
+  color: #56656f;
+  font-size: 13px;
 }
 
 .data-table strong,
 .user-card h3 {
-  font-size: 13px;
+  color: #24313a;
+  font-size: 14px;
 }
 
 .toolbar input,
@@ -52,7 +55,7 @@ body.light {
 .ghost-button,
 .primary-button,
 .secondary-button {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .motion-field,
@@ -209,6 +212,37 @@ body.light {
 
 .reports-panel {
   background: #fff;
+}
+
+.reports-heading > div > p:last-child,
+.report-title span,
+.operations-card p,
+.report-metrics span,
+.report-metrics small,
+.health-row span,
+.bar-item span,
+.pagination,
+.api-status,
+.sidebar-pulse span {
+  color: #56656f;
+  font-family: var(--font);
+  font-size: 12px;
+}
+
+.report-title h3,
+.bar-item b,
+.health-row b,
+.report-metrics strong,
+.operations-card strong {
+  color: #24313a;
+}
+
+.demo-note {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  line-height: 1.65;
 }
 
 .reports-panel:after {

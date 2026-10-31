@@ -406,9 +406,30 @@ body {
 }
 .project {
   border-color: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
   box-shadow:
     0 32px 100px rgba(0, 0, 0, 0.3),
     inset 0 1px rgba(255, 255, 255, 0.025);
+}
+
+/* Keep the shell stable; depth comes from the media inside it. */
+.project,
+.project:hover,
+.project.is-tilting {
+  border-radius: 20px;
+  transform: none;
+}
+
+.project-visual {
+  border-radius: 0;
+}
+
+@media (max-width: 760px) {
+  .project,
+  .project:hover,
+  .project.is-tilting {
+    border-radius: 15px;
+  }
 }
 .tilt-card {
   transform-style: preserve-3d;
@@ -2759,6 +2780,14 @@ summary:active {
 .focus-track article,
 .contact-card {
   transition-property: transform, border-color, box-shadow, filter;
+}
+
+.project,
+.project:hover,
+.project.is-tilting {
+  transform: none;
+  will-change: auto;
+  transition-property: border-color, box-shadow;
 }
 .project:active,
 .education-card:active,
