@@ -16,7 +16,8 @@ test('both pages have unique IDs and valid local assets and anchor links', async
     assert.equal(new Set(ids).size, ids.length, `Duplicate ID in ${page}`);
     for (const [, reference] of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
       if (/^(?:[a-z]+:|\/\/)/i.test(reference)) continue;
-      const [file, anchor] = reference.split('#');
+      const [fileWithQuery, anchor] = reference.split('#');
+      const file = fileWithQuery.split('?')[0];
       const target = file ? path.resolve(root, path.dirname(page), file) : path.join(root, page);
       assert.ok((await stat(target)).isFile(), `${page}: missing ${reference}`);
       if (anchor) {

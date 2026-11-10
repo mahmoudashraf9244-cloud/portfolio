@@ -20,7 +20,7 @@ const translations = {
     workingWith: "WORKING WITH",
     selectedWork: "المشاريع",
     workNote: "مشروع واحد. تجربة متكاملة.",
-    workTitle: "المشاريع.<br><em>تجارب تستحق الاستكشاف.</em>",
+    workTitle: "مشاريعي.<br><em>من الفكرة إلى التطبيق.</em>",
     workIntro: "نظرة على تحويل احتياج واقعي إلى تطبيق ويب متكامل.",
     projectCategory: "مشروع Full-Stack مميز",
     projectTitle: "بوابة المقررات<br>والأنشطة الجامعية",
