@@ -49,9 +49,13 @@ Then open `http://127.0.0.1:4173`.
 
 A bilingual Django application with authentication, protected student profiles, catalogue search and filtering, safe activity enrollment rules, Django Admin, and PostgreSQL in production.
 
+[Live demo](https://beni-suef-university-portal.vercel.app/) · [Source code](https://github.com/mahmoudashraf9244-cloud/beni-suef-university-portal)
+
 ### TeamDesk
 
 A responsive employee-management dashboard using the Fetch API with DummyJSON. It demonstrates CRUD flows, search, filters, sorting, pagination, reports, CSV export, validation, and local persistence.
+
+[Live demo](https://mahmoudashraf9244-cloud.github.io/portfolio/projects/teamdesk/) · [Source code](https://github.com/mahmoudashraf9244-cloud/portfolio/tree/main/dist/projects/teamdesk)
 
 ## Deployment
 
