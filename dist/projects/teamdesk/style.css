@@ -1018,3 +1018,6 @@ input::placeholder {
     transition: none !important;
   }
 }
+[hidden] {
+  display: none !important;
+}

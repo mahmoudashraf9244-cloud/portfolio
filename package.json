@@ -1,0 +1,11 @@
+﻿{
+  "name": "mahmoud-ashraf-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node preview.mjs",
+    "check": "node --check preview.mjs && node --check dist/app.js && node --check dist/projects/teamdesk/script.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=22" }
+}

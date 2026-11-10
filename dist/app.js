@@ -241,7 +241,7 @@ function setLanguage(language) {
   currentLanguage = language === "ar" ? "ar" : "en";
   document.documentElement.lang = currentLanguage;
   document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
-  for (const node of document.querySelectorAll("[data-i18n]"))
+  for (const node of nodes)
     node.innerHTML =
       translations[currentLanguage][node.dataset.i18n] ??
       translations.en[node.dataset.i18n] ??
@@ -379,17 +379,28 @@ if ("IntersectionObserver" in window) {
     .forEach((element) => element.classList.add("visible"));
 }
 const cursorGlow = document.querySelector("#cursorGlow");
-if (matchMedia("(pointer:fine)").matches) {
+if (matchMedia("(pointer:fine)").matches &&
+    !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  let cursorFrame = 0;
+  let cursorX = 0;
+  let cursorY = 0;
   document.addEventListener(
     "pointermove",
     (event) => {
-      cursorGlow.style.left = `${event.clientX}px`;
-      cursorGlow.style.top = `${event.clientY}px`;
-      cursorGlow.style.opacity = "1";
+      cursorX = event.clientX;
+      cursorY = event.clientY;
+      if (!cursorFrame) cursorFrame = requestAnimationFrame(() => {
+        cursorFrame = 0;
+        cursorGlow.style.left = `${cursorX}px`;
+        cursorGlow.style.top = `${cursorY}px`;
+        cursorGlow.style.opacity = "1";
+      });
     },
     { passive: true },
   );
   document.addEventListener("pointerleave", () => {
+    cancelAnimationFrame(cursorFrame);
+    cursorFrame = 0;
     cursorGlow.style.opacity = "0";
   });
   document.addEventListener("pointerover", (event) => {
@@ -412,7 +423,15 @@ function updateScrollUI() {
   header.classList.toggle("scrolled", scrollY > 18);
 }
 updateScrollUI();
-addEventListener("scroll", updateScrollUI, { passive: true });
+let scrollFrame = 0;
+function scheduleScrollUI() {
+  if (!scrollFrame) scrollFrame = requestAnimationFrame(() => {
+    scrollFrame = 0;
+    updateScrollUI();
+  });
+}
+addEventListener("scroll", scheduleScrollUI, { passive: true });
+addEventListener("resize", scheduleScrollUI, { passive: true });
 const projectVisuals = document.querySelectorAll(".project-visual");
 if (
   matchMedia("(pointer:fine)").matches &&

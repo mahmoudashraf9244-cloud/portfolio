@@ -51,4 +51,10 @@ A responsive employee-management dashboard using the Fetch API with DummyJSON. I
 
 ## Deployment
 
-`.openai/hosting.json` contains the Sites hosting configuration. Only the static `dist/` directory is published.
+Publish the static `dist/` directory. For GitHub Pages, select **Settings → Pages → Source → GitHub Actions**; the included workflow deploys pushes to `main`.
+
+Run `npm start` for local preview and `npm run check` to check JavaScript syntax. No dependency installation is required.
+
+Run `npm test` for regression checks covering local page links and assets, preview HTTP responses, dashboard filtering and pagination, local CRUD persistence, unavailable storage, API errors, and CSV escaping. The tests run the dashboard with controlled API and DOM boundaries; they do not replace visual checks in a browser.
+
+TeamDesk requires an internet connection to load DummyJSON. API writes are simulated; employee changes are saved in browser storage. If storage is blocked or full, changes fail with a message and the displayed data stays unchanged.

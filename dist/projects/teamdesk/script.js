@@ -47,9 +47,14 @@ const elements = {
 let users = [],
   filteredUsers = [],
   currentPage = 1,
-  currentView = localStorage.getItem("teamdesk-view") || "table",
+  currentView = "table",
   pendingDeleteId = null,
   nextLocalId = 10000;
+try {
+  currentView = localStorage.getItem("teamdesk-view") === "grid" ? "grid" : "table";
+} catch {
+  // Viewing the dashboard must still work when browser storage is unavailable.
+}
 const icons = {
   eye: '<svg viewBox="0 0 24 24"><path d="M3 12s3.2-6 9-6 9 6 9 6-3.2 6-9 6-9-6-9-6Z"/><circle cx="12" cy="12" r="2.5"/></svg>',
   edit: '<svg viewBox="0 0 24 24"><path d="m14 5 5 5M4 20l4-1 11-11-4-4L4 15v5Z"/></svg>',
@@ -67,19 +72,36 @@ function escapeHTML(value = "") {
 }
 function getChanges() {
   try {
-    return (
-      JSON.parse(localStorage.getItem(STORAGE_KEY)) || {
-        added: [],
-        updated: {},
-        deleted: [],
-      }
-    );
+    const changes = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    if (!changes || !Array.isArray(changes.added) ||
+        !changes.updated || typeof changes.updated !== "object" ||
+        Array.isArray(changes.updated) || !Array.isArray(changes.deleted)) {
+      return { added: [], updated: {}, deleted: [] };
+    }
+    return {
+      added: changes.added.filter((user) => user && Number.isSafeInteger(user.id)),
+      updated: changes.updated,
+      deleted: changes.deleted.filter(Number.isSafeInteger),
+    };
   } catch {
     return { added: [], updated: {}, deleted: [] };
   }
 }
+class StorageWriteError extends Error {}
 function saveChanges(changes) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(changes));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(changes));
+  } catch {
+    throw new StorageWriteError("Could not save locally. Allow browser storage or free some space and try again.");
+  }
+}
+async function requestUsers(endpoint = "", options = {}) {
+  const response = await fetch(`${API_URL}${endpoint}`, {
+    ...options,
+    signal: AbortSignal.timeout(15000),
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return response.json();
 }
 function applyLocalChanges(apiUsers) {
   const changes = getChanges();
@@ -106,6 +128,9 @@ function setControls(enabled) {
     elements.role,
     elements.sort,
     elements.reset,
+    elements.tableButton,
+    elements.gridButton,
+    elements.clear,
   ].forEach((el) => (el.disabled = !enabled));
 }
 function fullName(user) {
@@ -125,6 +150,7 @@ function value(input) {
   return input === undefined || input === null || input === "" ? "—" : input;
 }
 async function loadUsers() {
+  elements.retry.disabled = true;
   elements.loading.hidden = false;
   elements.error.hidden = true;
   elements.empty.hidden = true;
@@ -135,9 +161,8 @@ async function loadUsers() {
   elements.apiStatus.textContent = "Connecting to API";
   $(".api-status").classList.remove("live");
   try {
-    const response = await fetch(`${API_URL}?limit=0`);
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = await response.json();
+    const data = await requestUsers("?limit=0");
+    if (!Array.isArray(data.users)) throw new Error("Invalid employee response");
     users = applyLocalChanges(data.users);
     nextLocalId = Math.max(10000, ...users.map((u) => Number(u.id) || 0)) + 1;
     elements.apiStatus.textContent = "API connected";
@@ -151,6 +176,7 @@ async function loadUsers() {
     elements.apiStatus.textContent = "API unavailable";
   } finally {
     elements.loading.hidden = true;
+    elements.retry.disabled = false;
   }
 }
 function applyFilters(resetPage = true) {
@@ -193,8 +219,8 @@ function render() {
     elements.grid.innerHTML = "";
     return;
   }
-  elements.body.innerHTML = page.map(tableRow).join("");
-  elements.grid.innerHTML = page.map(userCard).join("");
+  elements.body.innerHTML = currentView === "table" ? page.map(tableRow).join("") : "";
+  elements.grid.innerHTML = currentView === "grid" ? page.map(userCard).join("") : "";
   renderPagination(totalPages, start, page.length);
 }
 function tableRow(user) {
@@ -204,6 +230,7 @@ function userCard(user) {
   return `<article class="user-card">${avatar(user)}<h3>${escapeHTML(fullName(user))}</h3><p>${escapeHTML(value(user.email))}</p><footer>${roleBadge(user.role)}<div class="row-actions">${actionButtons(user.id)}</div></footer></article>`;
 }
 function actionButtons(id) {
+  id = escapeHTML(id);
   return `<button type="button" data-action="details" data-id="${id}" aria-label="View user details">${icons.eye}</button><button type="button" data-action="edit" data-id="${id}" aria-label="Edit user">${icons.edit}</button><button type="button" data-action="delete" data-id="${id}" aria-label="Delete user">${icons.delete}</button>`;
 }
 function updateStats() {
@@ -246,7 +273,7 @@ function updateReports() {
   if ($("#roleTotal"))
     $("#roleTotal").textContent = `${users.length} employees`;
   if ($("#visibleReport"))
-    $("#visibleReport").textContent = filteredUsers.length || users.length;
+    $("#visibleReport").textContent = filteredUsers.length;
   if ($("#changesReport")) $("#changesReport").textContent = localChanges;
   if ($("#healthScore"))
     $("#healthScore").textContent = Math.max(
@@ -290,8 +317,13 @@ function renderPagination(totalPages, start, count) {
     .join("");
 }
 function setView(view) {
+  view = view === "grid" ? "grid" : "table";
   currentView = view;
-  localStorage.setItem("teamdesk-view", view);
+  try {
+    localStorage.setItem("teamdesk-view", view);
+  } catch {
+    // The selected view still works for this session.
+  }
   elements.tableButton.classList.toggle("active", view === "table");
   elements.gridButton.classList.toggle("active", view === "grid");
   elements.tableButton.setAttribute("aria-pressed", view === "table");
@@ -355,7 +387,8 @@ function validate(data) {
     return "Complete every field before saving.";
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
     return "Enter a valid email address.";
-  if (data.age < 1 || data.age > 120) return "Age must be between 1 and 120.";
+  if (!Number.isInteger(data.age) || data.age < 1 || data.age > 120)
+    return "Age must be a whole number between 1 and 120.";
   return "";
 }
 async function saveUser(event) {
@@ -384,7 +417,8 @@ async function saveUser(event) {
     );
   } catch (error) {
     console.error(error);
-    elements.formError.textContent = "The request failed. Please try again.";
+    elements.formError.textContent = error instanceof StorageWriteError
+      ? error.message : "The request failed. Please try again.";
     elements.formError.hidden = false;
   } finally {
     elements.save.disabled = false;
@@ -392,13 +426,11 @@ async function saveUser(event) {
   }
 }
 async function createUser(data) {
-  const response = await fetch(`${API_URL}/add`, {
+  await requestUsers("/add", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  await response.json();
   const user = {
     ...data,
     id: nextLocalId++,
@@ -407,29 +439,28 @@ async function createUser(data) {
     company: {},
     isLocal: true,
   };
-  users.unshift(user);
   const changes = getChanges();
   changes.added.unshift(user);
   saveChanges(changes);
+  users.unshift(user);
 }
 async function updateUser(id, data) {
   const user = users.find((u) => u.id === id);
   if (!user) return;
   if (!user.isLocal) {
-    const response = await fetch(`${API_URL}/${id}`, {
+    await requestUsers(`/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
   }
-  Object.assign(user, data);
   const changes = getChanges();
   const addedIndex = changes.added.findIndex((u) => u.id === id);
   if (addedIndex >= 0)
     changes.added[addedIndex] = { ...changes.added[addedIndex], ...data };
   else changes.updated[id] = { ...(changes.updated[id] || {}), ...data };
   saveChanges(changes);
+  Object.assign(user, data);
 }
 function askDelete(id) {
   const user = users.find((u) => u.id === id);
@@ -446,10 +477,8 @@ async function deleteUser() {
   elements.confirmDelete.textContent = "Deleting…";
   try {
     if (!user.isLocal) {
-      const response = await fetch(`${API_URL}/${id}`, { method: "DELETE" });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      await requestUsers(`/${id}`, { method: "DELETE" });
     }
-    users = users.filter((u) => u.id !== id);
     const changes = getChanges();
     const addedIndex = changes.added.findIndex((u) => u.id === id);
     if (addedIndex >= 0) changes.added.splice(addedIndex, 1);
@@ -458,16 +487,18 @@ async function deleteUser() {
       delete changes.updated[id];
     }
     saveChanges(changes);
+    users = users.filter((u) => u.id !== id);
     elements.deleteDialog.close();
+    pendingDeleteId = null;
     applyFilters();
     showToast("Employee deleted from the workspace.");
   } catch (error) {
     console.error(error);
-    showToast("Could not delete this employee.", "error");
+    showToast(error instanceof StorageWriteError
+      ? error.message : "Could not delete this employee.", "error");
   } finally {
     elements.confirmDelete.disabled = false;
     elements.confirmDelete.textContent = "Delete employee";
-    pendingDeleteId = null;
   }
 }
 function handleAction(event) {
@@ -525,15 +556,25 @@ document
   );
 document.querySelectorAll("dialog").forEach((dialog) =>
   dialog.addEventListener("click", (event) => {
-    if (event.target === dialog) dialog.close();
+    const bounds = dialog.getBoundingClientRect();
+    if (event.target === dialog &&
+        (event.clientX < bounds.left || event.clientX > bounds.right ||
+         event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
   }),
 );
 document.addEventListener("keydown", (event) => {
-  if (event.key === "/" && document.activeElement.tagName !== "INPUT") {
+  if (event.key === "/" && !event.ctrlKey && !event.metaKey && !event.altKey &&
+      !document.activeElement.closest("input, textarea, select, [contenteditable], dialog") &&
+      !elements.search.disabled) {
     event.preventDefault();
     elements.search.focus();
   }
 });
+function csvCell(value) {
+  const text = String(value);
+  const safe = /^[\s\u0000-\u001f]*[=+@-]/.test(text) ? "'" + text : text;
+  return `"${safe.replaceAll('"', '""')}"`;
+}
 function exportEmployees() {
   if (!filteredUsers.length) {
     showToast("No employee records to export.", "error");
@@ -550,7 +591,7 @@ function exportEmployees() {
   ]);
   const csv = [columns, ...rows]
     .map((row) =>
-      row.map((value) => `"${String(value).replaceAll('"', '""')}"`).join(","),
+      row.map(csvCell).join(","),
     )
     .join("\n");
   const url = URL.createObjectURL(
