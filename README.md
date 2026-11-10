@@ -1,6 +1,10 @@
 # Mahmoud Ashraf — Portfolio
 
+**[Live Demo — Open Portfolio](https://mahmoudashraf9244-cloud.github.io/portfolio/)** · [View Source Code](https://github.com/mahmoudashraf9244-cloud/portfolio/tree/main)
+
 A responsive Arabic/English portfolio for Mahmoud Ashraf, a software developer focused on practical full-stack web applications.
+
+The live portfolio is public: share its link on LinkedIn, in your CV, or directly with employers. Visitors can open it without a GitHub account or installation.
 
 ## Highlights
 
